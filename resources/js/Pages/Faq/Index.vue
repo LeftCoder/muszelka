@@ -1,0 +1,34 @@
+<script lang="ts" setup>
+import QuestionItem from '@/Pages/Faq/Partials/QuestionItem.vue'
+import Heading from '@/Layouts/Partials/Heading.vue'
+import AccentImage from '@/Shared/AccentImage.vue'
+import { useRootStore } from '@/store'
+
+const store = useRootStore()
+</script>
+
+<template>
+  <Head>
+    <title>FAQ</title>
+    <meta
+      name="description"
+      content="Tutaj znajdziesz odpowiedzi na najczęściej pojawiające się pytania."
+    />
+  </Head>
+
+  <Heading>
+    <template #default>Faq</template>
+    <template #slogan>Najcześciej zadawane pytania.</template>
+  </Heading>
+
+  <div class="mb-40 relative">
+    <div>
+      <QuestionItem
+        v-for="question in store.questions"
+        :key="question.id"
+        :question="question"
+      />
+    </div>
+    <AccentImage posX="right-[-20px]" posY="top-[-50px]" />
+  </div>
+</template>

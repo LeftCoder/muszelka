@@ -1,0 +1,16 @@
+<script setup>
+import Sidebar from '@/Pages/Dashboard/Partials/Sidebar.vue'
+import Navbar from '@/Pages/Dashboard/Partials/Navbar.vue'
+</script>
+
+<template>
+  <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <Navbar />
+    <div class="flex">
+      <Sidebar />
+      <div class="w-full px-8 py-5">
+        <slot />
+      </div>
+    </div>
+  </div>
+</template>

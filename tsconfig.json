@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "strict": true,
+        "importHelpers": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "allowJs": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["resources/js/*"],
+        },
+    },
+    "include": [
+        "resources/js/**/*",
+        "./*.js"
+    ],
+    "exclude": ["node_modules"],
+}

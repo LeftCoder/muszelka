@@ -1,0 +1,57 @@
+<script lang="ts" setup>
+//@ts-ignore
+import VueTailwindDatepicker from 'vue-tailwind-datepicker'
+import { ref, computed } from 'vue'
+
+const props = defineProps(['modelValue'])
+const emit = defineEmits(['update:modelValue'])
+
+const dateValue = computed({
+  get() {
+    return props.modelValue
+  },
+  set(value) {
+    emit('update:modelValue', value)
+  },
+})
+
+const options = ref({
+  shortcuts: {
+    today: 'Dzisiaj',
+    yesterday: 'Wczoraj',
+    past: (period: string) => period + ' dni',
+    currentMonth: 'Bierzący miesiąc',
+    pastMonth: 'Poprzedni miesiąc',
+  },
+  footer: {
+    apply: 'Wybierz',
+    cancel: 'Anuluj',
+  },
+})
+
+const formatter = ref({
+  date: 'DD.MM.YYYY',
+  month: 'MMM',
+})
+
+const dDate = (date: Date): boolean => {
+  const start = new Date()
+  start.setUTCHours(0, 0, 0, 0)
+  return date < start
+}
+</script>
+
+<template>
+  <div>
+    <VueTailwindDatepicker
+      :formatter="formatter"
+      placeholder="Zameldowanie ~ Wymeldowanie"
+      :options="options"
+      :shortcuts="false"
+      :disable-date="dDate"
+      v-model="dateValue"
+      i18n="pl"
+      input-classes="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
+    />
+  </div>
+</template>
