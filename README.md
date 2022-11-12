@@ -1,4 +1,4 @@
-<p align="center"><a href="https://muszelkawicie.pl" target="_blank"><img src="https://muszlelkawicie.pl/storage/images/logo.svg" width="400"></a></p>
+<p align="center"><a href="https://muszelkawicie.pl" target="_blank"><img src="https://muszelkawicie.pl/storage/images/logo.svg" width="400"></a></p>
 
 ## About Muszelka
 
