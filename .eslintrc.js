@@ -7,6 +7,7 @@ module.exports = {
   env: {
     amd: true,
     browser: true,
+    node: true,
     es6: true,
   },
   rules: {
@@ -17,7 +18,7 @@ module.exports = {
       'error',
       { vars: 'all', args: 'after-used', ignoreRestSiblings: true },
     ],
-    'comma-dangle': ['warn', 'always-multiline'],
+    'comma-dangle': ['warn', 'only-multiline'],
     'vue/multi-word-component-names': 'off',
     'vue/max-attributes-per-line': 'off',
     'vue/no-v-html': 'off',
