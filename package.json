@@ -27,7 +27,6 @@
         "@inertiajs/server": "^0.1.0",
         "@vue/server-renderer": "^3.2.45",
         "dayjs": "^1.11.6",
-        "eslint": "^8.27.0",
         "eslint-plugin-vue": "^9.7.0",
         "photoswipe": "^5.3.3",
         "pinia": "^2.0.23",
