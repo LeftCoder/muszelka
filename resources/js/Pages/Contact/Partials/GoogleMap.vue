@@ -1,12 +1,13 @@
 <script lang="ts" setup>
 import { GoogleMap, Marker, InfoWindow } from 'vue3-google-map'
 const center = { lat: 54.508996, lng: 16.476286 }
+const googleMapKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY
 </script>
 
 <template>
   <h2 class="text-white lg:text-5xl text-2xl font-bold mb-4">Mapa</h2>
   <GoogleMap
-    api-key="AIzaSyBLXcYJT_OJf6h2hHDcCde44E8gbqax3pA"
+    :api-key="googleMapKey"
     style="width: 100%; height: 500px"
     :center="center"
     :zoom="15"
