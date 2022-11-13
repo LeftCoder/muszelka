@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import vueFilePond from 'vue-filepond'
+import 'filepond/dist/filepond.min.css'
 import { Apartment } from '@/types'
 import { useForm } from '@inertiajs/inertia-vue3'
 
@@ -100,6 +102,19 @@ const handleSubmit = () => {
         v-text="form.errors.max"
         class="text-red-500 text-xs mt-1"
       ></div>
+    </div>
+
+    <div>
+      <file-pond
+        name="test"
+        ref="pond"
+        class-name="my-pond"
+        label-idle="Drop files here..."
+        allow-multiple="true"
+        accepted-file-types="image/jpeg, image/png"
+        v-bind:files="myFiles"
+        v-on:init="handleFilePondInit"
+      />
     </div>
 
     <div class="flex justify-end items-center gap-4">
