@@ -70,10 +70,4 @@ export interface MetaLink {
   url: string | null
 }
 
-export interface Question {
-  id: number
-  body: string
-  answer: string
-}
-
 export type Toast = (text: string) => void
