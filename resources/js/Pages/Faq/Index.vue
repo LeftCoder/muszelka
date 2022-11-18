@@ -3,6 +3,7 @@ import QuestionItem from '@/Pages/Faq/Partials/QuestionItem.vue'
 import Heading from '@/Layouts/Partials/Heading.vue'
 import AccentImage from '@/Shared/AccentImage.vue'
 import { useRootStore } from '@/store'
+import NoItems from '@/Shared/NoItems.vue'
 
 const store = useRootStore()
 </script>
@@ -21,7 +22,7 @@ const store = useRootStore()
     <template #slogan>Najcześciej zadawane pytania.</template>
   </Heading>
 
-  <div class="mb-40 relative">
+  <div v-if="store.questions.length" class="mb-40 relative">
     <div>
       <QuestionItem
         v-for="question in store.questions"
@@ -31,4 +32,5 @@ const store = useRootStore()
     </div>
     <AccentImage posX="right-[-20px]" posY="top-[-50px]" />
   </div>
+  <NoItems class="mb-40" v-else>Brak pytań w sekcji FAQ.</NoItems>
 </template>

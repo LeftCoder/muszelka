@@ -14,7 +14,7 @@ const placeholder: [] = []
 <template>
   <div class="grid grid-cols-1 gap-24 mb-64">
     <ApartmentItem
-      v-if="props.apartments"
+      v-if="props.apartments?.length"
       v-for="apartment in props.apartments"
       :apartment="apartment"
     />
