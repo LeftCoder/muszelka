@@ -30,60 +30,74 @@ export default {
 <template>
   <Head title="Zaloguj się" />
 
-  <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
-    {{ status }}
-  </div>
+  <div class="w-full flex h-screen">
+    <div class="flex-1 grid place-items-center">
+      <Link href="/" class="flex-none text-slate-900">
+        <img src="/storage/images/logo.svg" class="h-96" alt="Muszelka Logo" />
+        <span class="sr-only">Muszelka Logo</span>
+      </Link>
+    </div>
+    <div class="flex-1 bg-cyan-900">
+      <div class="h-screen grid place-items-center">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-400 mb-4 sm:pr-12">
+            Logowanie
+          </h2>
 
-  <div
-    class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-  >
-    <form @submit.prevent="onSubmit">
-      <div class="mb-6">
-        <label
-          for="email"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-          >Email</label
-        >
-        <input
-          type="email"
-          id="email"
-          v-model="form.email"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          required
-        />
-        <span
-          v-if="form.errors.email"
-          class="mt-2"
-          :v-html="form.errors.email"
-        />
+          <div
+            class="p-6 w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+          >
+            <form @submit.prevent="onSubmit">
+              <div class="mb-6">
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  v-model="form.email"
+                  class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
+                  required
+                />
+                <span
+                  v-if="form.errors.email"
+                  class="mt-2"
+                  :v-html="form.errors.email"
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="password"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >Hasło</label
+                >
+                <input
+                  type="password"
+                  id="password"
+                  v-model="form.password"
+                  class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
+                  required
+                />
+                <span
+                  v-if="form.errors.password"
+                  class="mt-2"
+                  :v-html="form.errors.password"
+                />
+              </div>
+              <div class="mt-12">
+                <button
+                  type="submit"
+                  class="flex justify-center w-full border md:text-2xl text-white rounded-lg text-lg bg-amber-500 hover:bg-amber-400 shadow-md font-semibold focus:outline-none md:px-6 px-6 md:py-4 py-3 xl:leading-4"
+                >
+                  Zaloguj
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="mb-6">
-        <label
-          for="password"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-          >Hasło</label
-        >
-        <input
-          type="password"
-          id="password"
-          v-model="form.password"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          required
-        />
-        <span
-          v-if="form.errors.password"
-          class="mt-2"
-          :v-html="form.errors.password"
-        />
-      </div>
-      <div class="text-right">
-        <button
-          type="submit"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Zaloguj
-        </button>
-      </div>
-    </form>
+    </div>
   </div>
 </template>
