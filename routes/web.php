@@ -3,6 +3,7 @@
 use App\Http\Controllers\ApartmentController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardPagesController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
@@ -30,8 +31,12 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
     Route::get('/rezerwacje', [DashboardPagesController::class, 'reservations']);
     Route::get('/domki', [DashboardPagesController::class, 'apartments']);
     Route::get('/domki/{apartment}', [ApartmentController::class, 'show']);
-    Route::post('/apartment/{apartment}', [ApartmentController::class, 'occupied']);
+
+    Route::patch('/api/apartment/{apartment}', [ApartmentController::class, 'update']);
+    Route::post('/api/occupied/{apartment}', [ApartmentController::class, 'occupied']);
     Route::get('/api/booked', [ReservationController::class, 'booked']);
+    Route::post('/api/upload', [ImageController::class, 'upload']);
+    Route::delete('/api/delete', [ImageController::class, 'destroy']);
 });
 
 require __DIR__.'/auth.php';

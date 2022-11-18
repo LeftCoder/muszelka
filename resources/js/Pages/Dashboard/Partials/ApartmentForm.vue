@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import vueFilePond from 'vue-filepond'
-import 'filepond/dist/filepond.min.css'
-import { Apartment } from '@/types'
+import type { Apartment } from '@/types'
 import { useForm } from '@inertiajs/inertia-vue3'
+import FilePondInput from '@/Pages/Dashboard/Partials/FilePondInput.vue'
 
 interface Props {
   apartment: Apartment
@@ -15,10 +14,12 @@ const form = useForm({
   description: props.apartment.description,
   price: props.apartment.price,
   max: props.apartment.max,
+  folders: [],
 })
 
 const handleSubmit = () => {
-  form.post('reservation')
+  console.log(form)
+  form.patch(`/dashboard/api/apartment/${props.apartment.id}`)
 }
 </script>
 
@@ -53,6 +54,7 @@ const handleSubmit = () => {
       <textarea
         id="description"
         name="description"
+        rows="4"
         v-model="form.description"
         class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
       />
@@ -104,17 +106,18 @@ const handleSubmit = () => {
       ></div>
     </div>
 
-    <div>
-      <file-pond
-        name="test"
-        ref="pond"
-        class-name="my-pond"
-        label-idle="Drop files here..."
-        allow-multiple="true"
-        accepted-file-types="image/jpeg, image/png"
-        v-bind:files="myFiles"
-        v-on:init="handleFilePondInit"
-      />
+    <div class="flex gap-2 my-10">
+      <div
+        v-for="feature in props.apartment.features"
+        :key="feature.id"
+        class="bg-slate-100 text-slate-900 mb-2 text-md font-medium px-2.5 py-0.5 rounded-full"
+      >
+        {{ feature.name }}
+      </div>
+    </div>
+
+    <div class="my-10">
+      <FilePondInput v-model="form.folders" />
     </div>
 
     <div class="flex justify-end items-center gap-4">

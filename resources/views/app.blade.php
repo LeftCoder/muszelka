@@ -8,6 +8,9 @@
         <meta name="robots" content="noindex,follow" />
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
+        <!-- CSRF Token -->
+        <meta name="csrf_token" content="{{ csrf_token() }}">
+
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
 

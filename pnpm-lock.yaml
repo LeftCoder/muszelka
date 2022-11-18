@@ -18,6 +18,8 @@ specifiers:
   eslint-plugin-vue: ^9.7.0
   filepond: ^4.30.4
   filepond-plugin-file-validate-type: ^1.2.8
+  filepond-plugin-image-resize: ^2.0.10
+  filepond-plugin-image-transform: ^3.8.7
   laravel-vite-plugin: ^0.5.4
   photoswipe: ^5.3.3
   pinia: ^2.0.23
@@ -39,6 +41,9 @@ dependencies:
   dayjs: 1.11.6
   eslint: 8.27.0
   eslint-plugin-vue: 9.7.0_eslint@8.27.0
+  filepond-plugin-file-validate-type: 1.2.8_filepond@4.30.4
+  filepond-plugin-image-resize: 2.0.10_filepond@4.30.4
+  filepond-plugin-image-transform: 3.8.7_filepond@4.30.4
   photoswipe: 5.3.3
   pinia: 2.0.23_zwu2zepfy3m6u2gunxlolp35gi
   recaptcha-v3: 1.10.0
@@ -56,7 +61,6 @@ devDependencies:
   axios: 0.27.2
   eslint-config-prettier: 8.5.0_eslint@8.27.0
   filepond: 4.30.4
-  filepond-plugin-file-validate-type: 1.2.8_filepond@4.30.4
   laravel-vite-plugin: 0.5.4_vite@3.2.3
   postcss: 8.4.19
   tailwindcss: 3.2.4
@@ -942,11 +946,26 @@ packages:
       filepond: '>=1.x <5.x'
     dependencies:
       filepond: 4.30.4
-    dev: true
+    dev: false
+
+  /filepond-plugin-image-resize/2.0.10_filepond@4.30.4:
+    resolution: {integrity: sha512-irX+J275u8Ph1KcciCeSQmxeFjbu0+co5XVCkiwdSNnz6KiqrCKN7RXTvEbdgSdDzyi5omr2oP1rKWps5L1RsQ==}
+    peerDependencies:
+      filepond: '>=3.x <5.x'
+    dependencies:
+      filepond: 4.30.4
+    dev: false
+
+  /filepond-plugin-image-transform/3.8.7_filepond@4.30.4:
+    resolution: {integrity: sha512-vgKwyIDG2y5twanf7YpqZvxkaLudTjwd9vRcoq5sQDB8egUlX5/NA0bQ0823pocrm0fjbFeetICu44mkqeDkIA==}
+    peerDependencies:
+      filepond: '>=3.6.0 <5.x'
+    dependencies:
+      filepond: 4.30.4
+    dev: false
 
   /filepond/4.30.4:
     resolution: {integrity: sha512-FCwsMvG9iiEs6uobdDrTaKsCgsqys0NuLgPPD8n37AYVYBiiDkrPkk9MSIU5rT2FahYcL1bScYI9huIPtlzqyA==}
-    dev: true
 
   /fill-range/7.0.1:
     resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==}

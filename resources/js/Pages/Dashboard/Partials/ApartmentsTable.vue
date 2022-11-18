@@ -11,7 +11,7 @@ const props = defineProps<Props>()
 
 const handleChange = (id: number, occupied: boolean) => {
   Inertia.post(
-    `/dashboard/apartment/${id}`,
+    `/dashboard/api/occupied/${id}`,
     {
       occupied: !occupied,
     },

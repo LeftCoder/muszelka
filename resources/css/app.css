@@ -6,4 +6,8 @@
   ul li::marker {
     @apply text-cyan-900;
   }
+
+  .filepond--panel-root {
+    @apply dark:bg-gray-700 dark:text-gray-400;
+  }
 }

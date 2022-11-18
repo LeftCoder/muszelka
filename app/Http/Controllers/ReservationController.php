@@ -16,7 +16,9 @@ class ReservationController extends Controller
 {
     public function show(Reservation $reservation)
     {
-        return Inertia::render('Dashboard/SingleReservation', ['reservation' => new ReservationResource($reservation)]);
+        return Inertia::render('Dashboard/SingleReservation', [
+            'reservation' => new ReservationResource($reservation),
+        ]);
     }
 
     public function store(StoreReservationRequest $request)
