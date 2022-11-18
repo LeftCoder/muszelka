@@ -4,6 +4,10 @@ import Navbar from '@/Pages/Dashboard/Partials/Navbar.vue'
 </script>
 
 <template>
+  <Head>
+    <meta name="robots" content="noindex,nofollow" />
+  </Head>
+
   <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
     <Navbar />
     <div class="flex">

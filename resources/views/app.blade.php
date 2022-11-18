@@ -4,8 +4,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- No index in development -->
-        <meta name="robots" content="noindex,follow" />
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- CSRF Token -->
