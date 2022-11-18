@@ -33,7 +33,7 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
     Route::get('/domki/{apartment}', [ApartmentController::class, 'show']);
 
     Route::patch('/api/apartment/{apartment}', [ApartmentController::class, 'update']);
-    Route::post('/api/occupied/{apartment}', [ApartmentController::class, 'occupied']);
+    Route::patch('/api/occupied/{apartment}', [ApartmentController::class, 'occupied']);
     Route::get('/api/booked', [ReservationController::class, 'booked']);
     Route::post('/api/upload', [ImageController::class, 'upload']);
     Route::delete('/api/delete', [ImageController::class, 'destroy']);

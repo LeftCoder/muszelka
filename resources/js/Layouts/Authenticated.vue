@@ -1,6 +1,20 @@
-<script setup>
+<script lang="ts" setup>
+import { computed, watch, provide } from 'vue'
+import { usePage } from '@inertiajs/inertia-vue3'
 import Sidebar from '@/Pages/Dashboard/Partials/Sidebar.vue'
 import Navbar from '@/Pages/Dashboard/Partials/Navbar.vue'
+import Toast from '@/utils/toast'
+import '@/../css/toast.css'
+
+provide('toast', Toast)
+const message = computed<string>(() => usePage<any>().props.value.flash.message)
+
+watch(
+  () => message.value,
+  (message) => {
+    Toast(message)
+  }
+)
 </script>
 
 <template>

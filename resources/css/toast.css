@@ -1,0 +1,54 @@
+.gui-toast-group {
+  z-index: 777;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+
+  display: grid;
+  justify-items: end;
+  justify-content: center;
+  gap: 1vh;
+
+  /* optimizations */
+  pointer-events: none;
+}
+
+.gui-toast {
+  --_duration: 3s;
+  --_travel-distance: 0;
+
+  color: white;
+  background: hsl(224, 76%, 48%);
+
+  max-inline-size: min(25ch, 90vw);
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  border-radius: 3px;
+  font-size: 1rem;
+
+  will-change: transform;
+  animation: fade-in 0.3s ease, slide-in 0.3s ease,
+    fade-out 0.3s ease var(--_duration);
+
+  @media (--motionOK) {
+    --_travel-distance: 5vh;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(var(--_travel-distance, 10px));
+  }
+}

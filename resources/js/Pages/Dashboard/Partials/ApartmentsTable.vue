@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { Apartment } from '@/types'
+import type { Apartment, Toast } from '@/types'
+import { inject } from 'vue'
 import { Switch } from '@headlessui/vue'
 import { Inertia } from '@inertiajs/inertia'
 
@@ -7,15 +8,19 @@ interface Props {
   apartments: Apartment[]
 }
 
+const Toast = inject('toast') as Toast
 const props = defineProps<Props>()
 
 const handleChange = (id: number, occupied: boolean) => {
-  Inertia.post(
+  Inertia.patch(
     `/dashboard/api/occupied/${id}`,
     {
       occupied: !occupied,
     },
     {
+      onSuccess: () => {
+        Toast('Status zmieniony.')
+      },
       only: ['apartments'],
     }
   )

@@ -75,3 +75,5 @@ export interface Question {
   body: string
   answer: string
 }
+
+export type Toast = (text: string) => void

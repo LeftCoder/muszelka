@@ -17,14 +17,13 @@ const form = useForm({
   folders: [],
 })
 
-const handleSubmit = () => {
-  console.log(form)
+const onSubmit = () => {
   form.patch(`/dashboard/api/apartment/${props.apartment.id}`)
 }
 </script>
 
 <template>
-  <form @submit="handleSubmit">
+  <form @submit.prevent="onSubmit">
     <div class="mb-4">
       <label
         for="name"

@@ -18,7 +18,7 @@ class ApartmentController extends Controller
         $apartment->occupied = $request->input('occupied');
         $apartment->save();
 
-        return back()->with(['message' => 'Zmiana wykonana.']);
+        return back();
     }
 
     public function update(Apartment $apartment, Request $request)
@@ -42,7 +42,7 @@ class ApartmentController extends Controller
             'max' => $request->max,
         ]);
 
-        return back()->with(['message' => 'Zmiana wykonana.']);
+        return back()->with('message', 'Informacje zaktualizowane.');
     }
 
     public function show(Apartment $apartment)
