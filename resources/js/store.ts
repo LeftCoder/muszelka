@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { Apartment } from '@/types'
+import { Apartment, Question } from '@/types'
 
 export const useRootStore = defineStore('root', {
   state: () => ({
@@ -64,7 +64,7 @@ export const useRootStore = defineStore('root', {
         answer:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices, mauris non congue faucibus, elit neque venenatis urna, vel lobortis ex turpis quis velit. Sed dignissim in sapien id imperdiet. Donec consectetur nisl sit amet mi congue, ut imperdiet nisi cursus. Nulla rutrum hendrerit nisl, eu ornare purus dictum sit amet. Phasellus ultricies lacinia vehicula.',
       },
-    ],
+    ] as Question[],
     apartments: [] as Apartment[],
     reservation: {
       start: '',
@@ -72,15 +72,12 @@ export const useRootStore = defineStore('root', {
       apartment_id: -1,
       adults: 2,
       children: 0,
-      animals: false
+      animals: false,
     },
   }),
   getters: {
     selectedDates: (state) => {
-      if (
-        state.reservation.start === '' ||
-        state.reservation.end === ''
-      ) {
+      if (state.reservation.start === '' || state.reservation.end === '') {
         return 'Nie wybrano'
       }
       return `od ${state.reservation.start} do ${state.reservation.end}`
@@ -110,7 +107,10 @@ export const useRootStore = defineStore('root', {
           (apartment) => apartment.id === state.reservation.apartment_id
         )
 
-        if (selected && ((state.reservation.adults + state.reservation.children) > selected.max)) {
+        if (
+          selected &&
+          state.reservation.adults + state.reservation.children > selected.max
+        ) {
           return `Przekroczony maksymalny limit ${selected.max} osób`
         }
       }
@@ -128,13 +128,13 @@ export const useRootStore = defineStore('root', {
   },
   actions: {
     setApartments(apartments: Apartment[] | undefined) {
-      if(apartments) {
+      if (apartments) {
         this.apartments = apartments
       } else {
         this.apartments = []
       }
     },
-    updateReservationDates(dates: {startDate: string; endDate: string;}) {
+    updateReservationDates(dates: { startDate: string; endDate: string }) {
       this.reservation.start = dates.startDate
       this.reservation.end = dates.endDate
     },
