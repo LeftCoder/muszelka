@@ -19,15 +19,18 @@ class ReservationConfirm extends Mailable
 
     public $token;
 
+    public $number;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Reservation $reservation, Token $token)
+    public function __construct(Reservation $reservation, Token $token, string $number)
     {
         $this->reservation = $reservation;
         $this->token = $token;
+        $this->number = $number;
     }
 
     /**

@@ -8,6 +8,7 @@ Twoja rezerwacja została przyjęta. Prosimy o jej potwierdzenie.
 <x-mail::table>
 |                            |                                                                                          |
 | :------------------------- | :--------------------------------------------------------------------------------------- |
+| **Nr rezerwacji**          | {{ $reservation->number }}                                                               |
 | **Osoba rezerwująca**      | {{ $reservation->name }} {{ $reservation->surname }}                                     |
 | **Domek**                  | {{ $reservation->apartment_id }}                                                         |
 | **Liczba gości**           | {{ $reservation->adults + $reservation->children }}                                      |

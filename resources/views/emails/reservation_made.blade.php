@@ -8,6 +8,7 @@ Właśnie pojawiła się nowa rezerwacja.
 <x-mail::table>
 |                            |                                                                                          |
 | :------------------------- | :--------------------------------------------------------------------------------------- |
+| **Nr rezerwacji**          | {{ $reservation->number }}                                                               |
 | **Osoba rezerwująca**      | {{ $reservation->name }} {{ $reservation->surname }}                                     |
 | **Domek**                  | {{ $reservation->apartment_id }}                                                         |
 | **Liczba gości**           | {{ $reservation->adults }} dorosłych, {{ $reservation->children }} dzieci                |

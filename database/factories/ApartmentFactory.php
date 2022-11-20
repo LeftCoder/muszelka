@@ -18,7 +18,7 @@ class ApartmentFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'description' => fake()->paragraph(),
+            'description' => fake()->paragraph(2),
             'price' => fake()->numberBetween(100, 300),
             'max' => fake()->randomDigitNotZero(),
             'occupied' => fake()->boolean(),

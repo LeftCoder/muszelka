@@ -16,14 +16,17 @@ class ReservationMade extends Mailable
 
     public $reservation;
 
+    public $number;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Reservation $reservation)
+    public function __construct(Reservation $reservation, string $number)
     {
         $this->reservation = $reservation;
+        $this->number = $number;
     }
 
     /**
