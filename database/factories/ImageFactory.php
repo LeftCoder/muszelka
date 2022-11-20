@@ -17,10 +17,10 @@ class ImageFactory extends Factory
     public function definition()
     {
         return [
-            'src' => '/storage/houses/m-1.jpg',
-            'thumbnail' => '/storage/houses/m-1.jpg',
+            'src' => 'https://via.placeholder.com/615x615?text=...',
+            'thumbnail' => 'https://via.placeholder.com/615x615?text=...',
             'width' => 1920,
-            'height' => 1277,
+            'height' => 1280,
             'alt' => 'Domek',
         ];
     }
