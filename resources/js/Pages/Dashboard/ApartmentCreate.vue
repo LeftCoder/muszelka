@@ -1,13 +1,6 @@
 <script lang="ts" setup>
 import ApartmentForm from '@/Pages/Dashboard/Partials/ApartmentForm.vue'
 import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/24/solid'
-import { Apartment } from '@/types'
-
-interface Props {
-  apartment: Apartment
-}
-
-const props = defineProps<Props>()
 </script>
 
 <script lang="ts">
@@ -26,18 +19,15 @@ export default {
       <HomeIcon class="h-6 w-6" />
     </Link>
     <ChevronRightIcon class="h-6 w-6 mx-1" />
-    <h2 class="text-4xl font-extrabold dark:text-slate-100">Edytuj</h2>
+    <h2 class="text-4xl font-extrabold dark:text-slate-100">Nowy domek</h2>
   </div>
 
   <div class="flex justify-center mt-24">
     <div class="w-full max-w-3xl">
-      <h2 class="mb-2 text-4xl font-extrabold dark:text-slate-100">
-        {{ props.apartment.name }}
-      </h2>
       <div
-        class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+        class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 overflow-hidden"
       >
-        <ApartmentForm :apartment="props.apartment" />
+        <ApartmentForm />
       </div>
     </div>
   </div>

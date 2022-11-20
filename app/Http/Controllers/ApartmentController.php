@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreApartmentRequest;
 use App\Http\Requests\UpdateApartmentRequest;
 use App\Http\Resources\ApartmentResource;
 use App\Models\Apartment;
@@ -22,7 +23,49 @@ class ApartmentController extends Controller
         return back();
     }
 
+    public function create()
+    {
+        return Inertia::render('Dashboard/ApartmentCreate');
+    }
+
+    public function store(StoreApartmentRequest $request)
+    {
+        $apartment = Apartment::create([
+            'name' => $request->safe()->name,
+            'description' => $request->safe()->description,
+            'price' => $request->safe()->price,
+            'max' => $request->safe()->max,
+        ]);
+
+        $this->addPhotos($request, $apartment);
+
+        return redirect('/dashboard/domki')
+            ->with('message', 'Nowy domek został dodany.');
+    }
+
     public function update(Apartment $apartment, UpdateApartmentRequest $request)
+    {
+        $this->addPhotos($request, $apartment);
+
+        $apartment->update([
+            'name' => $request->safe()->name,
+            'description' => $request->safe()->description,
+            'price' => $request->safe()->price,
+            'max' => $request->safe()->max,
+        ]);
+
+        return redirect('/dashboard/domki')
+            ->with('message', 'Informacje zaktualizowane.');
+    }
+
+    public function edit(Apartment $apartment)
+    {
+        $apartment = new ApartmentResource(Apartment::with(['features', 'images'])->first());
+
+        return Inertia::render('Dashboard/ApartmentUpdate', ['apartment' => $apartment]);
+    }
+
+    protected function addPhotos($request, $apartment)
     {
         if ($request->has('folders')) {
             foreach ($request->folders as $folder) {
@@ -35,25 +78,9 @@ class ApartmentController extends Controller
                 }
             }
         }
-
-        $apartment->update([
-            'name' => $request->name,
-            'description' => $request->description,
-            'price' => $request->price,
-            'max' => $request->max,
-        ]);
-
-        return back()->with('message', 'Informacje zaktualizowane.');
     }
 
-    public function show(Apartment $apartment)
-    {
-        $apartment = new ApartmentResource(Apartment::with(['features', 'images'])->first());
-
-        return Inertia::render('Dashboard/SingleApartment', ['apartment' => $apartment]);
-    }
-
-    public function moveTempImage(TemporaryImage $tmp_image, Apartment $apartment)
+    protected function moveTempImage(TemporaryImage $tmp_image, Apartment $apartment)
     {
         Storage::copy(
             "tmp/{$tmp_image->folder}/{$tmp_image->file}",
@@ -61,7 +88,7 @@ class ApartmentController extends Controller
         );
     }
 
-    public function createImage(TemporaryImage $tmp_image, Apartment $apartment)
+    protected function createImage(TemporaryImage $tmp_image, Apartment $apartment)
     {
         $path = "/storage/houses/{$apartment->id}/{$tmp_image->file}";
         $insert = InterventionImage::make(public_path().$path);
@@ -76,7 +103,7 @@ class ApartmentController extends Controller
         ]);
     }
 
-    public function deleteTempImage(TemporaryImage $tmp_image)
+    protected function deleteTempImage(TemporaryImage $tmp_image)
     {
         Storage::deleteDirectory("tmp/{$tmp_image->folder}");
         $tmp_image->delete();

@@ -2,23 +2,28 @@
 import type { Apartment } from '@/types'
 import { useForm } from '@inertiajs/inertia-vue3'
 import FilePondInput from '@/Pages/Dashboard/Partials/FilePondInput.vue'
+import LoadingSpinnerIcon from '@/Shared/LoadingSpinnerIcon.vue'
 
 interface Props {
-  apartment: Apartment
+  apartment?: Apartment
 }
 
 const props = defineProps<Props>()
 
 const form = useForm({
-  name: props.apartment.name,
-  description: props.apartment.description,
-  price: props.apartment.price,
-  max: props.apartment.max,
+  name: props.apartment ? props.apartment.name : '',
+  description: props.apartment ? props.apartment.description : '',
+  price: props.apartment ? props.apartment.price : '',
+  max: props.apartment ? props.apartment.max : '',
   folders: [],
 })
 
 const onSubmit = () => {
-  form.patch(`/dashboard/api/apartment/${props.apartment.id}`)
+  if (props.apartment) {
+    form.patch(`/dashboard/domki/${props.apartment.id}`)
+  } else {
+    form.post(`/dashboard/domki`)
+  }
 }
 </script>
 
@@ -110,7 +115,7 @@ const onSubmit = () => {
       ></div>
     </div>
 
-    <div class="flex gap-2 my-10">
+    <div v-if="props.apartment" class="flex gap-2 my-10">
       <div
         v-for="feature in props.apartment.features"
         :key="feature.id"
@@ -124,7 +129,9 @@ const onSubmit = () => {
       <FilePondInput v-model="form.folders" />
     </div>
 
-    <div class="flex justify-end items-center gap-4">
+    <div
+      class="flex justify-end items-center bg-slate-50 dark:bg-slate-700 gap-4 -mx-6 -mb-6 p-6"
+    >
       <Link href="/dashboard/domki">
         <button
           type="button"
@@ -139,7 +146,7 @@ const onSubmit = () => {
         :disabled="form.processing"
       >
         <LoadingSpinnerIcon v-if="form.processing" />
-        Aktualizuj
+        {{ props.apartment ? 'Aktualizuj' : 'Utwórz' }}
       </button>
     </div>
   </form>

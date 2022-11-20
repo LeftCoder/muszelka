@@ -30,9 +30,11 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
     Route::get('/', [DashboardPagesController::class, 'dashboard']);
     Route::get('/rezerwacje', [DashboardPagesController::class, 'reservations']);
     Route::get('/domki', [DashboardPagesController::class, 'apartments']);
-    Route::get('/domki/{apartment}', [ApartmentController::class, 'show']);
+    Route::patch('/domki/{apartment}', [ApartmentController::class, 'update']);
+    Route::get('/domki/{apartment}/edit', [ApartmentController::class, 'edit']);
+    Route::get('/domki/create', [ApartmentController::class, 'create']);
+    Route::post('/domki', [ApartmentController::class, 'store']);
 
-    Route::patch('/api/apartment/{apartment}', [ApartmentController::class, 'update']);
     Route::patch('/api/occupied/{apartment}', [ApartmentController::class, 'occupied']);
     Route::get('/api/booked', [ReservationController::class, 'booked']);
     Route::post('/api/upload', [ImageController::class, 'upload']);

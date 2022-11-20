@@ -34,6 +34,8 @@ const handleChange = (id: number, occupied: boolean) => {
       >
         <tr>
           <th scope="col" class="py-3 px-6">Nazwa domku</th>
+          <th scope="col" class="py-3 px-6">Cena wynajmu (zł)</th>
+          <th scope="col" class="py-3 px-6">Maksymalna l. gości</th>
           <th scope="col" class="py-3 px-6">Ostatnia rezerwacja</th>
           <th scope="col" class="py-3 px-6 text-right">Onacz jako wynajęty</th>
         </tr>
@@ -47,9 +49,15 @@ const handleChange = (id: number, occupied: boolean) => {
           <td class="py-4 px-6">
             <Link
               class="hover:underline"
-              :href="`/dashboard/domki/${apartment.id}`"
+              :href="`/dashboard/domki/${apartment.id}/edit`"
               >{{ apartment.name }}</Link
             >
+          </td>
+          <td class="py-4 px-6 text-right">
+            {{ apartment.price }}
+          </td>
+          <td class="py-4 px-6 text-right">
+            {{ apartment.max }}
           </td>
           <td class="py-4 px-6">
             {{

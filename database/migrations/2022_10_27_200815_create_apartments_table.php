@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('description');
             $table->integer('price');
             $table->integer('max');
-            $table->boolean('occupied');
+            $table->boolean('occupied')->default(false);
             $table->timestamps();
         });
     }
