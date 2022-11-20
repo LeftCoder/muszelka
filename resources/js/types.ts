@@ -1,5 +1,6 @@
 export interface Reservation {
   id: number
+  number: string
   name: string
   surname: string
   email: string

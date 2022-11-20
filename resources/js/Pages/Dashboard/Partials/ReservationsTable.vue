@@ -31,6 +31,7 @@ const formatDate = (date: string) => {
         class="text-xs text-slate-700 uppercase bg-slate-50 dark:bg-slate-700 dark:text-slate-400"
       >
         <tr>
+          <th scope="col" class="py-3 px-6">Nr rezerwacji</th>
           <th scope="col" class="py-3 px-6">Osoba rezerwująca</th>
           <th scope="col" class="py-3 px-6">Status</th>
           <th scope="col" class="py-3 px-6">Domek</th>
@@ -48,6 +49,9 @@ const formatDate = (date: string) => {
           class="bg-white dark:bg-slate-800"
           :key="reservation.id"
         >
+          <td scope="row" class="py-4 px-6 whitespace-nowrap">
+            {{ `${reservation.number}` }}
+          </td>
           <th
             scope="row"
             class="py-4 px-6 font-medium text-slate-900 whitespace-nowrap dark:text-white"

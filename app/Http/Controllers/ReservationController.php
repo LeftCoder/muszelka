@@ -54,7 +54,7 @@ class ReservationController extends Controller
         return Inertia::render('Checkout/Confirmed');
     }
 
-    public function booked(): Reservation
+    public function booked()
     {
         return Reservation::toBase()
             ->selectRaw('count(*) as booked')
