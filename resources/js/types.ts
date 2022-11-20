@@ -10,9 +10,15 @@ export interface Reservation {
   adults: number
   children: number
   animals: boolean
-  confirmed: boolean
+  status: ReservationStatus
   apartment_id: boolean
 }
+
+export type ReservationStatus =
+  | 'Przyjęta'
+  | 'Potwierdzona'
+  | 'Anulowana'
+  | 'Zakończona'
 
 export interface Apartment {
   id: number

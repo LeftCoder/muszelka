@@ -30,7 +30,7 @@ class ReservationFactory extends Factory
             'adults' => fake()->randomDigitNotZero(),
             'children' => fake()->randomDigitNotZero(),
             'animals' => fake()->boolean(),
-            'confirmed' => fake()->boolean(),
+            'status' => fake()->numberBetween(1, 4),
         ];
     }
 }

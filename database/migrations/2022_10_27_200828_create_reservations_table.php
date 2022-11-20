@@ -18,14 +18,14 @@ return new class extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('email');
-            $table->string('phone')->nullable();
+            $table->string('phone');
             $table->dateTime('start');
             $table->dateTime('end');
             $table->integer('adults');
             $table->integer('children');
             $table->boolean('animals');
             $table->foreignId('apartment_id')->constrained();
-            $table->boolean('confirmed')->default(false);
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
     }

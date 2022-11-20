@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Enums\ReservationStatus;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -14,6 +15,7 @@ class Reservation extends Model
     protected $casts = [
         'start' => 'datetime',
         'end' => 'datetime',
+        'status' => ReservationStatus::class,
     ];
 
     public function token()
