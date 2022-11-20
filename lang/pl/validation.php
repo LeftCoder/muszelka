@@ -154,6 +154,9 @@ return [
     'attributes' => [
         'name' => 'imię',
         'surname' => 'nazwisko',
+        'description' => 'opis',
+        'price' => 'cena',
+        'max' => 'maksymalna l. gości',
         'message' => 'wiadomość',
         'policy' => 'Polityka prywatności',
         'apartment_id' => 'domek',

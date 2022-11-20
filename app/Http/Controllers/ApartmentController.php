@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateApartmentRequest;
 use App\Http\Resources\ApartmentResource;
 use App\Models\Apartment;
 use App\Models\Image;
@@ -21,7 +22,7 @@ class ApartmentController extends Controller
         return back();
     }
 
-    public function update(Apartment $apartment, Request $request)
+    public function update(Apartment $apartment, UpdateApartmentRequest $request)
     {
         if ($request->has('folders')) {
             foreach ($request->folders as $folder) {

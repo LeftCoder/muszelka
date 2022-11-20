@@ -36,6 +36,7 @@ const onSubmit = () => {
         name="name"
         v-model="form.name"
         class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        required
       />
       <div
         v-if="form.errors.name"
@@ -56,6 +57,7 @@ const onSubmit = () => {
         rows="4"
         v-model="form.description"
         class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        required
       />
       <div
         v-if="form.errors.description"
@@ -77,6 +79,7 @@ const onSubmit = () => {
         name="price"
         v-model="form.price"
         class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        required
       />
       <div
         v-if="form.errors.price"
@@ -93,10 +96,12 @@ const onSubmit = () => {
       >
       <input
         type="number"
+        min="1"
         id="max"
         name="max"
         v-model="form.max"
         class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        required
       />
       <div
         v-if="form.errors.max"
@@ -131,7 +136,9 @@ const onSubmit = () => {
       <button
         type="submit"
         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        :disabled="form.processing"
       >
+        <LoadingSpinnerIcon v-if="form.processing" />
         Aktualizuj
       </button>
     </div>
