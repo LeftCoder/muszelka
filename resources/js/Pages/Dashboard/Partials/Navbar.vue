@@ -8,7 +8,7 @@ import ThemeToggle from '@/Shared/ThemeToggle.vue'
     <div class="flex flex-wrap justify-between items-center">
       <Link href="/dashboard" class="mr-auto flex-none text-slate-900">
         <img
-          src="/storage/images/logo.svg"
+          :src="`/storage/images/logo-dark.svg`"
           class="mr-3 h-20"
           alt="Muszelka Logo"
         />

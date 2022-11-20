@@ -25,7 +25,7 @@ const closeMobileMenu = (close: () => void) => {
         <div class="flex items-center">
           <Link href="/" class="mr-auto flex-none text-slate-900">
             <img
-              src="/storage/images/logo.svg"
+              src="/storage/images/logo-dark.svg"
               class="mr-3 h-16 sm:h-24"
               alt="Muszelka Logo"
             />

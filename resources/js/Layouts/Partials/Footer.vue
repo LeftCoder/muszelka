@@ -11,7 +11,7 @@ const year = new Date().getFullYear()
         <div class="hidden mb-6 md:block md:mb-0">
           <Link href="/" class="flex items-center">
             <img
-              src="/storage/images/logo.svg"
+              src="/storage/images/logo-dark.svg"
               class="h-12 sm:h-32"
               alt="Muszelka Logo"
             />
