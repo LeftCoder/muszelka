@@ -44,5 +44,12 @@ class DatabaseSeeder extends Seeder
                 ->for($apartment)
                 ->create();
         }
+
+        $reservations = Reservation::all();
+        $number = 0;
+        foreach ($reservations as $reservation) {
+            $reservation->number = '#MW/'.date('Y').'/'.sprintf('%04d', ++$number);
+            $reservation->save();
+        }
     }
 }
