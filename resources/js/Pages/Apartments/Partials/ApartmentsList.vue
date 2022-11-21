@@ -8,7 +8,6 @@ interface Props {
 }
 
 const props = defineProps<Props>()
-const placeholder: [] = []
 </script>
 
 <template>

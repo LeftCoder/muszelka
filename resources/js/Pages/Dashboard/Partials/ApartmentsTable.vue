@@ -28,7 +28,7 @@ const handleChange = (id: number, occupied: boolean) => {
 }
 </script>
 <template>
-  <div v-if="props.apartments.length > 0" class="overflow-x-auto relative">
+  <div class="overflow-x-auto relative">
     <table class="w-full text-sm text-left text-slate-500 dark:text-slate-400">
       <thead
         class="text-xs text-slate-700 uppercase bg-slate-50 dark:bg-slate-700 dark:text-slate-400"

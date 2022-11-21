@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import ApartmentsTable from '@/Pages/Dashboard/Partials/ApartmentsTable.vue'
+import NoItems from '@/Shared/NoItems.vue'
+
 import type { Apartment } from '@/types'
 
 interface Props {
@@ -35,5 +37,16 @@ export default {
       </button>
     </Link>
   </div>
-  <ApartmentsTable :apartments="props.apartments" />
+
+  <div v-if="props.apartments.length > 0">
+    <ApartmentsTable :apartments="props.apartments" />
+
+    <div class="flex justify-start items-center mt-5">
+      Łącznie: {{ props.apartments.length }}
+    </div>
+  </div>
+
+  <NoItems v-else class="mt-8">
+    Nie masz w tej chwili żadnych dodanych domków.
+  </NoItems>
 </template>
