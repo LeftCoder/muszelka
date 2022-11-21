@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\ReservationStatus;
 use App\Http\Requests\StoreReservationRequest;
 use App\Http\Resources\ReservationResource;
 use App\Mail\ReservationConfirm;
@@ -46,7 +47,7 @@ class ReservationController extends Controller
             return abort(404);
         }
 
-        $token->reservation->confirmed = true;
+        $token->reservation->status = ReservationStatus::CONFIRMED;
         $token->reservation->save();
 
         $token->delete();
