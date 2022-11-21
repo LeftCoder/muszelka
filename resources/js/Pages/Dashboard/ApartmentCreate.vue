@@ -11,6 +11,11 @@ export default {
 }
 </script>
 <template>
+  <Head>
+    <title>Dashboard | Nowy domek</title>
+    <meta name="description" content="Lista rezerwacji" />
+  </Head>
+
   <div class="flex items-center mb-4">
     <Link
       href="/dashboard/domki"
