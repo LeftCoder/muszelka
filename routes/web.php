@@ -42,6 +42,7 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
 
     //api
     Route::patch('/api/occupied/{apartment}', [ApartmentController::class, 'occupied']);
+    Route::patch('/api/status/{reservation}', [ReservationController::class, 'status']);
     Route::get('/api/booked', [ReservationController::class, 'booked']);
     Route::post('/api/upload', [ImageController::class, 'upload']);
     Route::delete('/api/delete', [ImageController::class, 'destroy']);

@@ -9,9 +9,11 @@ use App\Mail\ReservationConfirm;
 use App\Mail\ReservationMade;
 use App\Models\Reservation;
 use App\Models\Token;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use Inertia\Inertia;
+use ValueError;
 
 class ReservationController extends Controller
 {
@@ -61,6 +63,18 @@ class ReservationController extends Controller
             ->selectRaw('count(*) as booked')
             ->where('start', now()->format('Y-m-d'))
             ->first();
+    }
+
+    public function Status(Request $request, Reservation $reservation)
+    {
+        try {
+            $reservation->status = ReservationStatus::from($request->status);
+            $reservation->save();
+
+            return back()->with('message', 'Status zaktualizowany.');
+        } catch (ValueError $e) {
+            return back()->with('message', 'Nie można zaktualizować');
+        }
     }
 
     protected function createToken(Reservation $reservation): Token
