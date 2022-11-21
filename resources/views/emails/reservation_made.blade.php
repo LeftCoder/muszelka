@@ -1,5 +1,5 @@
 <x-mail::message>
-# Hej Michał!
+# Hej, Michał!
 
 <x-mail::panel>
 Właśnie pojawiła się nowa rezerwacja.
