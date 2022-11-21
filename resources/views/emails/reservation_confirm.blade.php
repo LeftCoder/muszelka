@@ -1,8 +1,9 @@
 <x-mail::message>
-# Hej {{ $reservation->name }}!
+# Hej, {{ $reservation->name }}!
 
 <x-mail::panel>
 Twoja rezerwacja została przyjęta. Prosimy o jej potwierdzenie.
+Link do potwierdzenia jest aktywny przez 24 godziny.
 </x-mail::panel>
 
 <x-mail::table>

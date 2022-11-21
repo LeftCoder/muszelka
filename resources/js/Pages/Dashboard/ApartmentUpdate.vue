@@ -57,6 +57,7 @@ export default {
             <h2 class="text-xl">Zdjęcia</h2>
           </div>
           <ImageGallery
+            class="rounded-lg"
             :images="props.apartment.images"
             :galleryId="props.apartment.id"
           />

@@ -33,7 +33,11 @@ export default {
   <div class="w-full flex h-screen">
     <div class="flex-1 grid place-items-center">
       <Link href="/" class="flex-none text-slate-900">
-        <img src="/storage/images/logo.svg" class="h-96" alt="Muszelka Logo" />
+        <img
+          src="/storage/images/logo-dark.svg"
+          class="h-96"
+          alt="Muszelka Logo"
+        />
         <span class="sr-only">Muszelka Logo</span>
       </Link>
     </div>
