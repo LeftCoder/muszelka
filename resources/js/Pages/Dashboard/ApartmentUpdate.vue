@@ -1,5 +1,8 @@
 <script lang="ts" setup>
+import ConfimModal from '@/Shared/ConfimModal.vue'
 import ApartmentForm from '@/Pages/Dashboard/Partials/ApartmentForm.vue'
+import ImageGallery from '@/Shared/ImageGallery.vue'
+import { Inertia } from '@inertiajs/inertia'
 import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/24/solid'
 import { Apartment } from '@/types'
 
@@ -8,6 +11,10 @@ interface Props {
 }
 
 const props = defineProps<Props>()
+
+const deleteApartment = () => {
+  Inertia.delete(`/dashboard/domki/${props.apartment.id}`)
+}
 </script>
 
 <script lang="ts">
@@ -31,12 +38,29 @@ export default {
     </h2>
   </div>
 
-  <div class="flex justify-center mt-24">
-    <div class="w-full max-w-3xl">
+  <div class="flex justify-end mt-12 gap-6">
+    <div class="w-full">
+      <div class="flex justify-end mb-4">
+        <ConfimModal @confirm="deleteApartment" />
+      </div>
       <div
         class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 overflow-hidden"
       >
         <ApartmentForm :apartment="props.apartment" />
+      </div>
+    </div>
+
+    <div class="w-full">
+      <div class="grid place-items-center h-full">
+        <div class="max-w-xl w-full mx-auto">
+          <div class="flex justify-end items-center mb-4">
+            <h2 class="text-xl">Zdjęcia</h2>
+          </div>
+          <ImageGallery
+            :images="props.apartment.images"
+            :galleryId="props.apartment.id"
+          />
+        </div>
       </div>
     </div>
   </div>

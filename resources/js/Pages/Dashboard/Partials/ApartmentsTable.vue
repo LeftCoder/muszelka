@@ -61,7 +61,9 @@ const handleChange = (id: number, occupied: boolean) => {
           </td>
           <td class="py-4 px-6">
             {{
-              `${apartment?.last_reservation?.name} ${apartment?.last_reservation?.surname}`
+              apartment.last_reservation
+                ? `${apartment.last_reservation?.name} ${apartment.last_reservation?.surname}`
+                : '...'
             }}
           </td>
           <td class="py-4 px-6 text-right">

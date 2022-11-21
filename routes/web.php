@@ -28,13 +28,19 @@ Route::post('/contact', [ContactController::class, 'send']);
 // Dashboard
 Route::prefix('dashboard')->middleware('auth')->group(function () {
     Route::get('/', [DashboardPagesController::class, 'dashboard']);
+
+    //Rezerwacje
     Route::get('/rezerwacje', [DashboardPagesController::class, 'reservations']);
+
+    //Domki
     Route::get('/domki', [DashboardPagesController::class, 'apartments']);
-    Route::patch('/domki/{apartment}', [ApartmentController::class, 'update']);
-    Route::get('/domki/{apartment}/edit', [ApartmentController::class, 'edit']);
     Route::get('/domki/create', [ApartmentController::class, 'create']);
     Route::post('/domki', [ApartmentController::class, 'store']);
+    Route::get('/domki/{apartment}/edit', [ApartmentController::class, 'edit']);
+    Route::patch('/domki/{apartment}', [ApartmentController::class, 'update']);
+    Route::delete('/domki/{apartment}', [ApartmentController::class, 'destroy']);
 
+    //api
     Route::patch('/api/occupied/{apartment}', [ApartmentController::class, 'occupied']);
     Route::get('/api/booked', [ReservationController::class, 'booked']);
     Route::post('/api/upload', [ImageController::class, 'upload']);

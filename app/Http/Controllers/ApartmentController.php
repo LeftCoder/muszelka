@@ -8,6 +8,7 @@ use App\Http\Resources\ApartmentResource;
 use App\Models\Apartment;
 use App\Models\Image;
 use App\Models\TemporaryImage;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
@@ -60,9 +61,25 @@ class ApartmentController extends Controller
 
     public function edit(Apartment $apartment)
     {
-        $apartment = new ApartmentResource(Apartment::with(['features', 'images'])->first());
+        $apartment = new ApartmentResource(
+            Apartment::with(['features', 'images'])
+            ->where('id', $apartment->id)
+            ->first()
+        );
 
         return Inertia::render('Dashboard/ApartmentUpdate', ['apartment' => $apartment]);
+    }
+
+    public function destroy(Apartment $apartment)
+    {
+        try {
+            $apartment->delete();
+        } catch (QueryException $e) {
+            return back()->with('message', 'Nie można usunąć domku.');
+        }
+
+        return redirect('/dashboard/domki')
+            ->with('message', 'Domek został usunięty.');
     }
 
     protected function addPhotos($request, $apartment)
