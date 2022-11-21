@@ -11,7 +11,7 @@ Link do potwierdzenia jest aktywny przez 24 godziny.
 | :------------------------- | :--------------------------------------------------------------------------------------- |
 | **Nr rezerwacji**          | {{ $reservation->number }}                                                               |
 | **Osoba rezerwująca**      | {{ $reservation->name }} {{ $reservation->surname }}                                     |
-| **Domek**                  | {{ $reservation->apartment->name }}                                                         |
+| **Domek**                  | {{ $reservation->apartment->name }}                                                      |
 | **Liczba gości**           | {{ $reservation->adults + $reservation->children }}                                      |
 | **Data pobytu**            | od {{ $reservation->start->format('d.m.Y') }} do {{$reservation->end->format('d.m.Y') }} |
 </x-mail::table>

@@ -10,7 +10,7 @@ Właśnie pojawiła się nowa rezerwacja.
 | :------------------------- | :--------------------------------------------------------------------------------------- |
 | **Nr rezerwacji**          | {{ $reservation->number }}                                                               |
 | **Osoba rezerwująca**      | {{ $reservation->name }} {{ $reservation->surname }}                                     |
-| **Domek**                  | {{ $reservation->apartment->name }}                                                         |
+| **Domek**                  | {{ $reservation->apartment->name }}                                                      |
 | **Liczba gości**           | {{ $reservation->adults }} dorosłych, {{ $reservation->children }} dzieci                |
 | **Data pobytu**            | od {{ $reservation->start->format('d.m.Y') }} do {{$reservation->end->format('d.m.Y') }} |
 </x-mail::table>
