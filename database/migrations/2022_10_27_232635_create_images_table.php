@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('width')->default(1920);
             $table->integer('height')->default(1277);
             $table->string('alt');
-            $table->foreignId('apartment_id')->constrained();
+            $table->foreignId('apartment_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

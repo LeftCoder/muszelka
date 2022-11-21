@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('tokens', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('reservation_id')->constrained();
+            $table->foreignId('reservation_id')->constrained()->onDelete('cascade');
             $table->string('token', 64)->unique();
             $table->timestamp('expires_at')->nullable();
             $table->timestamps();

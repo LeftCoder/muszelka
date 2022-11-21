@@ -25,7 +25,7 @@ return new class extends Migration
             $table->integer('adults');
             $table->integer('children');
             $table->boolean('animals');
-            $table->foreignId('apartment_id')->constrained();
+            $table->foreignId('apartment_id')->constrained()->onDelete('resctrict');
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
