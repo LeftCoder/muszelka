@@ -37,8 +37,9 @@ onMounted(() => {
             href="/dashboard/rezerwacje"
             class="flex items-center p-2 text-base font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700"
             :class="{
-              'bg-slate-100 dark:bg-slate-700':
-                $page.component === 'Dashboard/ReservationsList',
+              'bg-slate-100 dark:bg-slate-700': $page.url.startsWith(
+                '/dashboard/rezerwacje'
+              ),
             }"
           >
             <FireIcon class="w-6 h-6" />
@@ -56,7 +57,7 @@ onMounted(() => {
             class="flex items-center p-2 text-base font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700"
             :class="{
               'bg-slate-100 dark:bg-slate-700':
-                $page.component === 'Dashboard/ApartmentsList',
+                $page.url.startsWith('/dashboard/domki'),
             }"
           >
             <HomeIcon class="h-6 w-6" />
