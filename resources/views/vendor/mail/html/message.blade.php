@@ -2,7 +2,7 @@
 {{-- Header --}}
 <x-slot:header>
 <x-mail::header :url="config('app.url')">
-{{ config('app.name') }} - Domki do wynajęcia nad morzem.
+<img src="{{config('app.url'). '/storage/images/logo-dark.svg'}}" width="120" height="120" alt="Muszelka Logo">
 </x-mail::header>
 </x-slot:header>
 
