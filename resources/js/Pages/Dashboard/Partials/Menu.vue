@@ -16,15 +16,17 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
 
 <template>
   <Menu as="div" class="relative inline-block text-left z-50">
-    <MenuButton
-      class="inline-flex w-full justify-center rounded-md bg-white py-2 px-4 text-sm font-medium text-slate-900 focus:outline-none border border-slate-200 hover:bg-slate-100 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700"
-    >
-      {{ user }}
-      <ChevronDownIcon
-        class="ml-2 -mr-1 h-5 w-5 text-blue-400"
-        aria-hidden="true"
-      />
-    </MenuButton>
+    <div>
+      <MenuButton
+        class="inline-flex w-full justify-center rounded-md bg-white py-2 px-4 text-sm font-medium text-slate-900 focus:outline-none border border-slate-200 hover:bg-slate-100 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700"
+      >
+        {{ user }}
+        <ChevronDownIcon
+          class="ml-2 -mr-1 h-5 w-5 text-blue-400"
+          aria-hidden="true"
+        />
+      </MenuButton>
+    </div>
 
     <transition
       enter-active-class="transition duration-100 ease-out"
