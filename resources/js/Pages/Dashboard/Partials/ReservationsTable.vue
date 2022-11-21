@@ -59,9 +59,11 @@ const updateStatus = (status: number, id: number) => {
             />
           </td>
           <td class="py-4 px-6">
-            <Link class="hover:underline" href="/dashboard/domki">{{
-              reservation.apartment_id
-            }}</Link>
+            <Link
+              class="hover:underline"
+              :href="`/dashboard/domki/${reservation.apartment.id}/edit`"
+              >{{ reservation.apartment.name }}</Link
+            >
           </td>
           <td class="py-4 px-6">
             <a class="hover:underline" :href="`mail:${reservation.email}`">{{

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Enums\ReservationStatus;
 use App\Http\Requests\StoreReservationRequest;
-use App\Http\Resources\ReservationResource;
 use App\Mail\ReservationConfirm;
 use App\Mail\ReservationMade;
 use App\Models\Reservation;
@@ -17,13 +16,6 @@ use ValueError;
 
 class ReservationController extends Controller
 {
-    public function show(Reservation $reservation)
-    {
-        return Inertia::render('Dashboard/SingleReservation', [
-            'reservation' => new ReservationResource($reservation),
-        ]);
-    }
-
     public function store(StoreReservationRequest $request)
     {
         $validated = $this->validateRequest($request);
@@ -65,7 +57,7 @@ class ReservationController extends Controller
             ->first();
     }
 
-    public function Status(Request $request, Reservation $reservation)
+    public function status(Request $request, Reservation $reservation)
     {
         try {
             $reservation->status = ReservationStatus::from($request->status);

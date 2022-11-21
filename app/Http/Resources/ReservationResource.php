@@ -28,7 +28,10 @@ class ReservationResource extends JsonResource
             'children' => $this->children,
             'animals' => $this->animals,
             'status' => $this->status->label(),
-            'apartment_id' => $this->apartment_id,
+            'apartment' => [
+                'id' => $this->apartment->id,
+                'name' => $this->apartment->name,
+            ],
         ];
     }
 }

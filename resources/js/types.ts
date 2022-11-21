@@ -12,7 +12,7 @@ export interface Reservation {
   children: number
   animals: boolean
   status: ReservationStatus
-  apartment_id: boolean
+  apartment: Partial<Apartment>
 }
 
 export type ReservationStatus =

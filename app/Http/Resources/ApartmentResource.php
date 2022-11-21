@@ -23,7 +23,7 @@ class ApartmentResource extends JsonResource
             'occupied' => $this->occupied,
             'features' => FeatureResource::collection($this->whenLoaded('features')),
             'images' => ImageResource::collection($this->whenLoaded('images')),
-            'last_reservation' => new ReservationResource($this->whenLoaded('lastReservation')),
+            'last_reservation' => new LastReservationResource($this->whenLoaded('lastReservation')),
         ];
     }
 }
