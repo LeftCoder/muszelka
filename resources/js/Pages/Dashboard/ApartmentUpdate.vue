@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import ConfimModal from '@/Shared/ConfimModal.vue'
+import ConfirmModal from '@/Shared/ConfirmModal.vue'
 import ApartmentForm from '@/Pages/Dashboard/Partials/ApartmentForm.vue'
 import ImageGallery from '@/Shared/ImageGallery.vue'
 import { Inertia } from '@inertiajs/inertia'
@@ -41,7 +41,7 @@ export default {
   <div class="flex justify-end mt-12 gap-6">
     <div class="w-full">
       <div class="flex justify-end mb-4">
-        <ConfimModal @confirm="deleteApartment" />
+        <ConfirmModal @confirm="deleteApartment" />
       </div>
       <div
         class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 overflow-hidden"

@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import ReservationsTable from '@/Pages/Dashboard/Partials/ReservationsTable.vue'
+import NoItems from '@/Shared/NoItems.vue'
 import Pagination from '@/Pages/Dashboard/Partials/Pagination.vue'
+import ReservationsTable from '@/Pages/Dashboard/Partials/ReservationsTable.vue'
 import type { MetaInformations, PaginationLinks, Reservation } from '@/types'
 import { PropType } from 'vue'
 
@@ -32,6 +33,13 @@ export default {
   <h2 class="text-4xl font-extrabold dark:text-slate-100 mb-4">
     Lista rezerwacji
   </h2>
-  <ReservationsTable :reservations="props.reservations?.data" />
-  <Pagination :meta="props.reservations?.meta" />
+
+  <div v-if="props.reservations?.data.length">
+    <ReservationsTable :reservations="props.reservations?.data" />
+    <Pagination :meta="props.reservations?.meta" />
+  </div>
+
+  <NoItems v-else class="mt-8">
+    Nie masz w tej chwili żadnych rezerwacji.
+  </NoItems>
 </template>

@@ -63,7 +63,7 @@ const confirmDelete = () => {
           leave-to="opacity-0 scale-95"
         >
           <DialogPanel
-            class="grid grid-rows-modal max-w-xl w-full h-[20vh] transform overflow-hidden rounded-2xl bg-white dark:bg-slate-700 text-left align-middle shadow-xl transition-all"
+            class="grid grid-rows-modal max-w-xl w-full transform overflow-hidden rounded-2xl bg-white dark:bg-slate-700 text-left align-middle shadow-xl transition-all"
           >
             <DialogTitle
               as="h3"
