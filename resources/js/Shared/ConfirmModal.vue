@@ -63,12 +63,12 @@ const confirmDelete = () => {
           leave-to="opacity-0 scale-95"
         >
           <DialogPanel
-            class="grid grid-rows-modal max-w-xl w-full transform overflow-hidden rounded-2xl bg-white dark:bg-slate-700 text-left align-middle shadow-xl transition-all"
+            class="grid grid-rows-modal max-w-sm w-full transform overflow-hidden rounded-2xl bg-white dark:bg-slate-700 text-left align-middle shadow-xl transition-all"
           >
             <DialogTitle
               as="h3"
               class="text-lg font-medium leading-6 dark:text-white text-slate-900 bg-gray-100 dark:bg-slate-800 px-6 py-3"
-              >Usuń pozycję</DialogTitle
+              >Usuń wybrany domek</DialogTitle
             >
 
             <div class="grid justify-items-center overflow-y-auto h-full py-5">

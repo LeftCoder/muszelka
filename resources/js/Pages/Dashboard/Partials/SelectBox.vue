@@ -49,7 +49,7 @@ const selectedStatus = computed(
         class="relative block w-full text-left p-4 text-sm text-slate-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
       >
         <span class="block truncate dark:text-gray-400">{{
-          selectedStatus ? selectedStatus : 'Wybierz...'
+          selectedStatus ? selectedStatus : 'Wszystkie'
         }}</span>
         <span
           class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2"
@@ -90,7 +90,7 @@ const selectedStatus = computed(
               >
               <span
                 v-if="selected"
-                class="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600"
+                class="absolute inset-y-0 left-0 flex items-center pl-3 text-blue-600"
               >
                 <CheckIcon class="h-5 w-5" aria-hidden="true" />
               </span>
