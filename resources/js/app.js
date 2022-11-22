@@ -8,7 +8,7 @@ import { createInertiaApp, Head, Link } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers'
 import axios from 'axios'
-import GuestLayout from '@/Layouts/Guest.vue'
+import GuestLayout from '@/layouts/Guest.vue'
 
 load(import.meta.env.VITE_GOOGLE_RECAPTCHA_SITE_KEY, {
   autoHideBadge: true,
