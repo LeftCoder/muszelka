@@ -8,6 +8,7 @@ specifiers:
   '@inertiajs/progress': ^0.2.7
   '@inertiajs/server': ^0.1.0
   '@tailwindcss/forms': ^0.5.3
+  '@types/lodash': ^4.14.189
   '@vitejs/plugin-vue': ^3.2.0
   '@vue/server-renderer': ^3.2.45
   autoprefixer: ^10.4.13
@@ -21,6 +22,7 @@ specifiers:
   filepond-plugin-image-resize: ^2.0.10
   filepond-plugin-image-transform: ^3.8.7
   laravel-vite-plugin: ^0.5.4
+  lodash: ^4.17.21
   photoswipe: ^5.3.3
   pinia: ^2.0.23
   postcss: ^8.4.19
@@ -44,6 +46,7 @@ dependencies:
   filepond-plugin-file-validate-type: 1.2.8_filepond@4.30.4
   filepond-plugin-image-resize: 2.0.10_filepond@4.30.4
   filepond-plugin-image-transform: 3.8.7_filepond@4.30.4
+  lodash: 4.17.21
   photoswipe: 5.3.3
   pinia: 2.0.23_zwu2zepfy3m6u2gunxlolp35gi
   recaptcha-v3: 1.10.0
@@ -56,6 +59,7 @@ devDependencies:
   '@inertiajs/inertia-vue3': 0.6.0_5s4asfgpqryekmpvx2x3guy7nm
   '@inertiajs/progress': 0.2.7_@inertiajs+inertia@0.11.1
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.4
+  '@types/lodash': 4.14.189
   '@vitejs/plugin-vue': 3.2.0_vite@3.2.3+vue@3.2.45
   autoprefixer: 10.4.13_postcss@8.4.19
   axios: 0.27.2
@@ -235,6 +239,10 @@ packages:
     dependencies:
       mini-svg-data-uri: 1.4.4
       tailwindcss: 3.2.4
+    dev: true
+
+  /@types/lodash/4.14.189:
+    resolution: {integrity: sha512-kb9/98N6X8gyME9Cf7YaqIMvYGnBSWqEci6tiettE6iJWH1XdJz/PO8LB0GtLCG7x8dU3KWhZT+lA1a35127tA==}
     dev: true
 
   /@vitejs/plugin-vue/3.2.0_vite@3.2.3+vue@3.2.45:

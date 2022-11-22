@@ -34,4 +34,20 @@ class Reservation extends Model
             ? $this->start->diffInDays($this->end) + 1
             : $this->start->diffInDays($this->end);
     }
+
+     public function scopeFilter($query, array $filters)
+     {
+         $query->when($filters['search'] ?? null, function ($query, $search) {
+             $query->where(function ($query) use ($search) {
+                 $query->where('name', 'like', '%'.$search.'%')
+                    ->orWhere('surname', 'like', '%'.$search.'%')
+                    ->orWhere('email', 'like', '%'.$search.'%')
+                    ->orWhereHas('apartment', function ($query) use ($search) {
+                        $query->where('name', 'like', '%'.$search.'%');
+                    });
+             });
+         })->when($filters['status'] ?? null, function ($query, $status) {
+             $query->where('status', '=', $status);
+         });
+     }
 }
