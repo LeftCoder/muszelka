@@ -1,6 +1,6 @@
 <script>
 import vueFilePond, { setOptions } from 'vue-filepond'
-import pond_pl from '@/utils/pond_plond_pl'
+import pond_pl from '@/utils/pond_pl'
 import 'filepond/dist/filepond.min.css'
 import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type'
 import FilepondPluginImageResize from 'filepond-plugin-image-resize'
