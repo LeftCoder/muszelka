@@ -63,7 +63,7 @@ class ReservationController extends Controller
             $reservation->status = ReservationStatus::from($request->status);
             $reservation->save();
 
-            return back()->with('message', 'Status zaktualizowany.');
+            return back();
         } catch (ValueError $e) {
             return back()->with('message', 'Nie można zaktualizować');
         }

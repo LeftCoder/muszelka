@@ -6,7 +6,7 @@ import Pagination from '@/pages/Dashboard/Partials/Pagination.vue'
 import ReservationsTable from '@/pages/Dashboard/Partials/ReservationsTable.vue'
 import type { MetaInformations, PaginationLinks, Reservation } from '@/types'
 import { Inertia } from '@inertiajs/inertia'
-import { PropType, reactive, ref, watch } from 'vue'
+import { PropType, reactive, watch } from 'vue'
 import throttle from 'lodash/throttle'
 import pickBy from 'lodash/pickBy'
 

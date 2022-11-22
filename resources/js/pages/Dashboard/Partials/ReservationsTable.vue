@@ -1,12 +1,15 @@
 <script lang="ts" setup>
 import * as dayjs from 'dayjs'
-import type { Reservation } from '@/types'
+import type { Reservation, Toast } from '@/types'
 import StatusModal from '@/pages/Dashboard/Partials/StatusModal.vue'
 import { Inertia } from '@inertiajs/inertia'
+import { inject } from 'vue'
 
 interface Props {
   reservations: Reservation[] | undefined
 }
+
+const Toast = inject('toast') as Toast
 const props = defineProps<Props>()
 
 const formatDate = (date: string) => {
@@ -14,7 +17,16 @@ const formatDate = (date: string) => {
 }
 
 const updateStatus = (status: number, id: number) => {
-  Inertia.patch(`/dashboard/api/status/${id}`, { status })
+  Inertia.patch(
+    `/dashboard/api/status/${id}`,
+    { status },
+    {
+      onSuccess: () => {
+        Toast('Status zmieniony.')
+      },
+      only: ['reservations'],
+    }
+  )
 }
 </script>
 <template>
