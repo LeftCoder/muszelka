@@ -2,6 +2,7 @@
 import type { Apartment } from '@/types'
 import { useForm } from '@inertiajs/inertia-vue3'
 import FilePondInput from '@/pages/Dashboard/Partials/FilePondInput.vue'
+import ChoicesInput from '@/pages/Dashboard/Partials/ChoicesInput.vue'
 import LoadingSpinnerIcon from '@/shared/LoadingSpinnerIcon.vue'
 
 interface Props {
@@ -15,6 +16,10 @@ const form = useForm({
   description: props.apartment ? props.apartment.description : '',
   price: props.apartment ? props.apartment.price : '',
   max: props.apartment ? props.apartment.max : '',
+  features:
+    props.apartment && props.apartment.features
+      ? props.apartment.features.map((feature) => feature.id)
+      : [],
   folders: [],
 })
 
@@ -115,14 +120,18 @@ const onSubmit = () => {
       ></div>
     </div>
 
-    <div v-if="props.apartment" class="flex gap-2 my-10">
-      <div
-        v-for="feature in props.apartment.features"
-        :key="feature.id"
-        class="bg-slate-100 text-slate-900 mb-2 text-md font-medium px-2.5 py-0.5 rounded-full"
+    <div class="my-10">
+      <label
+        for="features"
+        class="block mb-2 text-sm font-medium text-slate-900 dark:text-slate-300"
+        >Udogodnienia</label
       >
-        {{ feature.name }}
-      </div>
+      <ChoicesInput
+        id="features"
+        name="features[]"
+        v-model="form.features"
+        :features="props.apartment?.features ?? []"
+      />
     </div>
 
     <div class="my-10">

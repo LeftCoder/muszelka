@@ -3,6 +3,7 @@
 use App\Http\Controllers\ApartmentController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardPagesController;
+use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ReservationController;
@@ -44,6 +45,7 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
     Route::patch('/api/occupied/{apartment}', [ApartmentController::class, 'occupied']);
     Route::patch('/api/status/{reservation}', [ReservationController::class, 'status']);
     Route::get('/api/booked', [ReservationController::class, 'booked']);
+    Route::get('/api/features', [FeatureController::class, 'features']);
     Route::post('/api/upload', [ImageController::class, 'upload']);
     Route::delete('/api/delete', [ImageController::class, 'destroy']);
 });

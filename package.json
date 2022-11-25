@@ -29,6 +29,7 @@
         "@heroicons/vue": "^2.0.13",
         "@inertiajs/server": "^0.1.0",
         "@vue/server-renderer": "^3.2.45",
+        "choices.js": "^10.1.0",
         "dayjs": "^1.11.6",
         "eslint": "^8.27.0",
         "eslint-plugin-vue": "^9.7.0",
