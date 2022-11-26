@@ -5,7 +5,7 @@ import 'choices.js/public/assets/styles/choices.min.css'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 
 interface Props {
-  features: Feature[] | undefined
+  features: Feature[]
   modelValue: number[]
 }
 
@@ -67,3 +67,32 @@ onUnmounted(() => {
     multiple
   ></select>
 </template>
+
+<style>
+.choices__inner {
+  border: 1px solid rgb(203 213 225 / 1);
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  background-color: rgb(248 250 252 / 1);
+  color: rgb(15 23 42 / 1);
+  min-height: min-content;
+}
+
+.choices__list--multiple .choices__item.is-highlighted,
+.choices__list--multiple .choices__item {
+  background-color: #3b82f6;
+  border: 1px solid #3b82f6;
+}
+
+.choices[data-type*='select-multiple'] .choices__button,
+.choices[data-type*='text'] .choices__button {
+  border-left: none;
+}
+
+.choices__input {
+  font-size: inherit;
+  margin-bottom: 0;
+}
+</style>
