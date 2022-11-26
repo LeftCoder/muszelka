@@ -8,7 +8,7 @@ use App\Http\Resources\ApartmentResource;
 use App\Models\Apartment;
 use App\Models\Image;
 use App\Models\TemporaryImage;
-use Illuminate\Database\QueryException;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
@@ -39,6 +39,7 @@ class ApartmentController extends Controller
         ]);
 
         $this->addPhotos($request, $apartment);
+        $this->addFeatures($request, $apartment);
 
         return redirect('/dashboard/domki')
             ->with('message', 'Nowy domek został dodany.');
@@ -46,14 +47,15 @@ class ApartmentController extends Controller
 
     public function update(Apartment $apartment, UpdateApartmentRequest $request)
     {
-        $this->addPhotos($request, $apartment);
-
         $apartment->update([
             'name' => $request->safe()->name,
             'description' => $request->safe()->description,
             'price' => $request->safe()->price,
             'max' => $request->safe()->max,
         ]);
+
+        $this->addPhotos($request, $apartment);
+        $this->addFeatures($request, $apartment);
 
         return redirect('/dashboard/domki')
             ->with('message', 'Informacje zaktualizowane.');
@@ -73,8 +75,10 @@ class ApartmentController extends Controller
     public function destroy(Apartment $apartment)
     {
         try {
+            $apartment->images()->delete();
+            Storage::deleteDirectory("tmp/{$apartment->id}");
             $apartment->delete();
-        } catch (QueryException $e) {
+        } catch (Exception $e) {
             return back()->with('message', 'Nie można usunąć domku.');
         }
 
@@ -82,10 +86,17 @@ class ApartmentController extends Controller
             ->with('message', 'Domek został usunięty.');
     }
 
+    protected function addFeatures($request, $apartment)
+    {
+        if ($request->has('features')) {
+            $apartment->features()->sync($request->safe()->features);
+        }
+    }
+
     protected function addPhotos($request, $apartment)
     {
         if ($request->has('folders')) {
-            foreach ($request->folders as $folder) {
+            foreach ($request->safe()->folders as $folder) {
                 $tmp_image = TemporaryImage::where('folder', $folder)->first();
 
                 if ($tmp_image) {

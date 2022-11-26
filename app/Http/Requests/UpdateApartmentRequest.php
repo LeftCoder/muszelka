@@ -28,6 +28,8 @@ class UpdateApartmentRequest extends FormRequest
             'description' => ['required', 'string'],
             'price' => ['required', 'numeric', 'integer', 'min:0'],
             'max' => ['required', 'numeric', 'integer', 'min:1'],
+            'features' => ['array'],
+            'folders' => ['array'],
         ];
     }
 }
