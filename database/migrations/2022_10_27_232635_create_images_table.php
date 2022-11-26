@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Apartment;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -20,7 +21,10 @@ return new class extends Migration
             $table->integer('width')->default(1920);
             $table->integer('height')->default(1277);
             $table->string('alt');
-            $table->foreignId('apartment_id')->constrained()->onDelete('cascade');
+            $table->foreignIdFor(Apartment::class)
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -16,8 +16,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('apartment_feature', function (Blueprint $table) {
-            $table->foreignIdFor(Apartment::class)->constrained()->onDelete('cascade');
-            $table->foreignIdFor(Feature::class)->constrained()->onDelete('cascade');
+            $table->foreignIdFor(Apartment::class)->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignIdFor(Feature::class)->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->primary(['apartment_id', 'feature_id']);
 
             $table->index('apartment_id');
