@@ -57,6 +57,7 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
     Route::get('/api/features', [FeatureController::class, 'features']);
     Route::post('/api/upload', [ImageController::class, 'upload']);
     Route::delete('/api/delete', [ImageController::class, 'destroy']);
+    Route::delete('/api/delete/{image}', [ImageController::class, 'delete']);
 });
 
 require __DIR__.'/auth.php';

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
 use App\Models\TemporaryImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -35,6 +36,17 @@ class ImageController extends Controller
         if ($tmp_image) {
             Storage::deleteDirectory("tmp/{$tmp_image->folder}");
             $tmp_image->delete();
+        }
+
+        return '';
+    }
+
+    public function delete(Image $image)
+    {
+        if ($image) {
+            $image_path = public_path().$image->src;
+            unlink($image_path);
+            $image->delete();
         }
 
         return '';

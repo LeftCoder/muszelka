@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import ConfirmModal from '@/shared/ConfirmModal.vue'
 import ApartmentForm from '@/pages/Dashboard/Partials/ApartmentForm.vue'
-import ImageGallery from '@/shared/ImageGallery.vue'
+import ApsGallery from '@/pages/Dashboard/Partials/ApsGallery.vue'
 import { Inertia } from '@inertiajs/inertia'
 import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/24/solid'
 import { Apartment } from '@/types'
@@ -56,17 +56,15 @@ export default {
     </div>
 
     <div class="w-full">
-      <div class="grid place-items-center h-full">
-        <div class="max-w-xl w-full mx-auto">
-          <div class="flex justify-end items-center mb-4">
-            <h2 class="text-xl">Zdjęcia</h2>
-          </div>
-          <ImageGallery
-            class="rounded-lg"
-            :images="props.apartment.images"
-            :galleryId="props.apartment.id"
-          />
+      <div class="max-w-xl w-full mx-auto">
+        <div class="flex justify-end items-center mb-4">
+          <h2 class="text-xl">Zdjęcia</h2>
         </div>
+        <ApsGallery
+          class="rounded-lg"
+          :images="props.apartment.images"
+          :galleryId="props.apartment.id"
+        />
       </div>
     </div>
   </div>
