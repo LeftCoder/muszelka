@@ -13,7 +13,7 @@ specifiers:
   '@vue/server-renderer': ^3.2.45
   autoprefixer: ^10.4.13
   axios: ^0.27.2
-  choices.js: ^10.1.0
+  choices.js: ^10.2.0
   dayjs: ^1.11.6
   eslint: ^8.28.0
   eslint-config-prettier: ^8.5.0
@@ -41,7 +41,7 @@ dependencies:
   '@heroicons/vue': 2.0.13_vue@3.2.45
   '@inertiajs/server': 0.1.0_@inertiajs+inertia@0.11.1
   '@vue/server-renderer': 3.2.45_vue@3.2.45
-  choices.js: 10.1.0
+  choices.js: 10.2.0
   dayjs: 1.11.6
   eslint: 8.28.0
   eslint-plugin-vue: 9.8.0_eslint@8.28.0
@@ -84,22 +84,22 @@ packages:
     resolution: {integrity: sha512-awrNfaMtnHUr653GgGEs++LlAvW6w+DcPrOliSMXWCKo597CwL5Acf/wWdNkf/tfEQE3mjkeD1YOVZOUV/od1w==}
     engines: {node: '>=6.9.0'}
 
-  /@babel/parser/7.20.3:
-    resolution: {integrity: sha512-OP/s5a94frIPXwjzEcv5S/tpQfc6XhxYUnmWpgdqMWGgYCuErA3SzozaRAMQgSZWKeTJxht9aWAkUY+0UzvOFg==}
+  /@babel/parser/7.20.5:
+    resolution: {integrity: sha512-r27t/cy/m9uKLXQNWWebeCUHgnAZq0CpG1OwKRxzJMP1vpSU4bSIK2hq+/cp0bQxetkXx38n09rNu8jVkcK/zA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
     dependencies:
-      '@babel/types': 7.20.2
+      '@babel/types': 7.20.5
 
-  /@babel/runtime/7.20.1:
-    resolution: {integrity: sha512-mrzLkl6U9YLF8qpqI7TB82PESyEGjm/0Ly91jG575eVxMMlb8fYfOXFZIJ8XfLrJZQbm7dlKry2bJmXBUEkdFg==}
+  /@babel/runtime/7.20.6:
+    resolution: {integrity: sha512-Q+8MqP7TiHMWzSfwiJwXCjyf4GYA4Dgw3emg/7xmwsdLJOZUp+nMqcOwOzzYheuM1rhDu8FSj2l0aoMygEuXuA==}
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.11
     dev: false
 
-  /@babel/types/7.20.2:
-    resolution: {integrity: sha512-FnnvsNWgZCr232sqtXggapvlkk/tuwR/qhGzcmxI0GXLCjmPYQPzio2FbdlWuY6y1sHFfQKk+rRbUZ9VStQMog==}
+  /@babel/types/7.20.5:
+    resolution: {integrity: sha512-c9fst/h2/dcF7H+MJKZ2T0KjEQ8hY/BNnDk/H3XY8C4Aw/eWQXWn/lWntHF9ooUBnGmEvbfGrTgLWc+um0YDUg==}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/helper-string-parser': 7.19.4
@@ -144,8 +144,8 @@ packages:
       fast-deep-equal: 3.1.3
     dev: false
 
-  /@googlemaps/markerclusterer/2.0.13:
-    resolution: {integrity: sha512-302GjQ9gsHOK/ef6hif+rJDv+AB3THst02iDCbXH2PS9GFwb/5yuytaLpuzJiqGNG+k2zvTAWTsGY/fQN5DZ7w==}
+  /@googlemaps/markerclusterer/2.0.14:
+    resolution: {integrity: sha512-/AKSz4kqMKOGc1ByPK4FWygOi0SHE2MjZdueelx4oShagcR5d9eIz77YMxcyxOUIc/dI0x5/Y0VoUTn+aWEUtQ==}
     dependencies:
       fast-deep-equal: 3.1.3
       supercluster: 7.1.5
@@ -268,7 +268,7 @@ packages:
   /@vue/compiler-core/3.2.45:
     resolution: {integrity: sha512-rcMj7H+PYe5wBV3iYeUgbCglC+pbpN8hBLTJvRiK2eKQiWqu+fG9F+8sW99JdL4LQi7Re178UOxn09puSXvn4A==}
     dependencies:
-      '@babel/parser': 7.20.3
+      '@babel/parser': 7.20.5
       '@vue/shared': 3.2.45
       estree-walker: 2.0.2
       source-map: 0.6.1
@@ -282,7 +282,7 @@ packages:
   /@vue/compiler-sfc/3.2.45:
     resolution: {integrity: sha512-1jXDuWah1ggsnSAOGsec8cFjT/K6TMZ0sPL3o3d84Ft2AYZi2jWJgRMjw4iaK0rBfA89L5gw427H4n1RZQBu6Q==}
     dependencies:
-      '@babel/parser': 7.20.3
+      '@babel/parser': 7.20.5
       '@vue/compiler-core': 3.2.45
       '@vue/compiler-dom': 3.2.45
       '@vue/compiler-ssr': 3.2.45
@@ -306,7 +306,7 @@ packages:
   /@vue/reactivity-transform/3.2.45:
     resolution: {integrity: sha512-BHVmzYAvM7vcU5WmuYqXpwaBHjsS8T63jlKGWVtHxAHIoMIlmaMyurUSEs1Zcg46M4AYT5MtB1U274/2aNzjJQ==}
     dependencies:
-      '@babel/parser': 7.20.3
+      '@babel/parser': 7.20.5
       '@vue/compiler-core': 3.2.45
       '@vue/shared': 3.2.45
       estree-walker: 2.0.2
@@ -496,8 +496,8 @@ packages:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
 
-  /choices.js/10.1.0:
-    resolution: {integrity: sha512-NtrFt7c7ZQEGmkWsAV+EHynJhADWoZ82JEfg1+vQ9MMKJD4Ax2rzYPxXe+Q64i0HgUgWG/XTN3gN2pB8UFFFlA==}
+  /choices.js/10.2.0:
+    resolution: {integrity: sha512-8PKy6wq7BMjNwDTZwr3+Zry6G2+opJaAJDDA/j3yxvqSCnvkKe7ZIFfIyOhoc7htIWFhsfzF9tJpGUATcpUtPg==}
     dependencies:
       deepmerge: 4.2.2
       fuse.js: 6.6.2
@@ -1498,7 +1498,7 @@ packages:
   /redux/4.2.0:
     resolution: {integrity: sha512-oSBmcKKIuIR4ME29/AeNUnl5L+hvBq7OaJWzaptTQJAntaPvxIJqfnjbaEiCzzaIz+XmVILfqAM3Ob0aXLPfjA==}
     dependencies:
-      '@babel/runtime': 7.20.1
+      '@babel/runtime': 7.20.6
     dev: false
 
   /regenerator-runtime/0.13.11:
@@ -1810,7 +1810,7 @@ packages:
       vue: '3'
     dependencies:
       '@googlemaps/js-api-loader': 1.15.1
-      '@googlemaps/markerclusterer': 2.0.13
+      '@googlemaps/markerclusterer': 2.0.14
       fast-deep-equal: 3.1.3
       vue: 3.2.45
     dev: false
