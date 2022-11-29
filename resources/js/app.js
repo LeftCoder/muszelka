@@ -1,5 +1,4 @@
 import '../css/app.css'
-import 'photoswipe/style.css'
 
 import { createApp, h } from 'vue'
 import { createPinia } from 'pinia'

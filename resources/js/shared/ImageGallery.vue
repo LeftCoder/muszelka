@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 // @ts-ignore
 import PhotoSwipeLightbox from 'photoswipe/lightbox'
-import { onMounted, onUnmounted, ref } from 'vue'
 import type { Image } from '@/types'
+import { onMounted, onUnmounted, ref } from 'vue'
+import 'photoswipe/style.css'
 
 interface Props {
   images?: Image[]
