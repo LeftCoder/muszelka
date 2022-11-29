@@ -65,11 +65,6 @@ export default {
                   class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
                   required
                 />
-                <span
-                  v-if="form.errors.email"
-                  class="mt-2"
-                  :v-html="form.errors.email"
-                />
               </div>
               <div class="mb-6">
                 <label
@@ -84,16 +79,15 @@ export default {
                   class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
                   required
                 />
-                <span
-                  v-if="form.errors.password"
-                  class="mt-2"
-                  :v-html="form.errors.password"
-                />
               </div>
-              <div class="mt-12">
+              <div v-if="form.errors.email" class="text-red-500 text-xs -mt-2">
+                {{ form.errors.email }}
+              </div>
+              <div class="mt-6">
                 <button
+                  :disabled="form.processing"
                   type="submit"
-                  class="flex justify-center w-full border md:text-2xl text-white rounded-lg text-lg bg-amber-500 hover:bg-amber-400 shadow-md font-semibold focus:outline-none md:px-6 px-6 md:py-4 py-3 xl:leading-4"
+                  class="flex justify-center w-full border md:text-2xl text-white rounded-lg text-lg bg-amber-500 enabled:hover:bg-amber-400 disabled:opacity-75 shadow-md font-semibold focus:outline-none md:px-6 px-6 md:py-4 py-3 xl:leading-4"
                 >
                   Zaloguj
                 </button>
