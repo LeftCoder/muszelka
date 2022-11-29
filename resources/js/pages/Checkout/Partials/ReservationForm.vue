@@ -35,8 +35,6 @@ const onSubmit = async () => {
   <h2 class="text-3xl font-bold text-gray-900 mb-4">Dane kontaktowe</h2>
   <form class="flex flex-col" @submit.prevent="onSubmit">
     <div class="mb-6">
-      <input type="hidden" name="apartment" v-model="form.apartmentName" />
-
       <div class="mb-4">
         <label for="name" class="block mb-2 text-sm font-medium text-slate-900"
           >Twoję imię</label
@@ -47,6 +45,7 @@ const onSubmit = async () => {
           name="name"
           v-model="form.name"
           class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
+          required
         />
         <div
           v-if="form.errors.name"
@@ -67,6 +66,7 @@ const onSubmit = async () => {
           name="surname"
           v-model="form.surname"
           class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
+          required
         />
         <div
           v-if="form.errors.surname"
@@ -85,6 +85,7 @@ const onSubmit = async () => {
           name="email"
           v-model="form.email"
           class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
+          required
         />
         <div
           v-if="form.errors.email"
@@ -103,6 +104,7 @@ const onSubmit = async () => {
           name="phone"
           v-model="form.phone"
           class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
+          required
         />
         <div
           v-if="form.errors.phone"
@@ -124,6 +126,7 @@ const onSubmit = async () => {
                 ? 'ring-red-500 ring-2 bg-gray-100'
                 : ''
             "
+            required
           />
           <label
             class="hover:cursor-pointer hover:text-slate-900 mr-1"
