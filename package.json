@@ -41,7 +41,7 @@
         "pinia": "^2.0.27",
         "recaptcha-v3": "^1.10.0",
         "typescript": "^4.9.3",
-        "vue-tailwind-datepicker": "^1.1.5",
+        "vue-tailwind-datepicker": "^1.1.7",
         "vue3-google-map": "^0.15.0"
     }
 }

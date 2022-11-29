@@ -33,7 +33,7 @@ specifiers:
   vite: ^3.2.4
   vue: ^3.2.45
   vue-filepond: ^7.0.3
-  vue-tailwind-datepicker: ^1.1.5
+  vue-tailwind-datepicker: ^1.1.7
   vue3-google-map: ^0.15.0
 
 dependencies:
@@ -53,7 +53,7 @@ dependencies:
   pinia: 2.0.27_mgnvym7yiazkylwwogi5r767ue
   recaptcha-v3: 1.10.0
   typescript: 4.9.3
-  vue-tailwind-datepicker: 1.1.5_3hrur4qc3atdtw54usfxux7ueu
+  vue-tailwind-datepicker: 1.1.7_3hrur4qc3atdtw54usfxux7ueu
   vue3-google-map: 0.15.0_vue@3.2.45
 
 devDependencies:
@@ -1779,8 +1779,8 @@ packages:
       vue: 3.2.45
     dev: true
 
-  /vue-tailwind-datepicker/1.1.5_3hrur4qc3atdtw54usfxux7ueu:
-    resolution: {integrity: sha512-vBmymwNUH/B7yzj8JA8cHKl71/W70lIec70qGjQuHwreXFxcUNTzptssodnHhe2hRParOCBhOsHQV6Ra3ZORlQ==}
+  /vue-tailwind-datepicker/1.1.7_3hrur4qc3atdtw54usfxux7ueu:
+    resolution: {integrity: sha512-Od2F13bgYyhDd9GDW/P8uyZNectCkwKSObUX2CedIS/Q1EKvZVyOnfP89FJzO9yHxGheI8BIw8PYPPLqlDG6ug==}
     peerDependencies:
       dayjs: ^1.11.5
       tailwindcss: ^3.1.8
