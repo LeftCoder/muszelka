@@ -6,6 +6,7 @@ use App\Enums\ReservationStatus;
 use App\Http\Requests\StoreReservationRequest;
 use App\Mail\ReservationConfirm;
 use App\Mail\ReservationMade;
+use App\Models\Apartment;
 use App\Models\Reservation;
 use App\Models\Token;
 use Illuminate\Http\Request;
@@ -55,6 +56,23 @@ class ReservationController extends Controller
             ->selectRaw('count(*) as booked')
             ->where('start', now()->format('Y-m-d'))
             ->first();
+    }
+
+    public function stats()
+    {
+        $confirmed = Reservation::toBase()
+            ->selectRaw('count(*) as confirmed')
+            ->where('status', ReservationStatus::CONFIRMED)
+            ->first();
+
+        $apartments = Apartment::toBase()
+            ->selectRaw('count(*) as apartments')
+            ->first();
+
+        return response()->json([
+            'confirmed' => $confirmed->confirmed,
+            'apartments' => $apartments->apartments,
+        ]);
     }
 
     public function status(Request $request, Reservation $reservation)

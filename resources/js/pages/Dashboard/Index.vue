@@ -1,5 +1,15 @@
 <script lang="ts" setup>
+import { ref, onMounted } from 'vue'
 import Card from '@/pages/Dashboard/Partials/Card.vue'
+
+const confirmed = ref(0)
+const apartments = ref(0)
+onMounted(() => {
+  window.axios.get(`/dashboard/api/stats`).then((result) => {
+    confirmed.value = result.data.confirmed
+    apartments.value = result.data.apartments
+  })
+})
 </script>
 
 <script lang="ts">
@@ -17,13 +27,13 @@ export default {
   </Head>
 
   <div class="flex gap-10">
-    <Card href="/dashboard/rezerwacje">
+    <Card href="/dashboard/rezerwacje?status=2">
       <template #title>Aktywne Rezerwacje</template>
-      10
+      {{ confirmed }}
     </Card>
     <Card href="/dashboard/domki">
-      <template #title>Wolne Domki</template>
-      8
+      <template #title>Domki</template>
+      {{ apartments }}
     </Card>
   </div>
 </template>

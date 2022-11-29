@@ -49,7 +49,7 @@ const selectedStatus = computed(
         class="relative block w-full text-left p-4 text-sm text-slate-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
       >
         <span class="block truncate text-gray-500 dark:text-gray-400">{{
-          selectedStatus ? selectedStatus : 'Wszystkie'
+          selectedStatus ?? 'Wszystkie'
         }}</span>
         <span
           class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2"
