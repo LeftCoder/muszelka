@@ -134,12 +134,16 @@ export const useRootStore = defineStore('root', {
         this.apartments = []
       }
     },
-    updateReservationDates(dates: { startDate: string; endDate: string }) {
+    resetApartment() {
+      this.reservation.apartment_id = -1
+    },
+    setReservationDates(dates: { startDate: string; endDate: string }) {
       this.reservation.start = dates.startDate
       this.reservation.end = dates.endDate
     },
-    resetApartment() {
-      this.reservation.apartment_id = -1
+    resetReservationDates() {
+      this.reservation.start = ''
+      this.reservation.end = ''
     },
   },
 })

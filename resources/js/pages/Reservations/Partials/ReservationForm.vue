@@ -11,7 +11,7 @@ const dates = ref({
 })
 
 watch(dates, (newDates) => {
-  store.updateReservationDates(newDates)
+  store.setReservationDates(newDates)
 })
 </script>
 
