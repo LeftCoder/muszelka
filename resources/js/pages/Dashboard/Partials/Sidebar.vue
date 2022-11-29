@@ -29,7 +29,7 @@ onMounted(() => {
                 $page.component === 'Dashboard/Index',
             }"
           >
-            <Squares2X2Icon class="w-6 h-6" />
+            <Squares2X2Icon class="w-6 h-6 dark:text-blue-400 text-slate-700" />
             <span class="ml-3">Dashboard</span>
           </Link>
         </li>
@@ -43,7 +43,7 @@ onMounted(() => {
               ),
             }"
           >
-            <BellAlertIcon class="w-6 h-6" />
+            <BellAlertIcon class="w-6 h-6 dark:text-blue-400 text-slate-700" />
             <span class="flex-1 ml-3 whitespace-nowrap">Rezerwacje</span>
             <span
               v-if="booked !== 0"
@@ -61,7 +61,7 @@ onMounted(() => {
                 $page.url.startsWith('/dashboard/domki'),
             }"
           >
-            <HomeIcon class="h-6 w-6" />
+            <HomeIcon class="h-6 w-6 dark:text-blue-400 text-slate-700" />
             <span class="flex-1 ml-3 whitespace-nowrap">Domki</span>
           </Link>
         </li>
@@ -75,7 +75,7 @@ onMounted(() => {
               ),
             }"
           >
-            <GiftIcon class="h-6 w-6" />
+            <GiftIcon class="h-6 w-6 dark:text-blue-400 text-slate-700" />
             <span class="flex-1 ml-3 whitespace-nowrap">Udogodnienia</span>
           </Link>
         </li>
