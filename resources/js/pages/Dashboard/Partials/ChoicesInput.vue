@@ -80,6 +80,16 @@ onUnmounted(() => {
   min-height: min-content;
 }
 
+html.dark .choices__inner {
+  border: 1px solid #374151;
+  background-color: #374151;
+}
+
+html.dark .choices__input {
+  background-color: #374151;
+  color: #f1f5f9;
+}
+
 .choices__list--multiple .choices__item.is-highlighted,
 .choices__list--multiple .choices__item {
   background-color: #3b82f6;
