@@ -29,7 +29,7 @@ class StoreReservationRequest extends FormRequest
             'name' => ['required', 'max:255'],
             'surname' => ['required', 'max:255'],
             'email' => ['required', 'email'],
-            'phone' => ['required', 'string', 'nullable', 'max:11'],
+            'phone' => ['required', 'string', 'max:11'],
             'start' => ['required', 'date', 'before_or_equal:end'],
             'end' => ['required', 'date', 'after_or_equal:start'],
             'max' => [new Limit],
