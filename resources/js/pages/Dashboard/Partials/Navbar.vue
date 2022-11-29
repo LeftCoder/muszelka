@@ -8,8 +8,8 @@ import ThemeToggle from '@/shared/ThemeToggle.vue'
     <div class="flex flex-wrap justify-between items-center">
       <Link href="/dashboard" class="mr-auto flex-none text-slate-900">
         <img
-          :src="`/storage/images/logo-dark.svg`"
-          class="mr-3 h-20"
+          src="/storage/images/logo-dark.svg"
+          class="mr-3 h-20 dashboard-logo"
           alt="Muszelka Logo"
         />
         <span class="sr-only">Muszelka Logo</span>
@@ -46,3 +46,9 @@ import ThemeToggle from '@/shared/ThemeToggle.vue'
     </div>
   </nav>
 </template>
+
+<style scoped>
+html.dark .dashboard-logo {
+  filter: brightness(0) invert(1);
+}
+</style>
