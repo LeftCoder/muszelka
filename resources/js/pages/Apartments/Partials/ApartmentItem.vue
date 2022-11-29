@@ -43,7 +43,7 @@ const props = defineProps<Props>()
         <p class="text-lg text-slate-500">{{ props.apartment.description }}</p>
       </section>
 
-      <section>
+      <section v-if="apartment.features">
         <div class="flex flex-wrap lg:flex-nowrap space-x-3 lg:justify-end">
           <span
             v-for="feature in props.apartment.features"
