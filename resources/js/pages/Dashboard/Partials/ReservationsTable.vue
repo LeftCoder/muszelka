@@ -41,11 +41,11 @@ const updateStatus = (status: number, id: number) => {
           <th scope="col" class="py-3 px-6">Status</th>
           <th scope="col" class="py-3 px-6">Domek</th>
           <th scope="col" class="py-3 px-6">Email</th>
-          <th scope="col" class="py-3 px-6">Telefon</th>
-          <th scope="col" class="py-3 px-6">Liczba gości</th>
-          <th scope="col" class="py-3 px-6">Data zameldowania</th>
-          <th scope="col" class="py-3 px-6">Data wyjazdu</th>
-          <th scope="col" class="py-3 px-6">Doby pobytu</th>
+          <th scope="col" class="py-3 px-6 text-right">Telefon</th>
+          <th scope="col" class="py-3 px-6 text-right">Liczba gości</th>
+          <th scope="col" class="py-3 px-6 text-right">Data zameldowania</th>
+          <th scope="col" class="py-3 px-6 text-right">Data wyjazdu</th>
+          <th scope="col" class="py-3 px-6 text-right">Doby pobytu</th>
         </tr>
       </thead>
       <tbody>
@@ -63,7 +63,7 @@ const updateStatus = (status: number, id: number) => {
           >
             {{ `${reservation.name} ${reservation.surname}` }}
           </th>
-          <td scope="row" class="inline-flex py-4 px-6">
+          <td scope="row" class="py-4 px-6">
             <StatusModal
               @confirm="updateStatus"
               :status="reservation.status"

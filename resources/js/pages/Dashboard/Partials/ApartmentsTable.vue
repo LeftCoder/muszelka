@@ -35,8 +35,8 @@ const handleChange = (id: number, occupied: boolean) => {
       >
         <tr>
           <th scope="col" class="py-3 px-6">Nazwa domku</th>
-          <th scope="col" class="py-3 px-6">Cena wynajmu</th>
-          <th scope="col" class="py-3 px-6">Maksymalna l. gości</th>
+          <th scope="col" class="py-3 px-6 text-right">Cena wynajmu</th>
+          <th scope="col" class="py-3 px-6 text-right">Maksymalna l. gości</th>
           <th scope="col" class="py-3 px-6">Ostatnia rezerwacja</th>
           <th scope="col" class="py-3 px-6 text-right">Onacz jako wynajęty</th>
         </tr>
