@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
 import {
-  FireIcon,
+  BellAlertIcon,
   HomeIcon,
+  GiftIcon,
   Squares2X2Icon,
 } from '@heroicons/vue/24/solid/index.js'
 
@@ -42,7 +43,7 @@ onMounted(() => {
               ),
             }"
           >
-            <FireIcon class="w-6 h-6" />
+            <BellAlertIcon class="w-6 h-6" />
             <span class="flex-1 ml-3 whitespace-nowrap">Rezerwacje</span>
             <span
               v-if="booked !== 0"
@@ -62,6 +63,20 @@ onMounted(() => {
           >
             <HomeIcon class="h-6 w-6" />
             <span class="flex-1 ml-3 whitespace-nowrap">Domki</span>
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/dashboard/udogodnienia"
+            class="flex items-center p-2 text-base font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700"
+            :class="{
+              'bg-slate-100 dark:bg-slate-700': $page.url.startsWith(
+                '/dashboard/udogodnienia'
+              ),
+            }"
+          >
+            <GiftIcon class="h-6 w-6" />
+            <span class="flex-1 ml-3 whitespace-nowrap">Udogodnienia</span>
           </Link>
         </li>
       </ul>

@@ -68,8 +68,8 @@ const confirmDelete = () => {
             <DialogTitle
               as="h3"
               class="text-lg font-medium leading-6 dark:text-white text-slate-900 bg-gray-100 dark:bg-slate-800 px-6 py-3"
-              >Usuń wybrany domek</DialogTitle
-            >
+              ><slot
+            /></DialogTitle>
 
             <div class="grid justify-items-center overflow-y-auto h-full py-5">
               <h2 class="text-xl">Czy jesteś pewny?</h2>

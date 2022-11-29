@@ -41,6 +41,14 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
     Route::patch('/domki/{apartment}', [ApartmentController::class, 'update']);
     Route::delete('/domki/{apartment}', [ApartmentController::class, 'destroy']);
 
+    //Domki
+    Route::get('/udogodnienia', [DashboardPagesController::class, 'features']);
+    Route::get('/udogodnienia/create', [FeatureController::class, 'create']);
+    Route::post('/udogodnienia', [FeatureController::class, 'store']);
+    Route::get('/udogodnienia/{feature}/edit', [FeatureController::class, 'edit']);
+    Route::patch('/udogodnienia/{feature}', [FeatureController::class, 'update']);
+    Route::delete('/udogodnienia/{feature}', [FeatureController::class, 'destroy']);
+
     //api
     Route::patch('/api/occupied/{apartment}', [ApartmentController::class, 'occupied']);
     Route::patch('/api/status/{reservation}', [ReservationController::class, 'status']);

@@ -2,8 +2,9 @@
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 import {
   ChevronDownIcon,
-  FireIcon,
+  BellAlertIcon,
   HomeIcon,
+  GiftIcon,
   Squares2X2Icon,
   ArrowRightOnRectangleIcon,
   ArrowTopRightOnSquareIcon,
@@ -58,6 +59,8 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
               Strona główna
             </Link>
           </MenuItem>
+        </div>
+        <div class="px-1 py-1">
           <MenuItem v-slot="{ active }">
             <Link
               href="/dashboard"
@@ -86,7 +89,7 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
                 'group flex w-full items-center rounded-md px-2 py-2 text-sm',
               ]"
             >
-              <FireIcon
+              <BellAlertIcon
                 class="mr-2 h-5 w-5"
                 :class="[active ? 'text-white' : 'text-blue-400']"
                 aria-hidden="true"
@@ -110,6 +113,24 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
                 aria-hidden="true"
               />
               Domki
+            </Link>
+          </MenuItem>
+          <MenuItem v-slot="{ active }">
+            <Link
+              href="/dashboard/udogodnienia"
+              :class="[
+                active
+                  ? 'bg-blue-500 text-white'
+                  : 'text-slate-900 dark:text-slate-400',
+                'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+              ]"
+            >
+              <GiftIcon
+                class="mr-2 h-5 w-5"
+                :class="[active ? 'text-white' : 'text-blue-400']"
+                aria-hidden="true"
+              />
+              Udogodnienia
             </Link>
           </MenuItem>
         </div>
