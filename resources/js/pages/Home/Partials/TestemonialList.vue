@@ -15,7 +15,9 @@ import AccentImage from '@/shared/AccentImage.vue'
         Dowiedz się o nas trochę wiecej.
       </p>
     </div>
-    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 relative">
+    <div
+      class="grid grid-cols-1 gap-12 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 relative"
+    >
       <AccentImage posX="left-[-40px]" posY="top-8" />
 
       <div class="space-y-8">

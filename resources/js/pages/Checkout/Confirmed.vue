@@ -9,8 +9,8 @@
         Dziękujemy! <span class="ml-3 text-3xl">🌴🏖️</span>
       </h1>
       <p class="text-lg">
-        Świetnie, że potwierdziłeś/łaś swoją rezerwację. Pozostaję nam tylko
-        życzyć bezpiecznej podróży. Do zobaczenia na miejscu!
+        Świetnie, że potwierdziłeś/łaś swoją rezerwację. Życzymy bezpiecznej
+        podróży. Do zobaczenia na miejscu!
       </p>
     </section>
   </div>

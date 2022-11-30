@@ -39,10 +39,10 @@ const updateStatus = (status: number, id: number) => {
           <th scope="col" class="py-3 px-6">Nr rezerwacji</th>
           <th scope="col" class="py-3 px-6">Osoba rezerwująca</th>
           <th scope="col" class="py-3 px-6">Status</th>
-          <th scope="col" class="py-3 px-6">Domek</th>
           <th scope="col" class="py-3 px-6">Email</th>
           <th scope="col" class="py-3 px-6 text-right">Telefon</th>
           <th scope="col" class="py-3 px-6 text-right">Liczba gości</th>
+          <th scope="col" class="py-3 px-6">Domek</th>
           <th scope="col" class="py-3 px-6 text-right">Data zameldowania</th>
           <th scope="col" class="py-3 px-6 text-right">Data wyjazdu</th>
           <th scope="col" class="py-3 px-6 text-right">Doby pobytu</th>
@@ -71,13 +71,6 @@ const updateStatus = (status: number, id: number) => {
             />
           </td>
           <td class="py-4 px-6">
-            <Link
-              class="hover:underline"
-              :href="`/dashboard/domki/${reservation.apartment.id}/edit`"
-              >{{ reservation.apartment.name }}</Link
-            >
-          </td>
-          <td class="py-4 px-6">
             <a class="hover:underline" :href="`mail:${reservation.email}`">{{
               reservation.email
             }}</a>
@@ -89,6 +82,13 @@ const updateStatus = (status: number, id: number) => {
           </td>
           <td class="py-4 px-6 text-right">
             {{ reservation.adults + reservation.children }}
+          </td>
+          <td class="py-4 px-6">
+            <Link
+              class="hover:underline"
+              :href="`/dashboard/domki/${reservation.apartment.id}/edit`"
+              >{{ reservation.apartment.name }}</Link
+            >
           </td>
           <td class="py-4 px-6 text-right">
             {{ formatDate(reservation.start) }}

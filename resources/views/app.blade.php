@@ -10,7 +10,8 @@
         <meta name="csrf_token" content="{{ csrf_token() }}">
 
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+        <link rel="icon" type="image/svg+xml" href="/storage/images/logo-dark.svg" media="(prefers-color-scheme: light)"/>
+        <link rel="icon" type="image/svg+xml" href="/storage/images/logo-light.svg" media="(prefers-color-scheme: dark)"/>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
