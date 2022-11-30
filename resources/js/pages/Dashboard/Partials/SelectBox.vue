@@ -7,35 +7,13 @@ import {
   ListboxOption,
 } from '@headlessui/vue'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
+import { statusList } from '@/utils/status'
 
 const props = defineProps({ modelValue: [Number, String] })
 const emit = defineEmits(['update:modelValue'])
 
-const statuses = [
-  {
-    id: '',
-    name: 'Wszystkie',
-  },
-  {
-    id: 1,
-    name: 'Przyjęta',
-  },
-  {
-    id: 2,
-    name: 'Potwierdzona',
-  },
-  {
-    id: 3,
-    name: 'Anulowana',
-  },
-  {
-    id: 4,
-    name: 'Zakończona',
-  },
-]
-
 const selectedStatus = computed(
-  () => statuses.find((status) => status.id === props.modelValue)?.name
+  () => statusList.find((status) => status.id === props.modelValue)?.name
 )
 </script>
 
@@ -68,7 +46,7 @@ const selectedStatus = computed(
         >
           <ListboxOption
             v-slot="{ active, selected }"
-            v-for="status in statuses"
+            v-for="status in statusList"
             :key="status.name"
             :value="status.id"
             as="template"

@@ -4,7 +4,7 @@ namespace App\Enums;
 
 enum ReservationStatus: int
 {
-    case ACCEPTED = 1;
+    case NEW = 1;
     case CONFIRMED = 2;
     case CANCELED = 3;
     case DONE = 4;
@@ -12,7 +12,7 @@ enum ReservationStatus: int
     public function label(): string
     {
         return match ($this) {
-            self::ACCEPTED => 'Przyjęta',
+            self::NEW => 'Nowa',
             self::CONFIRMED => 'Potwierdzona',
             self::CANCELED => 'Anulowana',
             self::DONE => 'Zakończona',
