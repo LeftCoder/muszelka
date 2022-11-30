@@ -31,7 +31,14 @@ const errors = computed(() => usePage<any>().props.value.errors)
       <div class="flex flex-col sm:flex-1">
         <div class="mb-12">
           <h2 class="text-3xl font-bold text-gray-900 sm:pr-12">Data pobytu</h2>
-          <p class="text-2xl text-gray-500 mt-2">
+          <p
+            class="text-2xl mt-2"
+            :class="
+              store.selectedDates === 'Nie wybrano'
+                ? 'text-red-500'
+                : 'text-gray-500'
+            "
+          >
             {{ store.selectedDates }}
           </p>
           <div
@@ -43,7 +50,12 @@ const errors = computed(() => usePage<any>().props.value.errors)
 
         <div class="mb-12">
           <h2 class="text-3xl font-bold text-gray-900 sm:pr-12">Domek</h2>
-          <p class="text-2xl text-gray-500 mt-2">
+          <p
+            class="text-2xl mt-2"
+            :class="
+              store.selectedApartmentName ? 'text-gray-500' : 'text-red-500'
+            "
+          >
             {{
               store.selectedApartmentName
                 ? store.selectedApartmentName
