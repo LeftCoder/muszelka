@@ -5,7 +5,8 @@ Muszelka is simple Inertia, Vue and Laravel app.
 ## Todo
 
 - [x] filter available apartments based on selected days of stay
-- [ ] add password reset to login page
-- [ ] add faq crud
+- [x] add faq crud
+- [ ] rwd
 - [ ] add confirmation email for guests
 - [ ] improve uploading and removing images
+- [ ] add password reset to login page
