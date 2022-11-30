@@ -28,7 +28,7 @@ export default {
 
   <div class="flex gap-10">
     <Card href="/dashboard/rezerwacje?status=2">
-      <template #title>Aktywne Rezerwacje</template>
+      <template #title>Potwierdzone</template>
       {{ confirmed }}
     </Card>
     <Card href="/dashboard/domki">

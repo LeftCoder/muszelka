@@ -9,6 +9,7 @@ use App\Mail\ReservationMade;
 use App\Models\Apartment;
 use App\Models\Reservation;
 use App\Models\Token;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
@@ -54,7 +55,7 @@ class ReservationController extends Controller
     {
         return Reservation::toBase()
             ->selectRaw('count(*) as booked')
-            ->where('start', now()->format('Y-m-d'))
+            ->whereDate('created_at', Carbon::today())
             ->first();
     }
 
