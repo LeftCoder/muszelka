@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Apartment;
+use App\Models\Faq;
 use App\Models\Feature;
 use App\Models\Image;
 use App\Models\Reservation;
@@ -29,6 +30,8 @@ class DatabaseSeeder extends Seeder
         foreach ($features as $feature) {
             Feature::factory()->create(['name' => $feature]);
         }
+
+        Faq::factory()->count(10)->create();
 
         $apartments = Apartment::factory()->count(10)->create();
         foreach ($apartments as $apartment) {

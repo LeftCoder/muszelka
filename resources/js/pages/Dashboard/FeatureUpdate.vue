@@ -26,12 +26,12 @@ export default {
 <template>
   <Head>
     <title>Dashboard | Aktualizuj udogodnienie</title>
-    <meta name="description" content="Lista rezerwacji" />
+    <meta name="description" content="Aktualizuj udogodnienie" />
   </Head>
 
   <div class="flex items-center mb-4">
     <Link
-      href="/dashboard/domki"
+      href="/dashboard/udogodnienia"
       class="flex items-center text-base p-2 font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700"
     >
       <HomeIcon class="h-6 w-6" />

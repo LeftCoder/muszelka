@@ -2,10 +2,13 @@
 import QuestionItem from '@/pages/Faq/Partials/QuestionItem.vue'
 import Heading from '@/layouts/Partials/Heading.vue'
 import AccentImage from '@/shared/AccentImage.vue'
-import { useRootStore } from '@/store'
 import NoItems from '@/shared/NoItems.vue'
+import { Faq } from '@/types'
 
-const store = useRootStore()
+interface Props {
+  faqs: Faq[]
+}
+const props = defineProps<Props>()
 </script>
 
 <template>
@@ -22,12 +25,12 @@ const store = useRootStore()
     <template #slogan>Najcześciej zadawane pytania.</template>
   </Heading>
 
-  <div v-if="store.questions.length" class="mb-40 relative">
+  <div v-if="props.faqs.length" class="mb-40 relative">
     <div>
       <QuestionItem
-        v-for="question in store.questions"
+        v-for="question in props.faqs"
         :key="question.id"
-        :question="question"
+        :faq="question"
       />
     </div>
     <AccentImage posX="right-[-20px]" posY="top-[-50px]" />

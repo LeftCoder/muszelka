@@ -1,6 +1,19 @@
 <script lang="ts" setup>
-import FeatureForm from '@/pages/Dashboard/Partials/FeatureForm.vue'
+import ConfirmModal from '@/shared/ConfirmModal.vue'
+import FaqForm from '@/pages/Dashboard/Partials/FaqForm.vue'
+import { Inertia } from '@inertiajs/inertia'
 import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/24/solid'
+import { Faq } from '@/types'
+
+interface Props {
+  faq: Faq
+}
+
+const props = defineProps<Props>()
+
+const deleteFaq = () => {
+  Inertia.delete(`/dashboard/faq/${props.faq.id}`)
+}
 </script>
 
 <script lang="ts">
@@ -12,8 +25,8 @@ export default {
 </script>
 <template>
   <Head>
-    <title>Dashboard | Nowe udogodnienie</title>
-    <meta name="description" content="Nowe udogodnienie" />
+    <title>Dashboard | Aktualizuj pytanie</title>
+    <meta name="description" content="Aktualizuj pytanie" />
   </Head>
 
   <div class="flex items-center mb-4">
@@ -25,16 +38,20 @@ export default {
     </Link>
     <ChevronRightIcon class="h-6 w-6 mx-1" />
     <h2 class="text-4xl font-extrabold dark:text-slate-100">
-      Nowe udogodnienie
+      Edytuj :: Pytanie
     </h2>
   </div>
 
-  <div class="flex justify-center mt-24">
-    <div class="w-full max-w-3xl">
+  <div class="flex justify-end mt-12 gap-6">
+    <div class="w-full max-w-3xl mx-auto">
+      <div class="flex justify-end mb-4">
+        <ConfirmModal @confirm="deleteFaq"> Usuń pytanie </ConfirmModal>
+      </div>
+
       <div
         class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 overflow-hidden"
       >
-        <FeatureForm />
+        <FaqForm :faq="props.faq" />
       </div>
     </div>
   </div>

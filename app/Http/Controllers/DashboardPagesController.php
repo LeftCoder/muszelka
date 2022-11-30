@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\ApartmentResource;
+use App\Http\Resources\FaqResource;
 use App\Http\Resources\FeatureResource;
 use App\Http\Resources\ReservationResource;
 use App\Models\Apartment;
+use App\Models\Faq;
 use App\Models\Feature;
 use App\Models\Reservation;
 use Illuminate\Support\Facades\Request;
@@ -53,6 +55,13 @@ class DashboardPagesController extends Controller
     {
         return Inertia::render('Dashboard/FeaturesList', [
             'features' => FeatureResource::collection(Feature::all()),
+        ]);
+    }
+
+    public function faq()
+    {
+        return Inertia::render('Dashboard/FaqList', [
+            'faqs' => FaqResource::collection(Faq::all()),
         ]);
     }
 }

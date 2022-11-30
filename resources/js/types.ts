@@ -58,9 +58,9 @@ export interface Image {
   alt: string
 }
 
-export interface Question {
+export interface Faq {
   id: number
-  body: string
+  question: string
   answer: string
 }
 

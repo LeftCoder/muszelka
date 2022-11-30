@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\ApartmentResource;
+use App\Http\Resources\FaqResource;
 use App\Models\Apartment;
+use App\Models\Faq;
 use Inertia\Inertia;
 
 class PagesController extends Controller
@@ -24,7 +26,11 @@ class PagesController extends Controller
 
     public function faq()
     {
-        return Inertia::render('Faq/Index');
+        $faqs = FaqResource::collection(
+            Faq::all()
+        );
+
+        return Inertia::render('Faq/Index', ['faqs' => $faqs]);
     }
 
     public function terms()

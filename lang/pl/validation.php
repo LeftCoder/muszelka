@@ -154,6 +154,8 @@ return [
     'attributes' => [
         'name' => 'imię',
         'surname' => 'nazwisko',
+        'question' => 'pytanie',
+        'answer' => 'odpowiedź',
         'description' => 'opis',
         'price' => 'cena',
         'max' => 'maksymalna l. gości',

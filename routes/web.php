@@ -3,6 +3,7 @@
 use App\Http\Controllers\ApartmentController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardPagesController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PagesController;
@@ -41,13 +42,21 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
     Route::patch('/domki/{apartment}', [ApartmentController::class, 'update']);
     Route::delete('/domki/{apartment}', [ApartmentController::class, 'destroy']);
 
-    //Domki
+    //Udogodnienia
     Route::get('/udogodnienia', [DashboardPagesController::class, 'features']);
     Route::get('/udogodnienia/create', [FeatureController::class, 'create']);
     Route::post('/udogodnienia', [FeatureController::class, 'store']);
     Route::get('/udogodnienia/{feature}/edit', [FeatureController::class, 'edit']);
     Route::patch('/udogodnienia/{feature}', [FeatureController::class, 'update']);
     Route::delete('/udogodnienia/{feature}', [FeatureController::class, 'destroy']);
+
+    //Faq
+    Route::get('/faq', [DashboardPagesController::class, 'faq']);
+    Route::get('/faq/create', [FaqController::class, 'create']);
+    Route::post('/faq', [FaqController::class, 'store']);
+    Route::get('/faq/{faq}/edit', [FaqController::class, 'edit']);
+    Route::patch('/faq/{faq}', [FaqController::class, 'update']);
+    Route::delete('/faq/{faq}', [FaqController::class, 'destroy']);
 
     //api
     Route::patch('/api/occupied/{apartment}', [ApartmentController::class, 'occupied']);

@@ -4,10 +4,10 @@ import {
   ChevronDownIcon,
 } from '@heroicons/vue/20/solid/index.js'
 import { ref } from 'vue'
-import type { Question } from '@/types'
+import type { Faq } from '@/types'
 
 interface Props {
-  question: Question
+  faq: Faq
 }
 
 const props = defineProps<Props>()
@@ -27,7 +27,7 @@ const open = ref(false)
     >
       <span class="flex items-center">
         <QuestionMarkCircleIcon class="h-5 w-5 text-amber-400 mr-2" />
-        <h2>{{ props.question.body }}</h2>
+        <h2>{{ props.faq.question }}</h2>
       </span>
 
       <ChevronDownIcon
@@ -39,7 +39,7 @@ const open = ref(false)
     <div :class="open ? 'block' : 'hidden'">
       <div class="p-5 border bg-white border-b-0 border-slate-200">
         <p class="text-lg font-normal text-slate-500">
-          {{ props.question.answer }}
+          {{ props.faq.answer }}
         </p>
       </div>
     </div>

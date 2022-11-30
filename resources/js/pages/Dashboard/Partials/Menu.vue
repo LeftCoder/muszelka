@@ -8,6 +8,7 @@ import {
   Squares2X2Icon,
   ArrowRightOnRectangleIcon,
   ArrowTopRightOnSquareIcon,
+  QuestionMarkCircleIcon,
 } from '@heroicons/vue/20/solid/index.js'
 import { usePage } from '@inertiajs/inertia-vue3'
 import { computed } from 'vue'
@@ -131,6 +132,24 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
                 aria-hidden="true"
               />
               Udogodnienia
+            </Link>
+          </MenuItem>
+          <MenuItem v-slot="{ active }">
+            <Link
+              href="/dashboard/faq"
+              :class="[
+                active
+                  ? 'bg-blue-500 text-white'
+                  : 'text-slate-900 dark:text-slate-400',
+                'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+              ]"
+            >
+              <QuestionMarkCircleIcon
+                class="mr-2 h-5 w-5"
+                :class="[active ? 'text-white' : 'text-blue-400']"
+                aria-hidden="true"
+              />
+              Faq
             </Link>
           </MenuItem>
         </div>

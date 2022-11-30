@@ -5,6 +5,7 @@ import {
   HomeIcon,
   GiftIcon,
   Squares2X2Icon,
+  QuestionMarkCircleIcon,
 } from '@heroicons/vue/24/solid/index.js'
 
 const booked = ref(0)
@@ -77,6 +78,21 @@ onMounted(() => {
           >
             <GiftIcon class="h-6 w-6 dark:text-blue-400 text-slate-700" />
             <span class="flex-1 ml-3 whitespace-nowrap">Udogodnienia</span>
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/dashboard/faq"
+            class="flex items-center p-2 text-base font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700"
+            :class="{
+              'bg-slate-100 dark:bg-slate-700':
+                $page.url.startsWith('/dashboard/faq'),
+            }"
+          >
+            <QuestionMarkCircleIcon
+              class="h-6 w-6 dark:text-blue-400 text-slate-700"
+            />
+            <span class="flex-1 ml-3 whitespace-nowrap">Faq</span>
           </Link>
         </li>
       </ul>
