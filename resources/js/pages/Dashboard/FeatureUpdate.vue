@@ -23,6 +23,7 @@ export default {
   layout: AuthenticatedLayout,
 }
 </script>
+
 <template>
   <Head>
     <title>Dashboard | Aktualizuj udogodnienie</title>

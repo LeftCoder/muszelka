@@ -10,6 +10,7 @@ export default {
   layout: AuthenticatedLayout,
 }
 </script>
+
 <template>
   <Head>
     <title>Dashboard | Nowe udogodnienie</title>

@@ -21,7 +21,7 @@ export default {
 <template>
   <Head>
     <title>Dashboard | Faq</title>
-    <meta name="description" content="Lista Udogodnień" />
+    <meta name="description" content="Lista pytań" />
   </Head>
 
   <div class="flex justify-between items-center mb-4">

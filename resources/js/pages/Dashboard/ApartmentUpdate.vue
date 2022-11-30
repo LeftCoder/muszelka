@@ -24,10 +24,11 @@ export default {
   layout: AuthenticatedLayout,
 }
 </script>
+
 <template>
   <Head>
-    <title>Dashboard | Aktualizuj dane domku</title>
-    <meta name="description" content="Lista rezerwacji" />
+    <title>Dashboard | Aktualizuj domek</title>
+    <meta name="description" content="Aktualizuj domek" />
   </Head>
 
   <div class="flex items-center mb-4">

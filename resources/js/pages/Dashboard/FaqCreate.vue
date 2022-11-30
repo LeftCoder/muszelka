@@ -13,7 +13,7 @@ export default {
 <template>
   <Head>
     <title>Dashboard | Nowe pytanie</title>
-    <meta name="description" content="Lista pytań" />
+    <meta name="description" content="Nowe pytanie" />
   </Head>
 
   <div class="flex items-center mb-4">

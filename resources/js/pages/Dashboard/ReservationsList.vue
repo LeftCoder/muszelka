@@ -47,7 +47,7 @@ export default {
 
 <template>
   <Head>
-    <title>Dashboard | Rezerwacje</title>
+    <title>Dashboard | Lista rezerwacji</title>
     <meta name="description" content="Lista rezerwacji" />
   </Head>
 

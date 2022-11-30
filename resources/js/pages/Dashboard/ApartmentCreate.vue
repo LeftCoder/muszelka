@@ -10,10 +10,11 @@ export default {
   layout: AuthenticatedLayout,
 }
 </script>
+
 <template>
   <Head>
     <title>Dashboard | Nowy domek</title>
-    <meta name="description" content="Lista rezerwacji" />
+    <meta name="description" content="Nowy domek" />
   </Head>
 
   <div class="flex items-center mb-4">

@@ -21,7 +21,7 @@ export default {
 
 <template>
   <Head>
-    <title>Dashboard | Domki</title>
+    <title>Dashboard | Lista domków</title>
     <meta name="description" content="Lista domków" />
   </Head>
 
