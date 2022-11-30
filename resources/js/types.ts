@@ -31,7 +31,7 @@ export type ReservationStatus =
   | Status.CANCELED
   | Status.DONE
 
-export type DropdownList = {
+export type StatusDropdown = {
   id: string | number
   name: ReservationStatus | 'Wszystkie'
 }[]

@@ -1,4 +1,4 @@
-import { DropdownList, Status } from '@/types'
+import { StatusDropdown, Status } from '@/types'
 
 export const statuses = [
   {
@@ -19,7 +19,7 @@ export const statuses = [
   },
 ]
 
-export const statusList: DropdownList = [
+export const dropdown: StatusDropdown = [
   {
     id: '',
     name: 'Wszystkie',
