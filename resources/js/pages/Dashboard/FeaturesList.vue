@@ -49,6 +49,8 @@ export default {
   </div>
 
   <NoItems v-else class="mt-8">
-    Nie masz w tej chwili żadnych dodanych domków.
+    <h2 class="text-2xl text-slate-900 dark:text-slate-100">
+      Brak udogodnień do wyświetlenia.
+    </h2>
   </NoItems>
 </template>

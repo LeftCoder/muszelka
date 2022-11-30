@@ -67,5 +67,9 @@ export default {
     <Pagination :meta="props.reservations?.meta" />
   </div>
 
-  <NoItems v-else class="mt-8"> Brak rezerwacji do wyświetlenia. </NoItems>
+  <NoItems v-else class="mt-8"
+    ><h2 class="text-2xl text-slate-900 dark:text-slate-100">
+      Brak rezerwacji do wyświetlenia.
+    </h2>
+  </NoItems>
 </template>

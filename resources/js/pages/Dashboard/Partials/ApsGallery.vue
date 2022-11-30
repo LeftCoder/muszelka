@@ -95,5 +95,9 @@ const deleteImage = (image: number, event: MouseEvent) => {
     </div>
   </div>
 
-  <NoItems v-else>Brak zdjęć do wyświetlenia</NoItems>
+  <NoItems v-else>
+    <h2 class="text-2xl text-slate-900 dark:text-slate-100">
+      Brak zdjęć do wyświetlenia.
+    </h2></NoItems
+  >
 </template>

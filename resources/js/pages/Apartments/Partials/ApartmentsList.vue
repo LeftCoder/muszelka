@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { Apartment } from '@/types'
-import NoItems from '@/shared/NoItems.vue'
+import NoBookingDate from '@/shared/NoBookingDate.vue'
 import ApartmentItem from '@/pages/Apartments/Partials/ApartmentItem.vue'
 
 interface Props {
@@ -17,6 +17,6 @@ const props = defineProps<Props>()
       v-for="apartment in props.apartments"
       :apartment="apartment"
     />
-    <NoItems v-else>Nie masz w tej chwili dodanych domków.</NoItems>
+    <NoBookingDate v-else />
   </div>
 </template>

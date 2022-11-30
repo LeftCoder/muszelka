@@ -32,5 +32,9 @@ const store = useRootStore()
     </div>
     <AccentImage posX="right-[-20px]" posY="top-[-50px]" />
   </div>
-  <NoItems class="mb-40" v-else>Brak pytań w sekcji FAQ.</NoItems>
+  <NoItems class="mb-40" v-else>
+    <h2 class="text-2xl text-slate-900 dark:text-slate-100">
+      Brak pytań w sekcji FAQ.
+    </h2></NoItems
+  >
 </template>
