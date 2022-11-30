@@ -8,3 +8,4 @@ Muszelka is simple Inertia, Vue and Laravel app.
 - [ ] add password reset to login page
 - [ ] add faq crud
 - [ ] add confirmation email for guests
+- [ ] improve uploading and removing images
