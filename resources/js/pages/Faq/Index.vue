@@ -3,7 +3,7 @@ import QuestionItem from '@/pages/Faq/Partials/QuestionItem.vue'
 import Heading from '@/layouts/Partials/Heading.vue'
 import AccentImage from '@/shared/AccentImage.vue'
 import NoItems from '@/shared/NoItems.vue'
-import { Faq } from '@/types'
+import type { Faq } from '@/types'
 
 interface Props {
   faqs: Faq[]

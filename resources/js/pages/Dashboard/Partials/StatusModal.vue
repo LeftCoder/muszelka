@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ReservationStatus } from '@/types'
+import type { ReservationStatus } from '@/types'
 import {
   TransitionRoot,
   TransitionChild,

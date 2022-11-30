@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Feature } from '@/types'
+import type { Feature } from '@/types'
 import Choices, { Choice } from 'choices.js'
 import 'choices.js/public/assets/styles/choices.min.css'
 import { computed, onMounted, onUnmounted, ref } from 'vue'

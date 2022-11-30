@@ -1,4 +1,5 @@
-import { StatusDropdown, Status } from '@/types'
+import type { StatusDropdown } from '@/types'
+import { Status } from '@/types'
 
 export const statuses = [
   {

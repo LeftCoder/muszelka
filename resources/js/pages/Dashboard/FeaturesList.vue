@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import FeaturesTable from '@/pages/Dashboard/Partials/FeaturesTable.vue'
 import NoItems from '@/shared/NoItems.vue'
-
 import type { Feature } from '@/types'
 
 interface Props {

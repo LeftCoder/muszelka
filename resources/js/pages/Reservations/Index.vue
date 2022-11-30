@@ -2,8 +2,8 @@
 import Heading from '@/layouts/Partials/Heading.vue'
 import ApartmentsList from '@/pages/Apartments/Partials/ApartmentsList.vue'
 import ReservationForm from '@/pages/Reservations/Partials/ReservationForm.vue'
+import type { Apartment } from '@/types'
 import { useRootStore } from '@/store'
-import { Apartment } from '@/types'
 import { onMounted } from 'vue'
 
 interface Props {

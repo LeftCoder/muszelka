@@ -3,7 +3,7 @@ import ConfirmModal from '@/shared/ConfirmModal.vue'
 import FeatureForm from '@/pages/Dashboard/Partials/FeatureForm.vue'
 import { Inertia } from '@inertiajs/inertia'
 import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/24/solid'
-import { Feature } from '@/types'
+import type { Feature } from '@/types'
 
 interface Props {
   feature: Feature
