@@ -1,13 +1,19 @@
 <script lang="ts" setup>
-import FaqsTable from '@/pages/Dashboard/Partials/FaqsTable.vue'
+import { PropType } from 'vue'
+import type { Faq, MetaInformations, PaginationLinks } from '@/types'
 import NoItems from '@/shared/NoItems.vue'
-import type { Faq } from '@/types'
+import FaqsTable from '@/pages/Dashboard/Partials/FaqsTable.vue'
+import Pagination from '@/pages/Dashboard/Partials/Pagination.vue'
 
 interface Props {
-  faqs: Faq[]
+  data: Faq[]
+  links: PaginationLinks
+  meta: MetaInformations
 }
 
-const props = defineProps<Props>()
+const props = defineProps({
+  faqs: Object as PropType<Props>,
+})
 </script>
 
 <script lang="ts">
@@ -15,6 +21,7 @@ import AuthenticatedLayout from '@/layouts/Authenticated.vue'
 
 export default {
   layout: AuthenticatedLayout,
+  components: { Pagination },
 }
 </script>
 
@@ -37,12 +44,9 @@ export default {
     </Link>
   </div>
 
-  <div v-if="props.faqs.length > 0">
-    <FaqsTable :faqs="props.faqs" />
-
-    <div class="flex justify-start items-center mt-5">
-      Łącznie: {{ props.faqs.length }}
-    </div>
+  <div v-if="props.faqs?.data.length">
+    <FaqsTable :faqs="props.faqs?.data" />
+    <Pagination :meta="props.faqs?.meta" />
   </div>
 
   <NoItems v-else class="mt-8">

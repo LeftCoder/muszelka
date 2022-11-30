@@ -51,7 +51,7 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
     Route::delete('/udogodnienia/{feature}', [FeatureController::class, 'destroy']);
 
     //Faq
-    Route::get('/faq', [DashboardPagesController::class, 'faq']);
+    Route::get('/faq', [DashboardPagesController::class, 'faqs']);
     Route::get('/faq/create', [FaqController::class, 'create']);
     Route::post('/faq', [FaqController::class, 'store']);
     Route::get('/faq/{faq}/edit', [FaqController::class, 'edit']);

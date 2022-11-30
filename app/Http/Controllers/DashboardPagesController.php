@@ -58,10 +58,14 @@ class DashboardPagesController extends Controller
         ]);
     }
 
-    public function faq()
+    public function faqs()
     {
+        $faqs = FaqResource::collection(
+            Faq::query()->paginate(10)
+        );
+
         return Inertia::render('Dashboard/FaqList', [
-            'faqs' => FaqResource::collection(Faq::all()),
+            'faqs' => $faqs,
         ]);
     }
 }
