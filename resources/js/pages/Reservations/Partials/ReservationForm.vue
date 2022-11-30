@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import Datepicker from '@/shared/Datepicker.vue'
-import { ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRootStore } from '@/store'
 import { XMarkIcon } from '@heroicons/vue/20/solid/index.js'
 
@@ -8,6 +8,15 @@ const store = useRootStore()
 const dates = ref({
   startDate: store.reservation.start,
   endDate: store.reservation.end,
+})
+
+const dropdownApartments = computed(() => {
+  if (store.filterApartments) {
+    return store.reservation.apartment_id !== -1
+      ? store.apartments
+      : store.filterApartments
+  }
+  return store.apartments
 })
 
 watch(dates, (newDates) => {
@@ -95,7 +104,7 @@ watch(dates, (newDates) => {
                 Wszystkie
               </option>
               <option
-                v-for="apartment in store.apartments"
+                v-for="apartment in dropdownApartments"
                 :value="apartment.id"
                 :key="apartment.id"
               >

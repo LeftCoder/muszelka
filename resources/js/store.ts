@@ -1,8 +1,41 @@
 import { defineStore } from 'pinia'
-import { Apartment, Question } from '@/types'
+import {
+  Apartment,
+  PickedReservation,
+  Question,
+  ReservationList,
+} from '@/types'
+import * as dayjs from 'dayjs'
+import isBetween from 'dayjs/plugin/isBetween'
+import customParseFormat from 'dayjs/plugin/customParseFormat'
+dayjs.extend(isBetween)
+dayjs.extend(customParseFormat)
+
+interface State {
+  questions: Question[]
+  apartments: Apartment[]
+  reservation: PickedReservation
+}
+
+const isApartmentOccupied = (state: State, reservation: ReservationList) => {
+  return (
+    dayjs(dayjs(reservation.start).format('YYYY-MM-DD')).isBetween(
+      dayjs(state.reservation.start, 'DD.MM.YYYY').format('YYYY-MM-DD'),
+      dayjs(state.reservation.end, 'DD.MM.YYYY').format('YYYY-MM-DD'),
+      'day',
+      '[)'
+    ) ||
+    dayjs(dayjs(reservation.end).format('YYYY-MM-DD')).isBetween(
+      dayjs(state.reservation.start, 'DD.MM.YYYY').format('YYYY-MM-DD'),
+      dayjs(state.reservation.end, 'DD.MM.YYYY').format('YYYY-MM-DD'),
+      'day',
+      '(]'
+    )
+  )
+}
 
 export const useRootStore = defineStore('root', {
-  state: () => ({
+  state: (): State => ({
     questions: [
       {
         id: 1,
@@ -64,8 +97,8 @@ export const useRootStore = defineStore('root', {
         answer:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices, mauris non congue faucibus, elit neque venenatis urna, vel lobortis ex turpis quis velit. Sed dignissim in sapien id imperdiet. Donec consectetur nisl sit amet mi congue, ut imperdiet nisi cursus. Nulla rutrum hendrerit nisl, eu ornare purus dictum sit amet. Phasellus ultricies lacinia vehicula.',
       },
-    ] as Question[],
-    apartments: [] as Apartment[],
+    ],
+    apartments: [],
     reservation: {
       start: '',
       end: '',
@@ -118,12 +151,29 @@ export const useRootStore = defineStore('root', {
       return `${state.reservation.adults} + ${state.reservation.children}`
     },
     filterApartments: (state) => {
-      if (state.reservation.apartment_id === -1) {
-        return state.apartments
+      let toFilter = state.apartments
+      if (state.reservation.apartment_id !== -1) {
+        toFilter = state.apartments.filter((apartment) => {
+          return apartment.id === state.reservation.apartment_id
+        })
       }
-      return state.apartments.filter(
-        (apartment) => apartment.id === state.reservation.apartment_id
-      )
+
+      return toFilter.filter((apartment) => {
+        const userPickedDates =
+          state.reservation.start && state.reservation.end ? true : false
+        const weHaveReservations = apartment.reservation_list?.length ?? 0
+
+        if (userPickedDates && weHaveReservations) {
+          //check if any of the ongoing reservation overlaps with guest selected dates
+          return apartment.reservation_list?.every((reservation) => {
+            let occupied = isApartmentOccupied(state, reservation)
+            //todo: consider reservation status
+            return !occupied
+          })
+        }
+        //there is no reservations for this apartment -> not ocuppied -> include
+        return apartment
+      })
     },
   },
   actions: {

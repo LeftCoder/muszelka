@@ -12,8 +12,18 @@ export interface Reservation {
   children: number
   animals: boolean
   status: ReservationStatus
-  apartment: Partial<Apartment>
+  apartment: Pick<Apartment, 'id' | 'name'>
 }
+
+export type PickedReservation = Pick<
+  Reservation,
+  'start' | 'end' | 'adults' | 'children' | 'animals'
+> & { apartment_id: number }
+export type ReservationList = Pick<
+  Reservation,
+  'id' | 'start' | 'end' | 'status'
+>
+export type LastReservation = Pick<Reservation, 'id' | 'name' | 'surname'>
 
 export type ReservationStatus =
   | 'Przyjęta'
@@ -30,7 +40,8 @@ export interface Apartment {
   occupied: boolean
   features?: Feature[]
   images?: Image[]
-  last_reservation?: Reservation
+  last_reservation?: LastReservation
+  reservation_list?: ReservationList[]
 }
 
 export interface Feature {

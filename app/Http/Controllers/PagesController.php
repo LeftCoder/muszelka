@@ -45,8 +45,7 @@ class PagesController extends Controller
     public function reservations()
     {
         $apartments = ApartmentResource::collection(
-            Apartment::with(['features', 'images'])
-            ->withLastReservation()
+            Apartment::with(['features', 'images', 'reservations'])
             ->get()
         );
 
