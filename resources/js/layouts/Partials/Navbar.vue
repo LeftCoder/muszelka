@@ -52,7 +52,7 @@ const closeMobileMenu = (close: () => void) => {
             <!-- Mobile menu button-->
             <DisclosureButton
               @click="changeOverflow(open)"
-              class="inline-flex items-center justify-center rounded-md p-2 text-slate-900 hover:bg-cyan-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              class="inline-flex items-center justify-center rounded-md p-2 text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-200"
             >
               <span class="sr-only">Otwórz menu</span>
               <Bars3Icon
