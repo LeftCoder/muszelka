@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import * as dayjs from 'dayjs'
+import dayjs from 'dayjs'
 import type { Reservation, Toast } from '@/types'
 import StatusModal from '@/pages/Dashboard/Partials/StatusModal.vue'
 import { Inertia } from '@inertiajs/inertia'

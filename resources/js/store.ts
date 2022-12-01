@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { Apartment, PickedReservation, ReservationList } from '@/types'
-import * as dayjs from 'dayjs'
+import dayjs from 'dayjs'
 import isBetween from 'dayjs/plugin/isBetween'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 dayjs.extend(isBetween)

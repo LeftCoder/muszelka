@@ -13,7 +13,7 @@ class ContactController extends Controller
         $details = $request->validated();
         $details = $request->safe()->except(['captcha_token']);
 
-        Mail::to('k.d.graczyk@gmail.com')->send(new ContactRequested($details));
+        Mail::to(config('mail.from.address'))->send(new ContactRequested($details));
 
         return back()->with(['message' => 'Dziękujemy. Twoja wiadomość została wysłana.']);
     }
