@@ -27,13 +27,14 @@ export default {
   </Head>
 
   <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-8">
-    <div class="flex justify-center items-center">
-      <Link href="/dashboard">
-        <Squares2X2Icon class="h-6 w-6 mr-3 text-blue-500" />
-      </Link>
-      <h2
-        class="text-3xl sm:text-4xl mb-4 sm:mb-0 font-extrabold dark:text-slate-100"
+    <div class="flex items-center mb-4 sm:mb-0">
+      <Link
+        href="/dashboard"
+        class="flex items-center text-base p-2 font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700 mr-2"
       >
+        <Squares2X2Icon class="h-6 w-6 text-blue-500" />
+      </Link>
+      <h2 class="text-2xl sm:text-4xl font-extrabold dark:text-slate-100">
         Lista udogodnień
       </h2>
     </div>

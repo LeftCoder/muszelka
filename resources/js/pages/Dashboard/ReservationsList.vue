@@ -54,14 +54,17 @@ export default {
   </Head>
 
   <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-8">
-    <Link href="/dashboard">
-      <Squares2X2Icon class="h-6 w-6 mr-3 text-blue-500" />
-    </Link>
-    <h2
-      class="sm:w-2/3 text-3xl sm:text-4xl mb-4 sm:mb-0 font-extrabold dark:text-slate-100"
-    >
-      Lista rezerwacji
-    </h2>
+    <div class="flex items-center mb-4 sm:mb-0">
+      <Link
+        href="/dashboard"
+        class="flex items-center text-base p-2 font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700 mr-2"
+      >
+        <Squares2X2Icon class="h-6 w-6 text-blue-500" />
+      </Link>
+      <h2 class="text-2xl sm:text-4xl font-extrabold dark:text-slate-100">
+        Lista rezerwacji
+      </h2>
+    </div>
 
     <div
       class="sm:w-1/3 flex flex-col sm:flex-row justify-center sm:items-center gap-4 my-8 sm:my-0"

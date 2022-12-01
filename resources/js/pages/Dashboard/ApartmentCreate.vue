@@ -21,11 +21,11 @@ export default {
   <div class="flex items-center mb-4">
     <Link
       href="/dashboard/domki"
-      class="flex items-center text-base sm:p-2 font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700"
+      class="flex items-center text-base p-2 font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700 mr-2"
     >
-      <ArrowSmallLeftIcon class="h-6 w-6 mr-2 text-blue-500" />
+      <ArrowSmallLeftIcon class="h-6 w-6 text-blue-500" />
     </Link>
-    <h2 class="text-3xl sm:text-4xl font-extrabold dark:text-slate-100">
+    <h2 class="text-2xl sm:text-4xl font-extrabold dark:text-slate-100">
       Nowy domek
     </h2>
   </div>

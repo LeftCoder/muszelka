@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import FeatureForm from '@/pages/Dashboard/Partials/FeatureForm.vue'
-import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/24/solid/index.js'
+import { ArrowSmallLeftIcon } from '@heroicons/vue/24/solid/index.js'
 </script>
 
 <script lang="ts">
@@ -20,17 +20,16 @@ export default {
   <div class="flex items-center mb-4">
     <Link
       href="/dashboard/udogodnienia"
-      class="flex items-center text-base p-2 font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700"
+      class="flex items-center text-base p-2 font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700 mr-2"
     >
-      <HomeIcon class="h-6 w-6" />
+      <ArrowSmallLeftIcon class="h-6 w-6 text-blue-500" />
     </Link>
-    <ChevronRightIcon class="h-6 w-6 mx-1" />
-    <h2 class="text-4xl font-extrabold dark:text-slate-100">
-      Nowe udogodnienie
+    <h2 class="text-2xl sm:text-4xl font-extrabold dark:text-slate-100">
+      Nowa pozycja
     </h2>
   </div>
 
-  <div class="flex justify-center mt-24">
+  <div class="flex justify-center sm:mt-24 mt-8">
     <div class="w-full max-w-3xl">
       <div
         class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 overflow-hidden"
