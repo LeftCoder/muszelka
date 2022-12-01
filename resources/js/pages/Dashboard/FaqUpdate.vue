@@ -2,7 +2,7 @@
 import ConfirmModal from '@/shared/ConfirmModal.vue'
 import FaqForm from '@/pages/Dashboard/Partials/FaqForm.vue'
 import { Inertia } from '@inertiajs/inertia'
-import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/24/solid/index.js'
+import { ArrowSmallLeftIcon } from '@heroicons/vue/24/solid/index.js'
 import { Faq } from '@/types'
 
 interface Props {
@@ -32,19 +32,18 @@ export default {
 
   <div class="flex items-center mb-4">
     <Link
-      href="/dashboard/udogodnienia"
-      class="flex items-center text-base p-2 font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700"
+      href="/dashboard/faq"
+      class="flex items-center text-base p-2 font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700 mr-2"
     >
-      <HomeIcon class="h-6 w-6" />
+      <ArrowSmallLeftIcon class="h-6 w-6 text-blue-500" />
     </Link>
-    <ChevronRightIcon class="h-6 w-6 mx-1" />
-    <h2 class="text-4xl font-extrabold dark:text-slate-100">
-      Edytuj :: Pytanie
+    <h2 class="text-2xl sm:text-4xl font-extrabold dark:text-slate-100">
+      Edytuj pytanie
     </h2>
   </div>
 
-  <div class="flex justify-end mt-12 gap-6">
-    <div class="w-full max-w-3xl mx-auto">
+  <div class="flex justify-center sm:mt-24 mt-12">
+    <div class="w-full max-w-3xl">
       <div class="flex justify-end mb-4">
         <ConfirmModal @confirm="deleteFaq"> Usuń pytanie </ConfirmModal>
       </div>

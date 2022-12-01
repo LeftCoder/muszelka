@@ -23,10 +23,12 @@ export default {
     >
       <ArrowSmallLeftIcon class="h-6 w-6 text-blue-500" />
     </Link>
-    <h2 class="text-4xl font-extrabold dark:text-slate-100">Nowe pytanie</h2>
+    <h2 class="text-2xl sm:text-4xl font-extrabold dark:text-slate-100">
+      Nowe pytanie
+    </h2>
   </div>
 
-  <div class="flex justify-center mt-24">
+  <div class="flex justify-center sm:mt-24 mt-12">
     <div class="w-full max-w-3xl">
       <div
         class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 overflow-hidden"

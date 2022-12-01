@@ -3,7 +3,7 @@ import ConfirmModal from '@/shared/ConfirmModal.vue'
 import ApartmentForm from '@/pages/Dashboard/Partials/ApartmentForm.vue'
 import ApsGallery from '@/pages/Dashboard/Partials/ApsGallery.vue'
 import { Inertia } from '@inertiajs/inertia'
-import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/24/solid/index.js'
+import { ArrowSmallLeftIcon } from '@heroicons/vue/24/solid/index.js'
 import { Apartment } from '@/types'
 
 interface Props {
@@ -34,17 +34,16 @@ export default {
   <div class="flex items-center mb-4">
     <Link
       href="/dashboard/domki"
-      class="flex items-center text-base p-2 font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700"
+      class="flex items-center text-base p-2 font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700 mr-2"
     >
-      <HomeIcon class="h-6 w-6" />
+      <ArrowSmallLeftIcon class="h-6 w-6 text-blue-500" />
     </Link>
-    <ChevronRightIcon class="h-6 w-6 mx-1" />
-    <h2 class="text-4xl font-extrabold dark:text-slate-100">
+    <h2 class="text-2xl sm:text-4xl font-extrabold dark:text-slate-100">
       Edytuj :: {{ props.apartment.name }}
     </h2>
   </div>
 
-  <div class="flex justify-end mt-12 gap-6">
+  <div class="flex flex-col sm:flex-row gap-24 sm:gap-6 sm:mt-24 mt-12">
     <div class="w-full">
       <div class="flex justify-end mb-4">
         <ConfirmModal @confirm="deleteApartment"> Usuń domek </ConfirmModal>

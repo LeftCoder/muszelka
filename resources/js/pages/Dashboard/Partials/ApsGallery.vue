@@ -61,7 +61,10 @@ const deleteImage = (image: number, event: MouseEvent) => {
 
 <template>
   <div v-if="props.images?.length">
-    <div :id="'gallery-' + props.galleryId" class="grid grid-cols-3 gap-2">
+    <div
+      :id="'gallery-' + props.galleryId"
+      class="grid sm:grid-cols-3 gap-8 sm:gap-2"
+    >
       <a
         v-for="image in props.images"
         :key="image.id"

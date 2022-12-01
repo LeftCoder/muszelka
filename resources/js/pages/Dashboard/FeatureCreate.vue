@@ -29,7 +29,7 @@ export default {
     </h2>
   </div>
 
-  <div class="flex justify-center sm:mt-24 mt-8">
+  <div class="flex justify-center sm:mt-24 mt-12">
     <div class="w-full max-w-3xl">
       <div
         class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 overflow-hidden"

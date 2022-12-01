@@ -32,7 +32,9 @@ export default {
     <meta name="description" content="Lista pytań" />
   </Head>
 
-  <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-8">
+  <div
+    class="flex flex-col sm:flex-row justify-between sm:items-center mb-12 sm:mb-8"
+  >
     <div class="flex items-center mb-4 sm:mb-0">
       <Link
         href="/dashboard"
@@ -50,7 +52,7 @@ export default {
         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         type="button"
       >
-        Nowy pozycja
+        Nowe pytanie
       </button>
     </Link>
   </div>

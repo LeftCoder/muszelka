@@ -27,7 +27,9 @@ export default {
     <meta name="description" content="Lista domków" />
   </Head>
 
-  <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-8">
+  <div
+    class="flex flex-col sm:flex-row justify-between sm:items-center mb-12 sm:mb-8"
+  >
     <div class="flex items-center mb-4 sm:mb-0">
       <Link
         href="/dashboard"

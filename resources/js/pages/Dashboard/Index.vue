@@ -26,7 +26,7 @@ export default {
     <meta name="description" content="Dashboard dla właścicieli" />
   </Head>
 
-  <div class="flex flex-col sm:flex-row gap-10">
+  <div class="w-full flex flex-col sm:flex-row gap-10">
     <Card href="/dashboard/rezerwacje?status=2">
       <template #title>Potwierdzone</template>
       {{ confirmed }}
