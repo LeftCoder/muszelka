@@ -42,10 +42,9 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
         class="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-slate-100 dark:divide-slate-600 rounded-md bg-white dark:bg-slate-800 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
       >
         <div class="px-1 py-1">
-          <MenuItem v-slot="{ active, close }">
+          <MenuItem v-slot="{ active }">
             <Link
               href="/"
-              @click="close"
               :class="[
                 active
                   ? 'bg-blue-500 text-white'
@@ -161,10 +160,9 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
         </div>
 
         <div class="px-1 py-1">
-          <MenuItem v-slot="{ active, close }">
+          <MenuItem v-slot="{ active }">
             <Link
               href="/logout"
-              @click="close"
               method="post"
               as="button"
               :class="[

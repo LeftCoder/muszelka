@@ -53,6 +53,7 @@ const dDate = (date: Date): boolean => {
       :options="options"
       :shortcuts="false"
       :disable-date="dDate"
+      :auto-apply="isDesktop"
       v-model="dateValue"
       i18n="pl"
       input-classes="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"

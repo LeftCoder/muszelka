@@ -29,7 +29,7 @@ watch(dates, (newDates) => {
     <div class="bg-white border shadow-md w-full lg:w-9/12 rounded-lg">
       <div class="py-8 px-6 flex flex-col lg:flex-row items-center gap-4">
         <div
-          class="lg:w-2/5 xl:border-r xl:mb-0 mb-4 border-gray-300 pr-0 lg:pr-8 w-full"
+          class="w-full lg:w-7/12 xl:border-r xl:mb-0 mb-4 border-gray-300 pr-0 lg:pr-8"
         >
           <label
             for="datepicker"
@@ -39,7 +39,7 @@ watch(dates, (newDates) => {
           <Datepicker id="datepicker" v-model="dates" />
         </div>
         <div
-          class="lg:w-1/5 xl:border-r xl:mb-0 mb-4 border-gray-300 lg:pr-8 w-full"
+          class="w-full lg:w-2/12 xl:border-r xl:mb-0 mb-4 border-gray-300 lg:pr-8"
         >
           <label
             for="adults"
@@ -56,7 +56,7 @@ watch(dates, (newDates) => {
             min="1"
           />
         </div>
-        <div class="lg:w-1/5 border-gray-300 lg:mb-0 mb-4 lg:pr-8 w-full">
+        <div class="w-full lg:w-2/12 border-gray-300 lg:mb-0 mb-4 lg:pr-8">
           <label
             for="children"
             class="block mb-2 text-sm font-medium text-slate-900"
@@ -71,7 +71,7 @@ watch(dates, (newDates) => {
             min="0"
           />
         </div>
-        <div class="hidden lg:block lg:w-1/5">
+        <div class="hidden lg:flex self-end lg:w-1/5">
           <Link href="/rezerwacje/checkout">
             <button
               type="button"
