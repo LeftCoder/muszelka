@@ -42,6 +42,7 @@ const onSubmit = async () => {
         v-model="form.name"
         aria-describedby="helper-text-explanation"
         class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
+        required
       />
       <div
         v-if="form.errors.name"
@@ -61,6 +62,7 @@ const onSubmit = async () => {
         v-model="form.email"
         aria-describedby="helper-text-explanation"
         class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
+        required
       />
       <div
         v-if="form.errors.email"
@@ -79,6 +81,7 @@ const onSubmit = async () => {
         v-model="form.message"
         rows="4"
         class="block p-2.5 w-full text-sm text-slate-900 bg-slate-50 rounded-lg border border-slate-300 focus:ring-cyan-500 focus:border-cyan-500"
+        required
       ></textarea>
       <div
         v-if="form.errors.message"
@@ -100,6 +103,7 @@ const onSubmit = async () => {
               ? 'ring-red-500 ring-2 bg-gray-100'
               : ''
           "
+          required
         />
         <label
           class="hover:cursor-pointer hover:text-slate-900 mr-1"
