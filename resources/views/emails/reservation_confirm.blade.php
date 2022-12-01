@@ -3,7 +3,7 @@
 
 <x-mail::panel>
 Twoja rezerwacja została przyjęta. Prosimy o jej potwierdzenie.
-Link do potwierdzenia jest aktywny przez 24 godziny.
+Link do potwierdzenia jest **aktywny przez 24 godziny**.
 </x-mail::panel>
 
 <x-mail::table>
@@ -13,6 +13,7 @@ Link do potwierdzenia jest aktywny przez 24 godziny.
 | **Osoba rezerwująca**      | {{ $reservation->name }} {{ $reservation->surname }}                                     |
 | **Domek**                  | {{ $reservation->apartment->name }}                                                      |
 | **Liczba gości**           | {{ $reservation->adults + $reservation->children }}                                      |
+| **Zwierzęta**              | {{ $reservation->animals ? 'Tak' : 'Nie' }}                                              |
 | **Data pobytu**            | od {{ $reservation->start->format('d.m.Y') }} do {{$reservation->end->format('d.m.Y') }} |
 </x-mail::table>
 

@@ -1,5 +1,5 @@
 <x-mail::message>
-# Hej, Michał!
+# Świetnie!
 
 <x-mail::panel>
 Właśnie pojawiła się nowa rezerwacja.
@@ -12,6 +12,7 @@ Właśnie pojawiła się nowa rezerwacja.
 | **Osoba rezerwująca**      | {{ $reservation->name }} {{ $reservation->surname }}                                     |
 | **Domek**                  | {{ $reservation->apartment->name }}                                                      |
 | **Liczba gości**           | {{ $reservation->adults }} dorosłych, {{ $reservation->children }} dzieci                |
+| **Zwierzęta**              | {{ $reservation->animals ? 'Tak' : 'Nie' }}                                              |
 | **Data pobytu**            | od {{ $reservation->start->format('d.m.Y') }} do {{$reservation->end->format('d.m.Y') }} |
 </x-mail::table>
 
