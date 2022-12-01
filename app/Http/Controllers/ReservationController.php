@@ -29,7 +29,7 @@ class ReservationController extends Controller
 
         $token = $this->createToken($reservation);
 
-        Mail::to('muszelka@muszelkawicie.pl')->send(new ReservationMade($reservation, $number));
+        Mail::to(config('mail.from.address'))->send(new ReservationMade($reservation, $number));
         Mail::to($reservation->email)->send(new ReservationConfirm($reservation, $token, $number));
 
         return Inertia::render('Checkout/Success');

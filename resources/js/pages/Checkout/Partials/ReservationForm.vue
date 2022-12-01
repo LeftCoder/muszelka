@@ -113,10 +113,11 @@ const onSubmit = async () => {
         ></div>
       </div>
 
-      <div class="mb-4 sm:text-right">
+      <div class="mb-4 lg:text-right">
         <p
-          class="sm:flex items-center sm:justify-end mt-2 text-sm text-slate-500"
+          class="lg:flex items-center lg:justify-end mt-2 text-sm text-slate-500"
         >
+        <div class="flex items-center">
           <input
             type="checkbox"
             id="policy"
@@ -130,12 +131,14 @@ const onSubmit = async () => {
             "
             required
           />
+
           <label
             class="hover:cursor-pointer hover:text-slate-900 mr-1"
             for="policy"
           >
             Zapoznałem/am się z
           </label>
+          </div>
           <PolicyAndTermsModal @confirm="form.policy = true" />
         </p>
       </div>

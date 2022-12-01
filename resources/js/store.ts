@@ -61,26 +61,28 @@ export const useRootStore = defineStore('root', {
     },
     guestsCout: (state) => {
       if (state.reservation.adults === 0 && state.reservation.children === 0) {
-        return 'Nie wybrano'
+        return '<span class="text-red-500">Nie wybrano</span>'
       }
       if (state.reservation.adults === 0 && state.reservation.children > 0) {
-        return 'Wymagana przynajmniej jedna osoba dorosła'
+        return '<span class="text-red-500">Wymagana przynajmniej jedna osoba dorosła</span>'
       }
 
-      if (state.apartments && state.reservation.apartment_id !== -1) {
-        const selected = state.apartments.find(
-          (apartment) => apartment.id === state.reservation.apartment_id
-        )
+      const selected = state.apartments.find(
+        (apartment) => apartment.id === state.reservation.apartment_id
+      )
 
+      if (state.apartments && state.reservation.apartment_id !== -1) {
         if (
           selected &&
           state.reservation.adults + state.reservation.children > selected.max
         ) {
-          return `Przekroczony maksymalny limit ${selected.max} osób`
+          return `<span class="text-red-500">Przekroczony maksymalny limit ${selected.max} osób</span>`
         }
       }
-
-      return `${state.reservation.adults} + ${state.reservation.children}`
+      const total = selected
+        ? `<span class="text-sm font-light">/ ${selected.max} max.</span>`
+        : ''
+      return `${state.reservation.adults} + ${state.reservation.children} ${total}`
     },
     filterApartments: (state) => {
       let toFilter = state.apartments

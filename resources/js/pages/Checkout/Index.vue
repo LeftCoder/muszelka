@@ -32,7 +32,7 @@ const errors = computed(() => usePage<any>().props.value.errors)
         <div class="mb-12">
           <h2 class="text-3xl font-bold text-gray-900 sm:pr-12">Data pobytu</h2>
           <p
-            class="text-2xl mt-2"
+            class="text-xl mt-2"
             :class="
               store.selectedDates === 'Nie wybrano'
                 ? 'text-red-500'
@@ -51,7 +51,7 @@ const errors = computed(() => usePage<any>().props.value.errors)
         <div class="mb-12">
           <h2 class="text-3xl font-bold text-gray-900 sm:pr-12">Domek</h2>
           <p
-            class="text-2xl mt-2"
+            class="text-xl mt-2"
             :class="
               store.selectedApartmentName ? 'text-gray-500' : 'text-red-500'
             "
@@ -73,9 +73,7 @@ const errors = computed(() => usePage<any>().props.value.errors)
           <h2 class="text-3xl font-bold text-gray-900 sm:pr-12">
             Liczba dorosłych oraz dzieci
           </h2>
-          <p class="text-2xl text-gray-500 mt-2">
-            {{ store.guestsCout }}
-          </p>
+          <p class="text-xl text-gray-500 mt-2" v-html="store.guestsCout"></p>
           <div
             v-if="errors.max"
             v-text="errors.max"
@@ -85,7 +83,7 @@ const errors = computed(() => usePage<any>().props.value.errors)
 
         <div class="mb-12">
           <h2 class="text-3xl font-bold text-gray-900 sm:pr-12">Zwierzęta</h2>
-          <p class="text-2xl text-gray-500 mt-2">
+          <p class="text-xl text-gray-500 mt-2">
             {{ store.reservation.animals ? 'Tak' : 'Nie' }}
           </p>
         </div>
