@@ -16,7 +16,7 @@ watch(dates, (newDates) => {
 </script>
 
 <template>
-  <div class="w-full flex flex-col items-center justify-center my-12 lg:my-32">
+  <div class="w-full flex flex-col items-center justify-center my-12">
     <div
       class="bg-white border shadow-md w-10/12 sm:w-11/12 lg:w-9/12 rounded-lg"
     >
