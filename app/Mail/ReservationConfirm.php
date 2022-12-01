@@ -41,8 +41,8 @@ class ReservationConfirm extends Mailable
     public function envelope()
     {
         return new Envelope(
-            from: new Address($this->reservation->email, "{$this->reservation->name} {$this->reservation->surname}"),
-            subject: 'Muszelka - Przyjęliśmy Twoją rezerwację.',
+            from: new Address(config('mail.from.address'), config('app.name')),
+            subject: 'Przyjęliśmy Twoją rezerwację.',
         );
     }
 
