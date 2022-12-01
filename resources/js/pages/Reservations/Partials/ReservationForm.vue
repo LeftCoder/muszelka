@@ -72,7 +72,7 @@ watch(dates, (newDates) => {
           />
         </div>
         <div class="hidden lg:flex self-end lg:w-1/5">
-          <Link href="/rezerwacje/checkout">
+          <Link href="/rezerwacja/podsumowanie">
             <button
               type="button"
               class="border text-white rounded-lg text-lg bg-amber-500 hover:bg-amber-400 shadow-md font-semibold focus:outline-none md:px-6 px-6 md:py-4 py-3 xl:leading-4"
@@ -143,7 +143,7 @@ watch(dates, (newDates) => {
             </div>
           </div>
           <div class="mt-8 w-full lg:hidden">
-            <Link href="/rezerwacje/checkout">
+            <Link href="/rezerwacja/podsumowanie">
               <button
                 type="button"
                 class="w-full border text-white rounded-lg text-lg bg-amber-500 hover:bg-amber-400 shadow-md font-semibold focus:outline-none md:px-6 px-6 md:py-4 py-3 xl:leading-4"

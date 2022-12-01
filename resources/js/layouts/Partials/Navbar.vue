@@ -42,7 +42,7 @@ const closeMobileMenu = (close: () => void) => {
               >Kontakt</Link
             >
             <Link
-              href="/rezerwacje"
+              href="/rezerwacja"
               class="inline-flex justify-center rounded-lg text-sm font-semibold py-2.5 px-4 bg-cyan-900 text-white hover:bg-cyan-700 -my-2.5 ml-8"
               >Rezerwacja</Link
             >
@@ -101,7 +101,7 @@ const closeMobileMenu = (close: () => void) => {
             >
             <Link
               @click="closeMobileMenu(close)"
-              href="/rezerwacje"
+              href="/rezerwacja"
               class="inline-flex justify-center rounded-lg text-xl sm:text-sm font-semibold py-2.5 px-4 bg-amber-500 shadow-md text-white hover:bg-amber-400 -my-2.5"
               >Rezerwacja</Link
             >

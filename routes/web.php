@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 // Pages
 Route::get('/', [PagesController::class, 'home'])->name('home');
 Route::get('/domki', [PagesController::class, 'apartments'])->name('apartments');
-Route::get('/rezerwacje', [PagesController::class, 'reservations'])->name('reservation');
-Route::get('/rezerwacje/checkout', [PagesController::class, 'checkout'])->name('reservation.checkout');
+Route::get('/rezerwacja', [PagesController::class, 'reservations'])->name('reservation');
+Route::get('/rezerwacja/podsumowanie', [PagesController::class, 'checkout'])->name('reservation.checkout');
 Route::get('/faq', [PagesController::class, 'faq'])->name('faq');
 Route::get('/polityka-prywatnosci', [PagesController::class, 'policy'])->name('policy');
 Route::get('/regulamin', [PagesController::class, 'terms'])->name('terms');

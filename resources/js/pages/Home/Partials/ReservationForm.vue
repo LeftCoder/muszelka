@@ -67,7 +67,7 @@ watch(dates, (newDates) => {
         <div
           class="w-full lg:w-1/12 block lg:flex lg:justify-center lg:self-end mt-4 lg:mt-0"
         >
-          <Link href="/rezerwacje" title="Wybierz domek">
+          <Link href="/rezerwacja" title="Wybierz domek">
             <button
               class="flex justify-center w-full border md:text-2xl text-white rounded-lg text-lg bg-amber-500 hover:bg-amber-400 shadow-md font-semibold focus:outline-none md:px-6 px-6 md:py-4 py-3 xl:leading-4"
             >

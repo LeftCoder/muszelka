@@ -90,7 +90,7 @@ const errors = computed(() => usePage<any>().props.value.errors)
 
         <div class="order-first sm:order-last mb-12 sm:mb-0">
           <Link
-            href="/rezerwacje"
+            href="/rezerwacja"
             class="inline-flex w-full sm:w-auto justify-center items-center rounded-lg text-lg font-semibold md:px-6 px-6 md:py-3 py-3 xl:leading-4 bg-white text-slate-900 border shadow hover:bg-slate-100"
           >
             <ArrowSmallLeftIcon class="h-5 w-5 mr-2" />
