@@ -1,6 +1,6 @@
 const swipe_pl = {
   closeTitle: 'Zamknij',
-  zoomTitle: 'Zbliżenie',
+  zoomTitle: 'Powiększ',
   arrowPrevTitle: 'Poprzednie',
   arrowNextTitle: 'Następne',
   errorMsg: 'Nie można wczytać tego zdjęcia',

@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 // @ts-ignore
 import PhotoSwipeLightbox from 'photoswipe/lightbox'
+import swipe_pl from '@/utils/swipe_pl'
 import type { Image } from '@/types'
 import { onMounted, onUnmounted, ref } from 'vue'
 import 'photoswipe/style.css'
@@ -24,6 +25,7 @@ onMounted(() => {
     lightbox.value = new PhotoSwipeLightbox({
       dataSource: props.images,
       pswpModule: () => import('photoswipe'),
+      ...swipe_pl,
     })
 
     lightbox.value?.init()
