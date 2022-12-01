@@ -113,8 +113,10 @@ const onSubmit = async () => {
         ></div>
       </div>
 
-      <div class="mb-4 text-right">
-        <p class="flex items-center justify-end mt-2 text-sm text-slate-500">
+      <div class="mb-4 sm:text-right">
+        <p
+          class="sm:flex items-center sm:justify-end mt-2 text-sm text-slate-500"
+        >
           <input
             type="checkbox"
             id="policy"
@@ -138,9 +140,9 @@ const onSubmit = async () => {
         </p>
       </div>
     </div>
-    <div class="flex justify-end">
+    <div class="flex justify-end mt-4 sm:mt-0">
       <button
-        class="inline-flex justify-center border text-white rounded-lg text-lg bg-amber-500 enabled:hover:bg-amber-400 disabled:opacity-75 shadow-md font-semibold focus:outline-none md:px-6 px-6 md:py-4 py-3 xl:leading-4"
+        class="inline-flex w-full sm:w-auto justify-center border text-white rounded-lg text-lg bg-amber-500 enabled:hover:bg-amber-400 disabled:opacity-75 shadow-md font-semibold focus:outline-none md:px-6 px-6 md:py-4 py-3 xl:leading-4"
         type="submit"
         :disabled="form.processing"
       >

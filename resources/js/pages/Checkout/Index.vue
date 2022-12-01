@@ -26,7 +26,7 @@ const errors = computed(() => usePage<any>().props.value.errors)
     >
   </Heading>
 
-  <div class="mb-64">
+  <div class="mb-24 lg:mb-64">
     <div class="flex flex-col sm:flex-row">
       <div class="flex flex-col sm:flex-1">
         <div class="mb-12">
@@ -93,7 +93,7 @@ const errors = computed(() => usePage<any>().props.value.errors)
         <div class="order-first sm:order-last mb-12 sm:mb-0">
           <Link
             href="/rezerwacje"
-            class="inline-flex justify-center rounded-lg text-sm font-semibold py-2.5 px-4 bg-cyan-900 text-white hover:bg-cyan-700"
+            class="inline-flex w-full sm:w-auto justify-center items-center rounded-lg text-lg font-semibold md:px-6 px-6 md:py-3 py-3 xl:leading-4 bg-cyan-900 text-white hover:bg-cyan-700"
           >
             <ArrowSmallLeftIcon class="h-5 w-5 mr-2 text-white" />
             Zmień szczegóły rezerwacji
