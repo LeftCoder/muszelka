@@ -23,7 +23,7 @@ export default {
 
   <main class="overflow-hidden">
     <div
-      class="bg-[url('/storage/images/hero-image.webp')] bg-cover bg-gray-300 bg-blend-multiply h-screen"
+      class="bg-[url('/storage/images/hero-image.webp')] bg-auto sm:bg-cover bg-slate-300 bg-blend-multiply h-screen"
     >
       <Navbar />
       <div

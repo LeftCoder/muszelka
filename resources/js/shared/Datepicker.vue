@@ -1,10 +1,12 @@
 <script lang="ts" setup>
 //@ts-ignore
 import VueTailwindDatepicker from 'vue-tailwind-datepicker'
+import { useMediaQuery } from '@vueuse/core'
 import { ref, computed } from 'vue'
 
 const props = defineProps(['modelValue'])
 const emit = defineEmits(['update:modelValue'])
+const isDesktop = useMediaQuery('(min-width: 640px)')
 
 const dateValue = computed({
   get() {
@@ -45,7 +47,9 @@ const dDate = (date: Date): boolean => {
   <div>
     <VueTailwindDatepicker
       :formatter="formatter"
-      placeholder="Zameldowanie ~ Wymeldowanie"
+      :placeholder="
+        isDesktop ? 'Zameldowanie ~ Wymeldowanie' : 'Początek ~ Koniec'
+      "
       :options="options"
       :shortcuts="false"
       :disable-date="dDate"

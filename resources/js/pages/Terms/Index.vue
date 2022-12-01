@@ -28,7 +28,7 @@ import TermsContent from '@/pages/Terms/Partials/TermsContent.vue'
 
   <TermsContent />
 
-  <div class="text-right mt-24 mb-48">
+  <div class="text-right mt-24 mb-24 lg:mb-64">
     <h2 class="text-2xl font-sign">Życzymy Państwu miłego pobytu,</h2>
     <h2 class="text-2xl font-sign">właściciele Muszelki</h2>
   </div>

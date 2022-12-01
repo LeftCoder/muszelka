@@ -18,7 +18,7 @@ import PolicyContent from '@/pages/Policy/Partials/PolicyContent.vue'
     >
   </Heading>
 
-  <div class="mb-48">
+  <div class="mb-24 lg:mb-64">
     <PolicyContent />
   </div>
 </template>

@@ -1,6 +1,6 @@
 <script lang="ts" setup></script>
 <template>
-  <div class="w-full mb-24 text-center">
+  <div class="w-full mt-16 sm:mt-0 mb-24 text-center">
     <h1
       class="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight"
     >

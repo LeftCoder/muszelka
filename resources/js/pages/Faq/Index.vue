@@ -25,7 +25,7 @@ const props = defineProps<Props>()
     <template #slogan>Najcześciej zadawane pytania.</template>
   </Heading>
 
-  <div v-if="props.faqs.length" class="mb-40 relative">
+  <div v-if="props.faqs.length" class="mb-24 lg:mb-64 relative">
     <div>
       <QuestionItem
         v-for="question in props.faqs"
