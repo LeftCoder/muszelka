@@ -1,5 +1,6 @@
 <script setup>
-import { useForm } from '@inertiajs/inertia-vue3'
+import { Link, useForm } from '@inertiajs/inertia-vue3'
+import { ArrowSmallLeftIcon } from '@heroicons/vue/24/solid/index.js'
 
 defineProps({
   canResetPassword: Boolean,
@@ -24,6 +25,7 @@ import LoginLayout from '@/layouts/Login.vue'
 
 export default {
   layout: LoginLayout,
+  components: { Link },
 }
 </script>
 
@@ -44,9 +46,14 @@ export default {
     <div class="sm:flex-1 bg-cyan-900">
       <div class="h-screen grid place-items-center">
         <div>
-          <h2 class="text-2xl font-bold text-slate-400 mb-4 sm:pr-12">
-            Logowanie
-          </h2>
+          <div class="flex items-center mb-4">
+            <Link href="/" title="Wroć na główną">
+              <ArrowSmallLeftIcon class="h-6 w-6 mr-2 text-amber-500" />
+            </Link>
+            <h2 class="text-2xl font-bold text-slate-400 sm:pr-12">
+              Logowanie
+            </h2>
+          </div>
 
           <div
             class="p-6 w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"

@@ -21,7 +21,9 @@ watch(dates, (newDates) => {
       class="bg-white border shadow-md w-10/12 sm:w-11/12 lg:w-9/12 rounded-lg"
     >
       <div class="py-8 px-6 flex flex-col sm:flex-row items-center gap-4">
-        <div class="md:w-3/6 xl:border-r xl:mb-0 mb-4 border-gray-300 sm:pr-8">
+        <div
+          class="w-full lg:w-7/12 xl:border-r xl:mb-0 mb-4 border-gray-300 sm:pr-8"
+        >
           <label
             for="dates"
             class="block mb-2 text-sm font-medium text-slate-900"
@@ -29,7 +31,9 @@ watch(dates, (newDates) => {
           >
           <Datepicker v-model="dates" />
         </div>
-        <div class="md:w-1/6 xl:border-r xl:mb-0 mb-4 border-gray-300 sm:pr-8">
+        <div
+          class="w-full lg:w-2/12 xl:border-r xl:mb-0 mb-4 border-gray-300 sm:pr-8"
+        >
           <label
             for="adults"
             class="block mb-2 text-sm font-medium text-slate-900"
@@ -45,7 +49,7 @@ watch(dates, (newDates) => {
             min="1"
           />
         </div>
-        <div class="md:w-1/6 border-gray-300 xl:mb-0 mb-4">
+        <div class="w-full lg:w-2/12 border-gray-300 xl:mb-0 mb-4 sm:pr-8">
           <label
             for="children"
             class="block mb-2 text-sm font-medium text-slate-900"
@@ -60,7 +64,9 @@ watch(dates, (newDates) => {
             min="0"
           />
         </div>
-        <div class="md:w-1/6 block w-full sm:flex sm:justify-end">
+        <div
+          class="w-full lg:w-1/12 block lg:flex lg:justify-center lg:self-end mt-4 lg:mt-0"
+        >
           <Link href="/rezerwacje" title="Wybierz domek">
             <button
               class="flex justify-center w-full border md:text-2xl text-white rounded-lg text-lg bg-amber-500 hover:bg-amber-400 shadow-md font-semibold focus:outline-none md:px-6 px-6 md:py-4 py-3 xl:leading-4"
