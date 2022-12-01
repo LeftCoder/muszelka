@@ -19,7 +19,7 @@ const props = defineProps<Props>()
         :galleryId="props.apartment.id"
       />
     </div>
-    <div class="lg:flex-1 flex flex-col justify-between p-8">
+    <div class="lg:flex-1 flex flex-col justify-between lg:p-8 py-8 px-4">
       <section class="mb-12 lg:mb-0">
         <div class="flex flex-col lg:flex-row lg:justify-between">
           <h2 class="mb-4 lg:mb-0 text-3xl font-bold text-gray-900">
