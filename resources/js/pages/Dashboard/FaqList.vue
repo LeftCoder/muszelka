@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import { PropType } from 'vue'
+import { Squares2X2Icon } from '@heroicons/vue/24/solid/index.js'
+import { Link } from '@inertiajs/inertia-vue3'
 import type { Faq, MetaInformations, PaginationLinks } from '@/types'
 import NoItems from '@/shared/NoItems.vue'
 import FaqsTable from '@/pages/Dashboard/Partials/FaqsTable.vue'
@@ -21,7 +23,6 @@ import AuthenticatedLayout from '@/layouts/Authenticated.vue'
 
 export default {
   layout: AuthenticatedLayout,
-  components: { Pagination },
 }
 </script>
 
@@ -32,11 +33,16 @@ export default {
   </Head>
 
   <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-8">
-    <h2
-      class="text-3xl sm:text-4xl mb-4 sm:mb-0 font-extrabold dark:text-slate-100"
-    >
-      Lista pytań
-    </h2>
+    <div class="flex justify-center items-center">
+      <Link href="/dashboard">
+        <Squares2X2Icon class="h-6 w-6 mr-3 text-blue-500" />
+      </Link>
+      <h2
+        class="text-3xl sm:text-4xl mb-4 sm:mb-0 font-extrabold dark:text-slate-100"
+      >
+        Lista pytań
+      </h2>
+    </div>
 
     <Link href="/dashboard/faq/create">
       <button

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import ApartmentForm from '@/pages/Dashboard/Partials/ApartmentForm.vue'
-import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/24/solid'
+import { ArrowSmallLeftIcon } from '@heroicons/vue/24/solid/index.js'
 </script>
 
 <script lang="ts">
@@ -8,6 +8,7 @@ import AuthenticatedLayout from '@/layouts/Authenticated.vue'
 
 export default {
   layout: AuthenticatedLayout,
+  components: { ArrowSmallLeftIcon },
 }
 </script>
 
@@ -22,9 +23,8 @@ export default {
       href="/dashboard/domki"
       class="flex items-center text-base sm:p-2 font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700"
     >
-      <HomeIcon class="h-6 w-6" />
+      <ArrowSmallLeftIcon class="h-6 w-6 mr-2 text-blue-500" />
     </Link>
-    <ChevronRightIcon class="h-6 w-6 mx-1" />
     <h2 class="text-3xl sm:text-4xl font-extrabold dark:text-slate-100">
       Nowy domek
     </h2>

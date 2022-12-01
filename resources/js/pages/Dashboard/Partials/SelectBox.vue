@@ -6,7 +6,7 @@ import {
   ListboxOptions,
   ListboxOption,
 } from '@headlessui/vue'
-import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid/index.js'
 import { dropdown } from '@/utils/status'
 
 const props = defineProps({ modelValue: [Number, String] })

@@ -3,7 +3,7 @@ import ConfirmModal from '@/shared/ConfirmModal.vue'
 import ApartmentForm from '@/pages/Dashboard/Partials/ApartmentForm.vue'
 import ApsGallery from '@/pages/Dashboard/Partials/ApsGallery.vue'
 import { Inertia } from '@inertiajs/inertia'
-import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/24/solid'
+import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/24/solid/index.js'
 import { Apartment } from '@/types'
 
 interface Props {

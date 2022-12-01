@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import FeatureForm from '@/pages/Dashboard/Partials/FeatureForm.vue'
-import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/24/solid'
+import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/24/solid/index.js'
 </script>
 
 <script lang="ts">
