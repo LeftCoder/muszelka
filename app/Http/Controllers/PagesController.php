@@ -48,7 +48,7 @@ class PagesController extends Controller
         return Inertia::render('Contact/Index');
     }
 
-    public function reservations()
+    public function reservation()
     {
         $apartments = ApartmentResource::collection(
             Apartment::with(['features', 'images', 'reservations'])
