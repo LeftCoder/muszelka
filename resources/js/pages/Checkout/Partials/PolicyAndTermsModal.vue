@@ -79,12 +79,14 @@ const confirmPolicy = () => {
             >
 
             <TabGroup>
-              <TabList class="flex space-x-5 px-6 py-3">
+              <TabList
+                class="flex justify-evenly px-6 py-3 bg-opacity-10 backdrop-blur supports-backdrop-blur:bg-white/95"
+              >
                 <Tab v-slot="{ selected }"
                   ><button
                     :class="[
-                      'w-full py-2.5 text-sm font-medium leading-5 text-slate-900',
-                      selected ? 'text-cyan-900' : 'text-slate-900',
+                      'w-full text-sm font-medium leading-5 text-slate-900 rounded-full px-3 py-2',
+                      selected ? 'bg-slate-200' : 'bg-white',
                     ]"
                   >
                     Polityka prywatności
@@ -94,8 +96,8 @@ const confirmPolicy = () => {
                   ><button
                     type="button"
                     :class="[
-                      'w-full py-2.5 text-sm font-medium leading-5 text-slate-900',
-                      selected ? 'text-cyan-900' : 'text-slate-900',
+                      'w-full text-sm font-medium leading-5 text-slate-900 rounded-full px-3 py-2',
+                      selected ? 'bg-slate-200' : 'bg-white',
                     ]"
                   >
                     Regulamin
