@@ -38,12 +38,12 @@ export default {
     >
       <ArrowSmallLeftIcon class="h-6 w-6 text-blue-500" />
     </Link>
-    <h2 class="text-2xl sm:text-4xl font-extrabold dark:text-slate-100">
+    <h2 class="text-2xl lg:text-4xl font-extrabold dark:text-slate-100">
       Edytuj :: {{ props.apartment.name }}
     </h2>
   </div>
 
-  <div class="flex flex-col sm:flex-row gap-24 sm:gap-6 sm:mt-24 mt-12">
+  <div class="flex flex-col lg:flex-row gap-24 lg:gap-6 lg:mt-24 mt-12">
     <div class="w-full">
       <div class="flex justify-end mb-4">
         <ConfirmModal @confirm="deleteApartment"> Usuń domek </ConfirmModal>
@@ -56,8 +56,8 @@ export default {
     </div>
 
     <div class="w-full">
-      <div class="max-w-xl w-full mx-auto">
-        <div class="flex justify-end items-center mb-4">
+      <div class="lg:max-w-xl w-full mx-auto">
+        <div class="flex lg:justify-end items-center mb-4">
           <h2 class="text-xl">Zdjęcia</h2>
         </div>
         <ApsGallery

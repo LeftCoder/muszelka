@@ -37,13 +37,13 @@ export default {
     >
       <ArrowSmallLeftIcon class="h-6 w-6 text-blue-500" />
     </Link>
-    <h2 class="text-2xl sm:text-4xl font-extrabold dark:text-slate-100">
+    <h2 class="text-2xl lg:text-4xl font-extrabold dark:text-slate-100">
       Edytuj pozycję
     </h2>
   </div>
 
-  <div class="flex justify-center sm:mt-24 mt-12">
-    <div class="w-full max-w-3xl">
+  <div class="flex justify-center lg:mt-24 mt-12">
+    <div class="w-full lg:max-w-3xl">
       <div class="flex justify-end mb-4">
         <ConfirmModal @confirm="deleteFeature">
           Usuń udogodnienie
