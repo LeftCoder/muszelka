@@ -8,12 +8,17 @@ import {
 } from '@headlessui/vue'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid/index.js'
 import { dropdown } from '@/utils/status'
+import { useUrlSearchParams } from '@vueuse/core'
 
 const props = defineProps({ modelValue: [Number, String] })
 const emit = defineEmits(['update:modelValue'])
-
+const params = useUrlSearchParams('history')
 const selectedStatus = computed(
-  () => dropdown.find((status) => status.id === props.modelValue)?.name
+  () =>
+    dropdown.find(
+      (status) =>
+        status.id === props.modelValue || Number(params.status) === status.id
+    )?.name
 )
 </script>
 
