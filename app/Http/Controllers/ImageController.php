@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Image;
 use App\Models\TemporaryImage;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -45,10 +46,25 @@ class ImageController extends Controller
     {
         if ($image) {
             $image_path = public_path().$image->src;
-            unlink($image_path);
+            if (unlink($image_path)) {
+                $this->removeDirectoryIfEmpty($image->apartment->id);
+            }
+
             $image->delete();
         }
 
         return '';
+    }
+
+    protected function removeDirectoryIfEmpty($folder)
+    {
+        $filesystem = new Filesystem();
+        $directory = public_path()."/storage/houses/$folder";
+        if ($filesystem->exists($directory)) {
+            $files = $filesystem->files($directory);
+            if (empty($files)) {
+                $filesystem->deleteDirectory($directory);
+            }
+        }
     }
 }

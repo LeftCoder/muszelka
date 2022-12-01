@@ -7,7 +7,6 @@ namespace Database\Seeders;
 use App\Models\Apartment;
 use App\Models\Faq;
 use App\Models\Feature;
-use App\Models\Image;
 use App\Models\Reservation;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -39,11 +38,6 @@ class DatabaseSeeder extends Seeder
 
             Reservation::factory()
                 ->count(3)
-                ->for($apartment)
-                ->create();
-
-            Image::factory()
-                ->count(1)
                 ->for($apartment)
                 ->create();
         }

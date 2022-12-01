@@ -62,10 +62,7 @@ const openGallery = () => {
     </div>
     <img
       v-if="props.images"
-      :src="
-        props.images[0]?.thumbnail ??
-        'https://via.placeholder.com/615x615?text=...'
-      "
+      :src="props.images[0]?.thumbnail ?? '/storage/images/default.jpg'"
       :alt="props.images[0]?.alt ?? 'Muszelka Wicie'"
       loading="lazy"
       class="object-cover object-center aspect-square w-full h-full"

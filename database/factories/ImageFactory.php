@@ -17,8 +17,8 @@ class ImageFactory extends Factory
     public function definition()
     {
         return [
-            'src' => '/storage/images/default.jpg',
-            'thumbnail' => '/storage/images/default.jpg',
+            'src' => config('app.url').'/storage/images/default.jpg',
+            'thumbnail' => config('app.url').'/storage/images/default.jpg',
             'width' => 1920,
             'height' => 1280,
             'alt' => 'Domek',

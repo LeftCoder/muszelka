@@ -24,11 +24,11 @@ watch(
     <meta name="robots" content="noindex,nofollow" />
   </Head>
 
-  <div class="h-screen bg-gray-100 dark:bg-gray-900">
+  <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
     <Navbar />
-    <div class="flex h-[calc(100%_-_80px)]">
+    <div class="flex h-full min-h-[calc(100vh_-_80px)]">
       <Sidebar />
-      <div class="w-full px-8 py-5">
+      <div class="flex-1 w-full h-full px-8 py-5">
         <slot />
       </div>
     </div>

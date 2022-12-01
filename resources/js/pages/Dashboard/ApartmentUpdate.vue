@@ -43,7 +43,7 @@ export default {
     </h2>
   </div>
 
-  <div class="flex flex-col lg:flex-row gap-24 lg:gap-6 lg:mt-24 mt-12">
+  <div class="flex flex-col lg:flex-row gap-24 lg:gap-6 mt-12">
     <div class="w-full">
       <div class="flex justify-end mb-4">
         <ConfirmModal @confirm="deleteApartment"> Usuń domek </ConfirmModal>
