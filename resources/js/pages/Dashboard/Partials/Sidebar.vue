@@ -16,10 +16,11 @@ onMounted(() => {
 })
 </script>
 <template>
-  <aside class="w-64 hidden lg:block" aria-label="Sidebar">
-    <div
-      class="overflow-y-auto py-4 px-3 bg-slate-500 dark:bg-slate-800 min-h-screen h-full"
-    >
+  <aside
+    class="w-64 hidden lg:block bg-slate-500 dark:bg-slate-800"
+    aria-label="Sidebar"
+  >
+    <div class="overflow-y-auto py-4 px-3">
       <ul class="space-y-2">
         <li>
           <Link

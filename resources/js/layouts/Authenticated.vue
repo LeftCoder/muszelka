@@ -24,9 +24,9 @@ watch(
     <meta name="robots" content="noindex,nofollow" />
   </Head>
 
-  <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+  <div class="h-screen bg-gray-100 dark:bg-gray-900">
     <Navbar />
-    <div class="flex">
+    <div class="flex h-[calc(100%_-_80px)]">
       <Sidebar />
       <div class="w-full px-8 py-5">
         <slot />
