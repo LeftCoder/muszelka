@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
                 ->create();
 
             Image::factory()
-                ->count(3)
+                ->count(1)
                 ->for($apartment)
                 ->create();
         }

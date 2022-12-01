@@ -17,8 +17,8 @@ class ImageFactory extends Factory
     public function definition()
     {
         return [
-            'src' => 'https://via.placeholder.com/615x615?text=...',
-            'thumbnail' => 'https://via.placeholder.com/615x615?text=...',
+            'src' => '/storage/images/default.jpg',
+            'thumbnail' => '/storage/images/default.jpg',
             'width' => 1920,
             'height' => 1280,
             'alt' => 'Domek',

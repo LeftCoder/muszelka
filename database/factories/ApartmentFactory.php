@@ -17,7 +17,7 @@ class ApartmentFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake()->name(),
+            'name' => fake()->company(),
             'description' => fake()->paragraph(2),
             'price' => fake()->numberBetween(100, 300),
             'max' => fake()->randomDigitNotZero(),
