@@ -25,12 +25,12 @@ watch(dates, (newDates) => {
 </script>
 
 <template>
-  <div class="w-full flex-col flex items-center justify-center mb-12 lg:mb-32">
-    <div
-      class="bg-white border shadow-md w-10/12 sm:w-11/12 lg:w-9/12 rounded-lg"
-    >
+  <div class="w-full flex-col flex items-center justify-center mb-32">
+    <div class="bg-white border shadow-md w-full lg:w-9/12 rounded-lg">
       <div class="py-8 px-6 flex flex-col lg:flex-row items-center gap-4">
-        <div class="md:w-2/5 xl:border-r xl:mb-0 mb-4 border-gray-300 pr-8">
+        <div
+          class="lg:w-2/5 xl:border-r xl:mb-0 mb-4 border-gray-300 pr-0 lg:pr-8 w-full"
+        >
           <label
             for="datepicker"
             class="block mb-2 text-sm font-medium text-slate-900"
@@ -38,7 +38,9 @@ watch(dates, (newDates) => {
           >
           <Datepicker id="datepicker" v-model="dates" />
         </div>
-        <div class="md:w-1/5 xl:border-r xl:mb-0 mb-4 border-gray-300 pr-8">
+        <div
+          class="lg:w-1/5 xl:border-r xl:mb-0 mb-4 border-gray-300 lg:pr-8 w-full"
+        >
           <label
             for="adults"
             class="block mb-2 text-sm font-medium text-slate-900"
@@ -54,7 +56,7 @@ watch(dates, (newDates) => {
             min="1"
           />
         </div>
-        <div class="md:w-1/5 border-gray-300 xl:mb-0 mb-4">
+        <div class="lg:w-1/5 border-gray-300 lg:mb-0 mb-4 lg:pr-8 w-full">
           <label
             for="children"
             class="block mb-2 text-sm font-medium text-slate-900"
@@ -69,7 +71,7 @@ watch(dates, (newDates) => {
             min="0"
           />
         </div>
-        <div class="md:w-1/5 text-right">
+        <div class="hidden lg:block lg:w-1/5">
           <Link href="/rezerwacje/checkout">
             <button
               type="button"
@@ -81,14 +83,14 @@ watch(dates, (newDates) => {
         </div>
       </div>
 
-      <div class="pb-8 px-6">
+      <div class="pb-8 px-6 -mt-4 lg:mt-0">
         <label
           for="apartment"
           class="block mb-2 text-sm font-medium text-slate-900"
           >Nasze domki</label
         >
-        <div class="flex items-center gap-4">
-          <div class="md:w-3/5 flex relative">
+        <div class="flex flex-col lg:flex-row items-center gap-4">
+          <div class="w-full lg:w-3/5 flex relative">
             <select
               id="apartment"
               class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
@@ -121,7 +123,7 @@ watch(dates, (newDates) => {
               <XMarkIcon class="h-5- w-5 text-slate-500" />
             </button>
           </div>
-          <div class="md:w-2/5">
+          <div class="w-full lg:w-2/5 mt-4 lg:mt-0">
             <div class="flex items-center text-sm text-slate-500">
               <input
                 type="checkbox"
@@ -139,6 +141,16 @@ watch(dates, (newDates) => {
                 >
               </label>
             </div>
+          </div>
+          <div class="mt-8 w-full lg:hidden">
+            <Link href="/rezerwacje/checkout">
+              <button
+                type="button"
+                class="w-full border text-white rounded-lg text-lg bg-amber-500 hover:bg-amber-400 shadow-md font-semibold focus:outline-none md:px-6 px-6 md:py-4 py-3 xl:leading-4"
+              >
+                Zarezerwuj pobyt
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -31,8 +31,12 @@ export default {
     <meta name="description" content="Lista pytań" />
   </Head>
 
-  <div class="flex justify-between items-center mb-4">
-    <h2 class="text-4xl font-extrabold dark:text-slate-100">Lista pytań</h2>
+  <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-8">
+    <h2
+      class="text-3xl sm:text-4xl mb-4 sm:mb-0 font-extrabold dark:text-slate-100"
+    >
+      Lista pytań
+    </h2>
 
     <Link href="/dashboard/faq/create">
       <button

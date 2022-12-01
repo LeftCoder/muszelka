@@ -16,7 +16,7 @@ onMounted(() => {
 })
 </script>
 <template>
-  <aside class="w-64" aria-label="Sidebar">
+  <aside class="w-64 hidden sm:block" aria-label="Sidebar">
     <div
       class="overflow-y-auto py-4 px-3 bg-slate-500 dark:bg-slate-800 min-h-screen h-full"
     >

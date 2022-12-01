@@ -51,12 +51,16 @@ export default {
     <meta name="description" content="Lista rezerwacji" />
   </Head>
 
-  <div class="flex justify-between items center mb-4">
-    <h2 class="w-2/3 text-4xl font-extrabold dark:text-slate-100">
+  <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-8">
+    <h2
+      class="sm:w-2/3 text-3xl sm:text-4xl mb-4 sm:mb-0 font-extrabold dark:text-slate-100"
+    >
       Lista rezerwacji
     </h2>
 
-    <div class="w-1/3 flex justify-center items-center gap-4">
+    <div
+      class="sm:w-1/3 flex flex-col sm:flex-row justify-center sm:items-center gap-4 my-8 sm:my-0"
+    >
       <SelectBox v-model="form.status" />
       <SearchBox v-model="form.search" />
     </div>
@@ -68,7 +72,7 @@ export default {
   </div>
 
   <NoItems v-else class="mt-8"
-    ><h2 class="text-2xl text-slate-900 dark:text-slate-100">
+    ><h2 class="text-2xl text-slate-900 text-center dark:text-slate-100">
       Brak rezerwacji do wyświetlenia.
     </h2>
   </NoItems>

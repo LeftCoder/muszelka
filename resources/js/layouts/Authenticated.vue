@@ -27,7 +27,7 @@ watch(
   <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
     <Navbar />
     <div class="flex">
-      <Sidebar />
+      <Sidebar class="hidden" />
       <div class="w-full px-8 py-5">
         <slot />
       </div>

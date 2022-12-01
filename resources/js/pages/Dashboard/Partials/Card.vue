@@ -4,7 +4,7 @@
   <Link
     class="block p-6 max-w-sm bg-white rounded-lg border border-slate-200 shadow-md hover:bg-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:hover:bg-slate-700"
   >
-    <div class="w-64">
+    <div class="max-w-64">
       <h5
         class="mb-2 text-2xl font-bold tracking-tight text-slate-500  dark:text-white"
       >

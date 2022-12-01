@@ -8,10 +8,12 @@ interface Props {
 const props = defineProps<Props>()
 </script>
 <template>
-  <div class="flex justify-between items-center mt-5">
+  <div class="flex flex-col sm:flex-row justify-between sm:items-center mt-5">
     <div>Łącznie: {{ props.meta?.total }}</div>
     <div v-if="props.meta && props.meta.links?.length > 3">
-      <div class="flex flex-wrap -mb-1">
+      <div
+        class="mt-5 sm:mt-0 flex justify-center sm:justify-end sm:flex-wrap text-sm -mb-1"
+      >
         <template v-for="(link, key) in props.meta?.links">
           <div
             v-if="link.url === null"

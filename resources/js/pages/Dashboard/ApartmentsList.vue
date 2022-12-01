@@ -25,8 +25,12 @@ export default {
     <meta name="description" content="Lista domków" />
   </Head>
 
-  <div class="flex justify-between items-center mb-4">
-    <h2 class="text-4xl font-extrabold dark:text-slate-100">Lista domków</h2>
+  <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-8">
+    <h2
+      class="text-3xl sm:text-4xl mb-4 sm:mb-0 font-extrabold dark:text-slate-100"
+    >
+      Lista domków
+    </h2>
 
     <Link href="/dashboard/domki/create">
       <button
@@ -47,7 +51,7 @@ export default {
   </div>
 
   <NoItems v-else class="mt-8">
-    <h2 class="text-2xl text-slate-900 dark:text-slate-100">
+    <h2 class="text-2xl text-slate-900 text-center dark:text-slate-100">
       Brak domków do wyświetlenia.
     </h2></NoItems
   >

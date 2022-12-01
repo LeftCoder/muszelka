@@ -30,8 +30,8 @@ export default {
 <template>
   <Head title="Zaloguj się" />
 
-  <div class="w-full flex h-screen">
-    <div class="flex-1 grid place-items-center">
+  <div class="w-full sm:flex h-screen">
+    <div class="hidden sm:flex-1 sm:grid sm:place-items-center">
       <Link href="/" class="flex-none text-slate-900">
         <img
           src="/storage/images/logo-dark.svg"
@@ -41,7 +41,7 @@ export default {
         <span class="sr-only">Muszelka Logo</span>
       </Link>
     </div>
-    <div class="flex-1 bg-cyan-900">
+    <div class="sm:flex-1 bg-cyan-900">
       <div class="h-screen grid place-items-center">
         <div>
           <h2 class="text-2xl font-bold text-slate-400 mb-4 sm:pr-12">
