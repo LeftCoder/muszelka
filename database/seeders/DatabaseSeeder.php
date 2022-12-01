@@ -10,6 +10,7 @@ use App\Models\Feature;
 use App\Models\Reservation;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,6 +24,12 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Kamil Graczyk',
             'email' => 'kamilgraczyk@o2.pl',
+        ]);
+
+        User::factory()->create([
+            'name' => 'Michał Nowak',
+            'email' => config('mail.from.address'),
+            'password' => Hash::make('Muszelka23'),
         ]);
 
         $features = ['wifi', 'tv', 'pralka', 'wyposażona kuchnia'];
