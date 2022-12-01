@@ -42,9 +42,10 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
         class="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-slate-100 dark:divide-slate-600 rounded-md bg-white dark:bg-slate-800 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
       >
         <div class="px-1 py-1">
-          <MenuItem v-slot="{ active }">
+          <MenuItem v-slot="{ active, close }">
             <Link
               href="/"
+              @click="close"
               :class="[
                 active
                   ? 'bg-blue-500 text-white'
@@ -62,9 +63,10 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
           </MenuItem>
         </div>
         <div class="px-1 py-1">
-          <MenuItem v-slot="{ active }">
+          <MenuItem v-slot="{ active, close }">
             <Link
               href="/dashboard"
+              @click="close"
               :class="[
                 active
                   ? 'bg-blue-500 text-white'
@@ -80,9 +82,10 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
               Dashboard
             </Link>
           </MenuItem>
-          <MenuItem v-slot="{ active }">
+          <MenuItem v-slot="{ active, close }">
             <Link
               href="/dashboard/rezerwacje"
+              @click="close"
               :class="[
                 active
                   ? 'bg-blue-500 text-white'
@@ -98,9 +101,10 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
               Rezerwacje
             </Link>
           </MenuItem>
-          <MenuItem v-slot="{ active }">
+          <MenuItem v-slot="{ active, close }">
             <Link
               href="/dashboard/domki"
+              @click="close"
               :class="[
                 active
                   ? 'bg-blue-500 text-white'
@@ -116,9 +120,10 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
               Domki
             </Link>
           </MenuItem>
-          <MenuItem v-slot="{ active }">
+          <MenuItem v-slot="{ active, close }">
             <Link
               href="/dashboard/udogodnienia"
+              @click="close"
               :class="[
                 active
                   ? 'bg-blue-500 text-white'
@@ -134,9 +139,10 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
               Udogodnienia
             </Link>
           </MenuItem>
-          <MenuItem v-slot="{ active }">
+          <MenuItem v-slot="{ active, close }">
             <Link
               href="/dashboard/faq"
+              @click="close"
               :class="[
                 active
                   ? 'bg-blue-500 text-white'
@@ -155,9 +161,10 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
         </div>
 
         <div class="px-1 py-1">
-          <MenuItem v-slot="{ active }">
+          <MenuItem v-slot="{ active, close }">
             <Link
               href="/logout"
+              @click="close"
               method="post"
               as="button"
               :class="[
