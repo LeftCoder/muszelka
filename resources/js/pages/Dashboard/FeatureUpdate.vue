@@ -42,7 +42,7 @@ export default {
     </h2>
   </div>
 
-  <div class="flex justify-center lg:mt-24 mt-12">
+  <div class="flex justify-center mt-12">
     <div class="w-full lg:max-w-3xl">
       <div class="flex justify-end mb-4">
         <ConfirmModal @confirm="deleteFeature">
