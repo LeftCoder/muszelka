@@ -18,11 +18,8 @@ load(import.meta.env.VITE_GOOGLE_RECAPTCHA_SITE_KEY, {
 window.axios = axios
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
 
-const appName =
-  window.document.getElementsByTagName('title')[0]?.innerText || 'Muszelka'
-
 createInertiaApp({
-  title: (title) => `${appName} - ${title}`,
+  title: (title) => (title ? `Muszelka - ${title}` : 'Muszelka'),
   resolve: async (name) => {
     const page = (
       await resolvePageComponent(
