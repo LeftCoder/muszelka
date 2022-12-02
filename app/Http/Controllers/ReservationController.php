@@ -53,26 +53,30 @@ class ReservationController extends Controller
 
     public function booked()
     {
-        return Reservation::toBase()
-            ->selectRaw('count(*) as booked')
+        $booked = Reservation::toBase()
+            ->selectRaw('count(*) as count')
             ->whereDate('created_at', Carbon::today())
             ->first();
+
+        return response()->json([
+            'booked' => intval($booked->count),
+        ]);
     }
 
     public function stats()
     {
         $confirmed = Reservation::toBase()
-            ->selectRaw('count(*) as confirmed')
+            ->selectRaw('count(*) as count')
             ->where('status', ReservationStatus::CONFIRMED)
             ->first();
 
         $apartments = Apartment::toBase()
-            ->selectRaw('count(*) as apartments')
+            ->selectRaw('count(*) as count')
             ->first();
 
         return response()->json([
-            'confirmed' => $confirmed->confirmed,
-            'apartments' => $apartments->apartments,
+            'confirmed' => intval($confirmed->count),
+            'apartments' => intval($apartments->count),
         ]);
     }
 
