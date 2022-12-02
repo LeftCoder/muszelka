@@ -8,10 +8,14 @@ import {
   QuestionMarkCircleIcon,
 } from '@heroicons/vue/24/solid/index.js'
 
+interface ResponseData {
+  booked: number
+}
+
 const booked = ref(0)
 onMounted(() => {
-  window.axios.get(`/dashboard/api/booked`).then((result) => {
-    booked.value = Number(result.data.booked)
+  window.axios.get<ResponseData>(`/dashboard/api/booked`).then(({ data }) => {
+    booked.value = data.booked
   })
 })
 </script>

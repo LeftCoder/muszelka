@@ -2,18 +2,24 @@
 import { ref, onMounted } from 'vue'
 import Card from '@/pages/Dashboard/Partials/Card.vue'
 
+interface ResponseData {
+  confirmed: number
+  apartments: number
+}
+
 const confirmed = ref(0)
 const apartments = ref(0)
 onMounted(() => {
-  window.axios.get(`/dashboard/api/stats`).then((result) => {
-    confirmed.value = result.data.confirmed
-    apartments.value = result.data.apartments
+  window.axios.get<ResponseData>(`/dashboard/api/stats`).then(({ data }) => {
+    confirmed.value = data.confirmed
+    apartments.value = data.apartments
   })
 })
 </script>
 
 <script lang="ts">
 import AuthenticatedLayout from '@/layouts/Authenticated.vue'
+import { AxiosResponse } from 'axios'
 
 export default {
   layout: AuthenticatedLayout,
