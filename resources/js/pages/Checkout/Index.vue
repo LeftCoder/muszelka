@@ -15,7 +15,7 @@ const errors = computed(() => usePage<any>().props.value.errors)
     <title>Twoja Rezerwacja</title>
     <meta
       name="description"
-      content="W tym miejscu uzupełnij swoję dane tak abyśmy mogli przyjąć Twoją rezerwację."
+      content="W tym miejscu uzupełnij swoję dane abyśmy mogli przyjąć Twoją rezerwację."
     />
   </Head>
 

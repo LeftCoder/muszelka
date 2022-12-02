@@ -1,4 +1,11 @@
 <template>
+  <Head>
+    <title>Rezerwacja przyjęta</title>
+    <meta
+      name="description"
+      content="W tym miejscu uzupełnij swoję dane abyśmy mogli przyjąć Twoją rezerwację."
+    />
+  </Head>
   <div
     class="mt-16 max-w-5xl mx-auto p-1 bg-gradient-to-r from-cyan-500 to-amber-500 rounded-lg"
   >

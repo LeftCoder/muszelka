@@ -1,4 +1,7 @@
 <template>
+  <Head>
+    <title>Rezerwacja potwierdzona</title>
+  </Head>
   <div
     class="mt-16 max-w-5xl mx-auto p-1 bg-gradient-to-r from-cyan-500 to-amber-500 rounded-lg"
   >

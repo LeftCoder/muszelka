@@ -20,7 +20,7 @@ onMounted(() => {
 
 <template>
   <Head>
-    <title>Rezerwacje</title>
+    <title>Rezerwacja</title>
     <meta
       name="description"
       content="Wybierz odpowiedni domek dla siebie i Twojej rodziny i zarezerwuj swój pobyt."
