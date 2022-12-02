@@ -11,7 +11,7 @@ import {
 const booked = ref(0)
 onMounted(() => {
   window.axios.get(`/dashboard/api/booked`).then((result) => {
-    booked.value = result.data.booked
+    booked.value = Number(result.data.booked)
   })
 })
 </script>
