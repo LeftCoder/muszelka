@@ -19,7 +19,6 @@ onMounted(() => {
 
 <script lang="ts">
 import AuthenticatedLayout from '@/layouts/Authenticated.vue'
-import { AxiosResponse } from 'axios'
 
 export default {
   layout: AuthenticatedLayout,
