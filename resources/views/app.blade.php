@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title inertia>{{ config('app.name', 'Laravel') }}</title>
+        <!-- Title handled by Inertia Head component -->
 
         <!-- CSRF Token -->
         <meta name="csrf_token" content="{{ csrf_token() }}">
