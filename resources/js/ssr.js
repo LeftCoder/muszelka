@@ -5,13 +5,11 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers'
 import { createPinia } from 'pinia'
 import createServer from '@inertiajs/server'
 
-const appName = 'Muszelka'
-
 createServer((page) =>
   createInertiaApp({
     page,
     render: renderToString,
-    title: (title) => `${appName} - ${title}`,
+    title: (title) => `Muszelka - ${title}`,
     resolve: (name) =>
       resolvePageComponent(
         `./pages/${name}.vue`,
