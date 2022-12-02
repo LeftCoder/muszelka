@@ -39,7 +39,7 @@ const colors = (status: ReservationStatus) => {
 
 const isOpen = ref(false)
 const selected = ref(
-  statuses.find((status) => status.name === props.status)?.id || 0
+  statuses.find((status) => status.name === props.status)?.id ?? 0
 )
 
 const setIsOpen = (value: boolean) => {
