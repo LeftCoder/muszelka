@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import type { ReservationStatus } from '@/types'
-import { Status } from '@/types'
 import {
   TransitionRoot,
   TransitionChild,
@@ -26,13 +25,13 @@ const emit = defineEmits<{
 
 const colors = (status: ReservationStatus) => {
   switch (status) {
-    case Status.NEW:
+    case 'Nowa':
       return 'bg-blue-100 text-blue-800 dark:bg-blue-200 dark:text-blue-800'
-    case Status.CONFIRMED:
+    case 'Potwierdzona':
       return 'bg-amber-100 text-amber-800 dark:bg-amber-200 dark:text-amber-900'
-    case Status.CANCELED:
+    case 'Anulowana':
       return 'bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-300'
-    case Status.DONE:
+    case 'Zakończona':
       return 'bg-cyan-100 text-cyan-800 dark:bg-cyan-200 dark:text-cyan-900'
   }
 }

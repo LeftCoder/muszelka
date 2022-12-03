@@ -26,22 +26,15 @@ export type ReservationList = Pick<
 export type LastReservation = Pick<Reservation, 'id' | 'name' | 'surname'>
 
 export type ReservationStatus =
-  | Status.NEW
-  | Status.CONFIRMED
-  | Status.CANCELED
-  | Status.DONE
+  | 'Nowa'
+  | 'Potwierdzona'
+  | 'Anulowana'
+  | 'Zakończona'
 
 export type StatusDropdown = {
   id: string | number
   name: ReservationStatus | 'Wszystkie'
 }[]
-
-export enum Status {
-  NEW = 'Nowa',
-  CONFIRMED = 'Potwierdzona',
-  CANCELED = 'Anulowana',
-  DONE = 'Zakończona',
-}
 
 export interface Apartment {
   id: number

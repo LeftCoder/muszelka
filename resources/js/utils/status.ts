@@ -1,22 +1,21 @@
-import type { StatusDropdown } from '@/types'
-import { Status } from '@/types'
+import type { ReservationStatus, StatusDropdown } from '@/types'
 
-export const statuses = [
+export const statuses: { id: number; name: ReservationStatus }[] = [
   {
     id: 1,
-    name: Status.NEW,
+    name: 'Nowa',
   },
   {
     id: 2,
-    name: Status.CONFIRMED,
+    name: 'Potwierdzona',
   },
   {
     id: 3,
-    name: Status.CANCELED,
+    name: 'Anulowana',
   },
   {
     id: 4,
-    name: Status.DONE,
+    name: 'Zakończona',
   },
 ]
 

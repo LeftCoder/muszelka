@@ -13,7 +13,7 @@ const props = defineProps<Props>()
         class="text-xs text-slate-700 uppercase bg-slate-50 dark:bg-slate-700 dark:text-slate-400"
       >
         <tr>
-          <th scope="col" class="py-3 px-6">Ptanie</th>
+          <th scope="col" class="py-3 px-6">Pytanie</th>
           <th scope="col" class="py-3 px-6">Odpowiedź</th>
         </tr>
       </thead>
