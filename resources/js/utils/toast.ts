@@ -31,9 +31,9 @@ const Toast = (text: string) => {
   const toast = createToast(text)
   addToast(toast)
 
-  new Promise<void>((resolve) => {
+  new Promise<void>(resolve => {
     Promise.allSettled(
-      toast.getAnimations().map((animation) => animation.finished)
+      toast.getAnimations().map(animation => animation.finished)
     ).then(() => {
       Toaster.removeChild(toast)
       resolve()

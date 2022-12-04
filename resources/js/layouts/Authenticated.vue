@@ -11,7 +11,7 @@ const message = computed<string>(() => usePage<any>().props.value.flash.message)
 
 watch(
   () => message.value,
-  (message) => {
+  message => {
     if (message) {
       Toast(message)
     }

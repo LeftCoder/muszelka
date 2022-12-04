@@ -10,7 +10,7 @@ const dates = ref({
   endDate: store.reservation.end,
 })
 
-watch(dates, (newDates) => {
+watch(dates, newDates => {
   store.setReservationDates(newDates)
 })
 </script>

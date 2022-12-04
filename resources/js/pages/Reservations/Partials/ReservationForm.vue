@@ -19,7 +19,7 @@ const dropdownApartments = computed(() => {
   return store.apartments
 })
 
-watch(dates, (newDates) => {
+watch(dates, newDates => {
   store.setReservationDates(newDates)
 })
 </script>

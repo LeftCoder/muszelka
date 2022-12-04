@@ -18,7 +18,7 @@ const form = useForm({
   max: props.apartment ? props.apartment.max : '',
   features:
     props.apartment && props.apartment.features
-      ? props.apartment.features.map((feature) => feature.id)
+      ? props.apartment.features.map(feature => feature.id)
       : [],
   folders: [],
 })

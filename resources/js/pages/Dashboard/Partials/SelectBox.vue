@@ -16,7 +16,7 @@ const params = useUrlSearchParams('history')
 const selectedStatus = computed(
   () =>
     dropdown.find(
-      (status) =>
+      status =>
         status.id === props.modelValue || Number(params.status) === status.id
     )?.name
 )
@@ -25,7 +25,7 @@ const selectedStatus = computed(
 <template>
   <Listbox
     :value="props.modelValue"
-    @update:modelValue="(value) => emit('update:modelValue', value)"
+    @update:modelValue="value => emit('update:modelValue', value)"
   >
     <div class="relative flex-1">
       <ListboxButton

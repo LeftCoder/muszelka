@@ -43,7 +43,7 @@ export default {
     },
     handleRemove(error, file) {
       try {
-        this.myFiles = this.myFiles.filter((f) => f !== file.serverId)
+        this.myFiles = this.myFiles.filter(f => f !== file.serverId)
         this.$emit('update:modelValue', this.myFiles)
       } catch {
         console.error(error)
