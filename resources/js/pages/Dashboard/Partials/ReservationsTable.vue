@@ -9,7 +9,7 @@ interface Props {
   reservations: Reservation[] | undefined
 }
 
-const Toast = inject('toast') as Toast
+const toast = inject('toast') as Toast
 const props = defineProps<Props>()
 
 const formatDate = (date: string) => {
@@ -22,7 +22,7 @@ const updateStatus = (status: number, id: number) => {
     { status },
     {
       onSuccess: () => {
-        Toast('Status zmieniony.')
+        toast('Status zmieniony.')
       },
       only: ['reservations'],
     }
@@ -51,8 +51,8 @@ const updateStatus = (status: number, id: number) => {
       <tbody>
         <tr
           v-for="reservation in props.reservations"
-          class="bg-white dark:bg-slate-800"
           :key="reservation.id"
+          class="bg-white dark:bg-slate-800"
         >
           <td scope="row" class="py-4 px-6 whitespace-nowrap">
             {{ `${reservation.number}` }}
@@ -65,9 +65,9 @@ const updateStatus = (status: number, id: number) => {
           </th>
           <td scope="row" class="py-4 px-6">
             <StatusModal
-              @confirm="updateStatus"
-              :status="reservation.status"
               :id="reservation.id"
+              :status="reservation.status"
+              @confirm="updateStatus"
             />
           </td>
           <td class="py-4 px-6">

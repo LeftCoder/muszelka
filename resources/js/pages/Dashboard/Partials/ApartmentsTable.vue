@@ -9,7 +9,7 @@ interface Props {
   apartments: Apartment[]
 }
 
-const Toast = inject('toast') as Toast
+const toast = inject('toast') as Toast
 const props = defineProps<Props>()
 
 const handleChange = (id: number, occupied: boolean) => {
@@ -20,7 +20,7 @@ const handleChange = (id: number, occupied: boolean) => {
     },
     {
       onSuccess: () => {
-        Toast('Status zmieniony.')
+        toast('Status zmieniony.')
       },
       only: ['apartments'],
     }
@@ -69,13 +69,13 @@ const handleChange = (id: number, occupied: boolean) => {
           </td>
           <td class="py-4 px-6 text-right">
             <Switch
-              @click="handleChange(apartment.id, apartment.occupied)"
               :class="
                 apartment.occupied
                   ? 'bg-blue-600'
                   : 'bg-slate-200 dark:bg-slate-700'
               "
               class="relative inline-flex h-6 w-11 items-center rounded-full"
+              @click="handleChange(apartment.id, apartment.occupied)"
             >
               <span class="sr-only">Oznacz jako wynajęty</span>
               <span

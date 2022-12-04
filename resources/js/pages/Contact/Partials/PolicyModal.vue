@@ -25,8 +25,8 @@ const confirmPolicy = () => {
 <template>
   <button
     type="button"
-    @click="setIsOpen(true)"
     class="font-medium text-cyan-700 hover:underline"
+    @click="setIsOpen(true)"
   >
     polityką prywatności
   </button>

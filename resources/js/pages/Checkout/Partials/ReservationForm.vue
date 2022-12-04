@@ -41,16 +41,16 @@ const onSubmit = async () => {
         >
         <input
           id="name"
+          v-model="form.name"
           type="text"
           name="name"
-          v-model="form.name"
           class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
           required
         />
         <div
           v-if="form.errors.name"
-          v-text="form.errors.name"
           class="text-red-500 text-xs mt-1"
+          v-text="form.errors.name"
         ></div>
       </div>
 
@@ -62,16 +62,16 @@ const onSubmit = async () => {
         >
         <input
           id="surname"
+          v-model="form.surname"
           type="text"
           name="surname"
-          v-model="form.surname"
           class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
           required
         />
         <div
           v-if="form.errors.surname"
-          v-text="form.errors.surname"
           class="text-red-500 text-xs mt-1"
+          v-text="form.errors.surname"
         ></div>
       </div>
 
@@ -81,16 +81,16 @@ const onSubmit = async () => {
         >
         <input
           id="email"
+          v-model="form.email"
           type="email"
           name="email"
-          v-model="form.email"
           class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
           required
         />
         <div
           v-if="form.errors.email"
-          v-text="form.errors.email"
           class="text-red-500 text-xs mt-1"
+          v-text="form.errors.email"
         ></div>
       </div>
 
@@ -100,16 +100,16 @@ const onSubmit = async () => {
         >
         <input
           id="phone"
+          v-model="form.phone"
           type="tel"
           name="phone"
-          v-model="form.phone"
           class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
           required
         />
         <div
           v-if="form.errors.phone"
-          v-text="form.errors.phone"
           class="text-red-500 text-xs mt-1"
+          v-text="form.errors.phone"
         ></div>
       </div>
 
@@ -119,10 +119,10 @@ const onSubmit = async () => {
         >
           <div class="flex items-center">
             <input
-              type="checkbox"
               id="policy"
-              name="policy"
               v-model="form.policy"
+              type="checkbox"
+              name="policy"
               class="w-4 h-4 text-cyan-600 focus:ring-cyan-500 bg-gray-100 mr-2 rounded border-gray-300 focus:ring-2"
               :class="
                 form.errors.policy && !form.policy

@@ -18,7 +18,7 @@ import AccentImage from '@/shared/AccentImage.vue'
     <div
       class="grid grid-cols-1 gap-12 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 relative"
     >
-      <AccentImage posX="left-[-40px]" posY="top-8" />
+      <AccentImage pos-x="left-[-40px]" pos-y="top-8" />
 
       <div class="space-y-8">
         <TestimonialItem
@@ -47,7 +47,7 @@ import AccentImage from '@/shared/AccentImage.vue'
         />
       </div>
 
-      <AccentImage class="rotate-180" posX="right-[-20px]" posY="bottom-20" />
+      <AccentImage class="rotate-180" pos-x="right-[-20px]" pos-y="bottom-20" />
     </div>
   </div>
 </template>

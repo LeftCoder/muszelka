@@ -10,7 +10,7 @@ const dates = ref({
   endDate: store.reservation.end,
 })
 
-watch(dates, newDates => {
+watch(dates, (newDates) => {
   store.setReservationDates(newDates)
 })
 </script>
@@ -42,9 +42,9 @@ watch(dates, newDates => {
 
           <input
             id="adults"
+            v-model="store.reservation.adults"
             class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
             type="number"
-            v-model="store.reservation.adults"
             name="adults"
             min="1"
           />
@@ -57,9 +57,9 @@ watch(dates, newDates => {
           >
           <input
             id="children"
+            v-model="store.reservation.children"
             class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
             type="number"
-            v-model="store.reservation.children"
             name="children"
             min="0"
           />

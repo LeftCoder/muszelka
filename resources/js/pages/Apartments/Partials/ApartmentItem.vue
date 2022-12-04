@@ -16,7 +16,7 @@ const props = defineProps<Props>()
     <div class="lg:flex-1 relative overflow-hidden rounded-lg bg-slate-100">
       <ImageGallery
         :images="props.apartment.images"
-        :galleryId="props.apartment.id"
+        :gallery-id="props.apartment.id"
       />
     </div>
     <div class="lg:flex-1 flex flex-col justify-between lg:p-8 py-8 px-4">
@@ -43,7 +43,7 @@ const props = defineProps<Props>()
         <p class="text-lg text-slate-500">{{ props.apartment.description }}</p>
       </section>
 
-      <section class="mt-16 lg:mt-0" v-if="apartment.features">
+      <section v-if="apartment.features" class="mt-16 lg:mt-0">
         <div class="flex flex-wrap lg:flex-nowrap lg:space-x-3 justify-end">
           <span
             v-for="feature in props.apartment.features"

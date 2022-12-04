@@ -1,3 +1,18 @@
+import type { Page, PageProps, Errors, ErrorBag } from '@inertiajs/inertia'
+export interface InertiaPage extends Page<PageProps> {
+  errors: Errors & ErrorBag
+  auth: {
+    user: {
+      id: string
+      name: string
+      email: string
+    }
+  }
+  flash: {
+    message: string
+  }
+}
+
 export interface Reservation {
   id: number
   number: string

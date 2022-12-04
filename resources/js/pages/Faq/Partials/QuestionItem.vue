@@ -19,11 +19,11 @@ const open = ref(false)
     class="bg-white font-medium text-left text-slate-900 border border-slate-200 focus:ring-4 focus:ring-slate-200 hover:bg-slate-100"
   >
     <button
-      @click="open = !open"
       type="button"
       class="flex items-center justify-between w-full px-5 py-6"
       :class="open ? 'bg-slate-200' : ''"
       aria-expanded="false"
+      @click="open = !open"
     >
       <span class="flex items-center">
         <QuestionMarkCircleIcon class="h-5 w-5 text-amber-400 mr-2" />

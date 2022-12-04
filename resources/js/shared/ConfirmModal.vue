@@ -25,8 +25,8 @@ const confirmDelete = () => {
 <template>
   <button
     type="button"
-    @click="setIsOpen(true)"
     class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm sm:w-auto px-3 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+    @click="setIsOpen(true)"
   >
     <TrashIcon class="h-8 w-8 p-2" />
   </button>
@@ -78,7 +78,7 @@ const confirmDelete = () => {
             <div
               class="flex justify-end items-center dark:text-white text-slate-900 bg-gray-100 dark:bg-slate-800 gap-4 px-6 py-3"
             >
-              <button @click="setIsOpen(false)" type="button">Anuluj</button>
+              <button type="button" @click="setIsOpen(false)">Anuluj</button>
               <button
                 type="button"
                 class="inline-flex justify-center rounded-lg text-sm font-semibold py-2.5 px-4 text-white bg-red-700 hover:bg-red-800 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"

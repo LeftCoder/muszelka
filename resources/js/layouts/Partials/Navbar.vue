@@ -20,7 +20,7 @@ const closeMobileMenu = (close: () => void) => {
   <header
     class="relative z-50 w-full flex-none bg-white text-sm font-semibold leading-6 text-slate-900"
   >
-    <Disclosure as="nav" v-slot="{ open }">
+    <Disclosure v-slot="{ open }" as="nav">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="flex items-center">
           <Link href="/" class="mr-auto flex-none text-slate-900">
@@ -51,8 +51,8 @@ const closeMobileMenu = (close: () => void) => {
           <div class="flex items-center sm:hidden">
             <!-- Mobile menu button-->
             <DisclosureButton
-              @click="changeOverflow(open)"
               class="inline-flex items-center justify-center rounded-md p-2 text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-200"
+              @click="changeOverflow(open)"
             >
               <span class="sr-only">Otwórz menu</span>
               <Bars3Icon
@@ -70,39 +70,39 @@ const closeMobileMenu = (close: () => void) => {
         <div class="grid items-center h-screen bg-white w-full p-5">
           <div class="text-2xl flex flex-col items-center space-y-10">
             <Link
-              @click="closeMobileMenu(close)"
               href="/"
               class="hover:text-amber-500"
+              @click="closeMobileMenu(close)"
               >Start</Link
             >
             <Link
-              @click="closeMobileMenu(close)"
               href="/domki"
               class="hover:text-amber-500"
+              @click="closeMobileMenu(close)"
               >Domki</Link
             >
             <Link
-              @click="closeMobileMenu(close)"
               href="/faq"
               class="hover:text-amber-500"
+              @click="closeMobileMenu(close)"
               >FAQ</Link
             >
             <Link
-              @click="closeMobileMenu(close)"
               href="/regulamin"
               class="hover:text-amber-500"
+              @click="closeMobileMenu(close)"
               >Regulamin</Link
             >
             <Link
-              @click="closeMobileMenu(close)"
               href="/kontakt"
               class="hover:text-amber-500"
+              @click="closeMobileMenu(close)"
               >Kontakt</Link
             >
             <Link
-              @click="closeMobileMenu(close)"
               href="/rezerwacja"
               class="inline-flex justify-center rounded-lg text-xl sm:text-sm font-semibold py-2.5 px-4 bg-amber-500 shadow-md text-white hover:bg-amber-400 -my-2.5"
+              @click="closeMobileMenu(close)"
               >Rezerwacja</Link
             >
           </div>

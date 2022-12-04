@@ -46,9 +46,9 @@ const openGallery = () => {
 
 <template>
   <div
-    @click="openGallery"
     :id="'gallery-' + props.galleryId"
     class="overflow-hidden relative"
+    @click="openGallery"
   >
     <div
       class="absolute right-3 top-3 p-1 h-8 w-8 text-center text-white z-20 bg-amber-500 rounded-full"

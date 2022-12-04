@@ -19,7 +19,7 @@ const dropdownApartments = computed(() => {
   return store.apartments
 })
 
-watch(dates, newDates => {
+watch(dates, (newDates) => {
   store.setReservationDates(newDates)
 })
 </script>
@@ -49,9 +49,9 @@ watch(dates, newDates => {
 
           <input
             id="adults"
+            v-model="store.reservation.adults"
             class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
             type="number"
-            v-model="store.reservation.adults"
             name="adults"
             min="1"
           />
@@ -64,9 +64,9 @@ watch(dates, newDates => {
           >
           <input
             id="children"
+            v-model="store.reservation.children"
             class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
             type="number"
-            v-model="store.reservation.children"
             name="children"
             min="0"
           />
@@ -93,8 +93,8 @@ watch(dates, newDates => {
           <div class="w-full lg:w-3/5 flex relative">
             <select
               id="apartment"
-              class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
               v-model="store.reservation.apartment_id"
+              class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
               name="apartment_id"
             >
               <option
@@ -107,8 +107,8 @@ watch(dates, newDates => {
               </option>
               <option
                 v-for="apartment in dropdownApartments"
-                :value="apartment.id"
                 :key="apartment.id"
+                :value="apartment.id"
               >
                 {{ apartment.name }}
               </option>
@@ -117,8 +117,8 @@ watch(dates, newDates => {
               v-if="store.reservation.apartment_id !== -1"
               type="button"
               title="Pokaż wszystkie domki"
-              @click="store.resetApartment"
               class="text-slate-900 absolute right-8 top-3"
+              @click="store.resetApartment"
             >
               <XMarkIcon class="h-5- w-5 text-slate-500" />
             </button>
@@ -126,9 +126,9 @@ watch(dates, newDates => {
           <div class="w-full lg:w-2/5 mt-4 lg:mt-0">
             <div class="flex items-center text-sm text-slate-500">
               <input
-                type="checkbox"
                 id="animals"
                 v-model="store.reservation.animals"
+                type="checkbox"
                 name="animals"
                 class="w-4 h-4 text-cyan-600 focus:ring-cyan-500 bg-gray-100 mr-2 rounded border-gray-300 focus:ring-2"
               />

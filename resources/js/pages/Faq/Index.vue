@@ -33,9 +33,9 @@ const props = defineProps<Props>()
         :faq="question"
       />
     </div>
-    <AccentImage posX="right-[-20px]" posY="top-[-50px]" />
+    <AccentImage pos-x="right-[-20px]" pos-y="top-[-50px]" />
   </div>
-  <NoItems class="mb-40" v-else>
+  <NoItems v-else class="mb-40">
     <h2 class="text-2xl text-slate-900 dark:text-slate-100">
       Brak pytań w sekcji FAQ.
     </h2></NoItems

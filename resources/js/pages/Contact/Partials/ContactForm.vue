@@ -4,8 +4,11 @@ import { useForm, usePage } from '@inertiajs/inertia-vue3'
 import SuccessMessage from '@/pages/Contact/Partials/SuccessMessage.vue'
 import PolicyModal from '@/pages/Contact/Partials/PolicyModal.vue'
 import LoadingSpinnerIcon from '@/shared/LoadingSpinnerIcon.vue'
+import type { InertiaPage } from '@/types'
 
-const message = computed<string>(() => usePage<any>().props.value.flash.message)
+const message = computed<string>(
+  () => usePage<InertiaPage>().props.value.flash.message
+)
 
 const form = useForm({
   name: '',
@@ -30,24 +33,24 @@ const onSubmit = async () => {
 }
 </script>
 <template>
-  <form @submit.prevent="onSubmit" class="w-full">
+  <form class="w-full" @submit.prevent="onSubmit">
     <div class="mb-4">
       <label for="name" class="block mb-2 text-sm font-medium text-slate-900"
         >Twoję imię</label
       >
       <input
-        type="text"
         id="name"
-        name="name"
         v-model="form.name"
+        type="text"
+        name="name"
         aria-describedby="helper-text-explanation"
         class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
         required
       />
       <div
         v-if="form.errors.name"
-        v-text="form.errors.name"
         class="text-red-500 text-xs mt-1"
+        v-text="form.errors.name"
       ></div>
     </div>
 
@@ -56,18 +59,18 @@ const onSubmit = async () => {
         >Email</label
       >
       <input
-        type="email"
         id="email"
-        name="email"
         v-model="form.email"
+        type="email"
+        name="email"
         aria-describedby="helper-text-explanation"
         class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
         required
       />
       <div
         v-if="form.errors.email"
-        v-text="form.errors.email"
         class="text-red-500 text-xs mt-1"
+        v-text="form.errors.email"
       ></div>
     </div>
 
@@ -77,26 +80,26 @@ const onSubmit = async () => {
       >
       <textarea
         id="message"
-        name="message"
         v-model="form.message"
+        name="message"
         rows="4"
         class="block p-2.5 w-full text-sm text-slate-900 bg-slate-50 rounded-lg border border-slate-300 focus:ring-cyan-500 focus:border-cyan-500"
         required
       ></textarea>
       <div
         v-if="form.errors.message"
-        v-text="form.errors.message"
         class="text-red-500 text-xs mt-1"
+        v-text="form.errors.message"
       ></div>
     </div>
 
     <div>
       <p class="flex items-center lg:justify-end mt-2 text-sm text-slate-500">
         <input
-          type="checkbox"
           id="policy"
-          name="policy"
           v-model="form.policy"
+          type="checkbox"
+          name="policy"
           class="w-4 h-4 text-cyan-600 focus:ring-cyan-500 bg-gray-100 mr-2 rounded border-gray-300 focus:ring-2"
           :class="
             form.errors.policy && !form.policy

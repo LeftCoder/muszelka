@@ -65,13 +65,13 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
           <MenuItem v-slot="{ active, close }">
             <Link
               href="/dashboard"
-              @click="close"
               :class="[
                 active
                   ? 'bg-blue-500 text-white'
                   : 'text-slate-900 dark:text-slate-400',
                 'group flex w-full items-center rounded-md px-2 py-2 text-sm',
               ]"
+              @click="close"
             >
               <Squares2X2Icon
                 class="mr-2 h-5 w-5"
@@ -84,13 +84,13 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
           <MenuItem v-slot="{ active, close }">
             <Link
               href="/dashboard/rezerwacje"
-              @click="close"
               :class="[
                 active
                   ? 'bg-blue-500 text-white'
                   : 'text-slate-900 dark:text-slate-400',
                 'group flex w-full items-center rounded-md px-2 py-2 text-sm',
               ]"
+              @click="close"
             >
               <BellAlertIcon
                 class="mr-2 h-5 w-5"
@@ -103,13 +103,13 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
           <MenuItem v-slot="{ active, close }">
             <Link
               href="/dashboard/domki"
-              @click="close"
               :class="[
                 active
                   ? 'bg-blue-500 text-white'
                   : 'text-slate-900 dark:text-slate-400',
                 'group flex w-full items-center rounded-md px-2 py-2 text-sm',
               ]"
+              @click="close"
             >
               <HomeIcon
                 class="mr-2 h-5 w-5"
@@ -122,13 +122,13 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
           <MenuItem v-slot="{ active, close }">
             <Link
               href="/dashboard/udogodnienia"
-              @click="close"
               :class="[
                 active
                   ? 'bg-blue-500 text-white'
                   : 'text-slate-900 dark:text-slate-400',
                 'group flex w-full items-center rounded-md px-2 py-2 text-sm',
               ]"
+              @click="close"
             >
               <GiftIcon
                 class="mr-2 h-5 w-5"
@@ -141,13 +141,13 @@ const user = computed<string>(() => usePage<any>().props.value.auth.user.name)
           <MenuItem v-slot="{ active, close }">
             <Link
               href="/dashboard/faq"
-              @click="close"
               :class="[
                 active
                   ? 'bg-blue-500 text-white'
                   : 'text-slate-900 dark:text-slate-400',
                 'group flex w-full items-center rounded-md px-2 py-2 text-sm',
               ]"
+              @click="close"
             >
               <QuestionMarkCircleIcon
                 class="mr-2 h-5 w-5"

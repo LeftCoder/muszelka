@@ -38,7 +38,7 @@ const colors = (status: ReservationStatus) => {
 
 const isOpen = ref(false)
 const selected = ref(
-  statuses.find(status => status.name === props.status)?.id ?? 0
+  statuses.find((status) => status.name === props.status)?.id ?? 0
 )
 
 const setIsOpen = (value: boolean) => {
@@ -107,11 +107,11 @@ const confirmUpdate = () => {
                 >
                 <div class="space-y-4 w-full">
                   <RadioGroupOption
-                    as="template"
                     v-for="status in statuses"
                     :key="status.name"
-                    :value="status.id"
                     v-slot="{ active, checked }"
+                    as="template"
+                    :value="status.id"
                   >
                     <div
                       :class="[
@@ -166,7 +166,7 @@ const confirmUpdate = () => {
             <div
               class="flex justify-end items-center dark:text-white text-slate-900 bg-gray-100 dark:bg-slate-800 gap-4 px-6 py-3"
             >
-              <button @click="setIsOpen(false)" type="button">Anuluj</button>
+              <button type="button" @click="setIsOpen(false)">Anuluj</button>
               <button
                 type="button"
                 :disabled="!selected"

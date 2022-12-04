@@ -24,8 +24,8 @@ const onSubmit = () => {
 import LoginLayout from '@/layouts/Login.vue'
 
 export default {
-  layout: LoginLayout,
   components: { Link },
+  layout: LoginLayout,
 }
 </script>
 
@@ -66,9 +66,9 @@ export default {
                   >Email</label
                 >
                 <input
-                  type="email"
                   id="email"
                   v-model="form.email"
+                  type="email"
                   class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
                   required
                 />
@@ -80,9 +80,9 @@ export default {
                   >Hasło</label
                 >
                 <input
-                  type="password"
                   id="password"
                   v-model="form.password"
+                  type="password"
                   class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
                   required
                 />

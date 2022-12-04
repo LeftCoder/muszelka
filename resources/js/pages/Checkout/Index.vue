@@ -1,13 +1,14 @@
 <script lang="ts" setup>
 import Heading from '@/layouts/Partials/Heading.vue'
 import ReservationForm from '@/pages/Checkout/Partials/ReservationForm.vue'
+import type { InertiaPage } from '@/types'
 import { ArrowSmallLeftIcon } from '@heroicons/vue/20/solid/index.js'
 import { useRootStore } from '@/store'
 import { computed } from 'vue'
 import { usePage } from '@inertiajs/inertia-vue3'
 
 const store = useRootStore()
-const errors = computed(() => usePage<any>().props.value.errors)
+const errors = computed(() => usePage<InertiaPage>().props.value.errors)
 </script>
 
 <template>
@@ -43,8 +44,8 @@ const errors = computed(() => usePage<any>().props.value.errors)
           </p>
           <div
             v-if="errors.start || errors.end"
-            v-text="errors.start"
             class="text-red-500 text-xs mt-1"
+            v-text="errors.start"
           ></div>
         </div>
 
@@ -64,8 +65,8 @@ const errors = computed(() => usePage<any>().props.value.errors)
           </p>
           <div
             v-if="errors.apartment_id"
-            v-text="errors.apartment_id"
             class="text-red-500 text-xs mt-1"
+            v-text="errors.apartment_id"
           ></div>
         </div>
 
@@ -76,8 +77,8 @@ const errors = computed(() => usePage<any>().props.value.errors)
           <p class="text-xl text-gray-500 mt-2" v-html="store.guestsCout"></p>
           <div
             v-if="errors.max"
-            v-text="errors.max"
             class="text-red-500 text-xs mt-1"
+            v-text="errors.max"
           ></div>
         </div>
 

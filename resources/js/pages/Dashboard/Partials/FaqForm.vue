@@ -32,17 +32,17 @@ const onSubmit = () => {
         >Pytanie</label
       >
       <input
-        type="text"
         id="question"
-        name="question"
         v-model="form.question"
+        type="text"
+        name="question"
         class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         required
       />
       <div
         v-if="form.errors.question"
-        v-text="form.errors.question"
         class="text-red-500 text-xs mt-1"
+        v-text="form.errors.question"
       ></div>
     </div>
 
@@ -54,16 +54,16 @@ const onSubmit = () => {
       >
       <textarea
         id="answer"
+        v-model="form.answer"
         name="answer"
         rows="4"
-        v-model="form.answer"
         class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         required
       />
       <div
         v-if="form.errors.answer"
-        v-text="form.errors.answer"
         class="text-red-500 text-xs mt-1"
+        v-text="form.errors.answer"
       ></div>
     </div>
 

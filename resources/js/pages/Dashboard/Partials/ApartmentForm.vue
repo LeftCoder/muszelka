@@ -18,7 +18,7 @@ const form = useForm({
   max: props.apartment ? props.apartment.max : '',
   features:
     props.apartment && props.apartment.features
-      ? props.apartment.features.map(feature => feature.id)
+      ? props.apartment.features.map((feature) => feature.id)
       : [],
   folders: [],
 })
@@ -41,17 +41,17 @@ const onSubmit = () => {
         >Nazwa domku</label
       >
       <input
-        type="text"
         id="name"
-        name="name"
         v-model="form.name"
+        type="text"
+        name="name"
         class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         required
       />
       <div
         v-if="form.errors.name"
-        v-text="form.errors.name"
         class="text-red-500 text-xs mt-1"
+        v-text="form.errors.name"
       ></div>
     </div>
 
@@ -63,16 +63,16 @@ const onSubmit = () => {
       >
       <textarea
         id="description"
+        v-model="form.description"
         name="description"
         rows="4"
-        v-model="form.description"
         class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         required
       />
       <div
         v-if="form.errors.description"
-        v-text="form.errors.description"
         class="text-red-500 text-xs mt-1"
+        v-text="form.errors.description"
       ></div>
     </div>
 
@@ -83,18 +83,18 @@ const onSubmit = () => {
         >Cena za dobę</label
       >
       <input
+        id="price"
+        v-model="form.price"
         type="number"
         min="0"
-        id="price"
         name="price"
-        v-model="form.price"
         class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         required
       />
       <div
         v-if="form.errors.price"
-        v-text="form.errors.price"
         class="text-red-500 text-xs mt-1"
+        v-text="form.errors.price"
       ></div>
     </div>
 
@@ -105,18 +105,18 @@ const onSubmit = () => {
         >Maksymalna liczba gości</label
       >
       <input
+        id="max"
+        v-model="form.max"
         type="number"
         min="1"
-        id="max"
         name="max"
-        v-model="form.max"
         class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         required
       />
       <div
         v-if="form.errors.max"
-        v-text="form.errors.max"
         class="text-red-500 text-xs mt-1"
+        v-text="form.errors.max"
       ></div>
     </div>
 
@@ -128,8 +128,8 @@ const onSubmit = () => {
       >
       <ChoicesInput
         id="features"
-        name="features[]"
         v-model="form.features"
+        name="features[]"
         :features="props.apartment?.features ?? []"
       />
     </div>

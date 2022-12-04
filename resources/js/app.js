@@ -11,7 +11,7 @@ import GuestLayout from '@/layouts/Guest.vue'
 
 load(import.meta.env.VITE_GOOGLE_RECAPTCHA_SITE_KEY, {
   autoHideBadge: true,
-}).then(recaptcha => {
+}).then((recaptcha) => {
   window.captcha = recaptcha
 })
 
@@ -19,8 +19,8 @@ window.axios = axios
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
 
 createInertiaApp({
-  title: title => (title ? `Muszelka - ${title}` : 'Muszelka'),
-  resolve: async name => {
+  title: (title) => (title ? `Muszelka - ${title}` : 'Muszelka'),
+  resolve: async (name) => {
     const page = (
       await resolvePageComponent(
         `./pages/${name}.vue`,

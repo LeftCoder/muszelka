@@ -22,7 +22,7 @@ interface Lightbox {
 
 const props = defineProps<Props>()
 let lightbox = ref<Lightbox | null>(null)
-const Toast = inject('toast') as Toast
+const toast = inject('toast') as Toast
 
 onMounted(() => {
   if (props.images?.length && !lightbox.value) {
@@ -51,7 +51,7 @@ const deleteImage = (image: number, event: MouseEvent) => {
 
     Inertia.delete(`/dashboard/api/delete/${image}`, {
       onSuccess: () => {
-        Toast('Zdjęcie usunięte.')
+        toast('Zdjęcie usunięte.')
       },
       only: ['apartment'],
     })
@@ -72,9 +72,9 @@ const deleteImage = (image: number, event: MouseEvent) => {
         :data-pswp-width="image.width"
         :data-pswp-height="image.height"
         target="_blank"
-        @click="deleteImage(image.id, $event)"
         class="overflow-hidden relative"
         rel="noreferrer"
+        @click="deleteImage(image.id, $event)"
       >
         <button
           type="button"

@@ -25,8 +25,8 @@ setOptions({
 })
 
 export default {
-  emits: ['update:modelValue'],
   components: { FilePond },
+  emits: ['update:modelValue'],
   data() {
     return {
       myFiles: [],
@@ -43,7 +43,7 @@ export default {
     },
     handleRemove(error, file) {
       try {
-        this.myFiles = this.myFiles.filter(f => f !== file.serverId)
+        this.myFiles = this.myFiles.filter((f) => f !== file.serverId)
         this.$emit('update:modelValue', this.myFiles)
       } catch {
         console.error(error)
@@ -59,10 +59,10 @@ export default {
     class-name="hover:cursor-pointer"
     allow-multiple="true"
     accepted-file-types="image/*"
-    imageResizeTargetWidth="1920"
-    imageResizeTargetHeight="1280"
-    imageResizeUpscale="false"
-    imageTransformClientTransforms="resize"
+    image-resize-target-width="1920"
+    image-resize-target-height="1280"
+    image-resize-upscale="false"
+    image-transform-client-transforms="resize"
     @processfile="handleAdd"
     @removefile="handleRemove"
   />

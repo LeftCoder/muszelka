@@ -36,11 +36,11 @@ const hideMessage = () => {
       {{ props.message }}
     </div>
     <button
-      @click="hideMessage"
       type="button"
       class="ml-auto -mx-1.5 -my-1.5 bg-gray-100 text-gray-500 rounded-lg focus:ring-2 focus:ring-gray-400 p-1.5 hover:bg-gray-200 inline-flex h-8 w-8"
       data-dismiss-target="#alert"
       aria-label="Zamknij"
+      @click="hideMessage"
     >
       <span class="sr-only">zamknij</span>
       <svg

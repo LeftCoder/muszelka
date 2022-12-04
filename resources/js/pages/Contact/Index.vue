@@ -26,8 +26,8 @@ import AccentImage from '@/shared/AccentImage.vue'
     </div>
     <div class="relative w-full lg:w-1/2 flex items-center">
       <AccentImage
-        posX="right-[-30px]"
-        posY="top-[104px]"
+        pos-x="right-[-30px]"
+        pos-y="top-[104px]"
         class="hidden lg:block"
       />
       <ContactForm />

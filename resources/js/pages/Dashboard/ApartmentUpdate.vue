@@ -63,7 +63,7 @@ export default {
         <ApsGallery
           class="rounded-lg"
           :images="props.apartment.images"
-          :galleryId="props.apartment.id"
+          :gallery-id="props.apartment.id"
         />
       </div>
     </div>

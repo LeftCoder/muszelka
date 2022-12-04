@@ -46,6 +46,7 @@ const dDate = (date: Date): boolean => {
 <template>
   <div>
     <VueTailwindDatepicker
+      v-model="dateValue"
       :formatter="formatter"
       :placeholder="
         isDesktop ? 'Zameldowanie ~ Wymeldowanie' : 'Początek ~ Koniec'
@@ -54,7 +55,6 @@ const dDate = (date: Date): boolean => {
       :shortcuts="false"
       :disable-date="dDate"
       :auto-apply="isDesktop"
-      v-model="dateValue"
       i18n="pl"
       input-classes="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
     />

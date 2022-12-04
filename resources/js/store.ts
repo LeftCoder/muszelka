@@ -41,25 +41,25 @@ export const useRootStore = defineStore('root', {
     },
   }),
   getters: {
-    selectedDates: state => {
+    selectedDates: (state) => {
       if (state.reservation.start === '' || state.reservation.end === '') {
         return 'Nie wybrano'
       }
       return `od ${state.reservation.start} do ${state.reservation.end}`
     },
-    selectedApartmentName: state => {
+    selectedApartmentName: (state) => {
       const selected = state.apartments.find(
-        apartment => apartment.id === state.reservation.apartment_id
+        (apartment) => apartment.id === state.reservation.apartment_id
       )
       return selected ? selected.name : ''
     },
-    selectedApartmentMax: state => {
+    selectedApartmentMax: (state) => {
       const selected = state.apartments.find(
-        apartment => apartment.id === state.reservation.apartment_id
+        (apartment) => apartment.id === state.reservation.apartment_id
       )
       return selected ? selected.max : null
     },
-    guestsCout: state => {
+    guestsCout: (state) => {
       if (state.reservation.adults === 0 && state.reservation.children === 0) {
         return '<span class="text-red-500">Nie wybrano</span>'
       }
@@ -68,7 +68,7 @@ export const useRootStore = defineStore('root', {
       }
 
       const selected = state.apartments.find(
-        apartment => apartment.id === state.reservation.apartment_id
+        (apartment) => apartment.id === state.reservation.apartment_id
       )
 
       if (state.apartments && state.reservation.apartment_id !== -1) {
@@ -84,23 +84,23 @@ export const useRootStore = defineStore('root', {
         : ''
       return `${state.reservation.adults} + ${state.reservation.children} ${total}`
     },
-    filterApartments: state => {
+    filterApartments: (state) => {
       let toFilter = state.apartments
       if (state.reservation.apartment_id !== -1) {
-        toFilter = state.apartments.filter(apartment => {
+        toFilter = state.apartments.filter((apartment) => {
           return apartment.id === state.reservation.apartment_id
         })
       }
 
-      return toFilter.filter(apartment => {
+      return toFilter.filter((apartment) => {
         const userPickedDates =
           state.reservation.start && state.reservation.end ? true : false
         const weHaveReservations = apartment.reservation_list?.length ?? 0
 
         if (userPickedDates && weHaveReservations) {
           //check if any of the ongoing reservation overlaps with guest selected dates
-          return apartment.reservation_list?.every(reservation => {
-            let occupied = isApartmentOccupied(state, reservation)
+          return apartment.reservation_list?.every((reservation) => {
+            const occupied = isApartmentOccupied(state, reservation)
             //todo: consider reservation status
             return !occupied
           })

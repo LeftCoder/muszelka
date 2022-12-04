@@ -27,22 +27,22 @@ const options = {
 
 const onChange = (e: Event) => {
   const select = e.target as HTMLSelectElement
-  let options = Array.from(select.selectedOptions).map(option =>
+  let options = Array.from(select.selectedOptions).map((option) =>
     Number(option.value)
   )
   emit('update:modelValue', options)
 }
 
 const settingChoices = computed<Choice[]>(() => {
-  return allFeatures.map(feature => ({
+  return allFeatures.map((feature) => ({
     label: feature.name,
     value: feature.id,
-    selected: props.features?.find(f => f.id === feature.id) ? true : false,
+    selected: props.features?.find((f) => f.id === feature.id) ? true : false,
   }))
 })
 
 onMounted(() => {
-  window.axios.get(`/dashboard/api/features`).then(result => {
+  window.axios.get(`/dashboard/api/features`).then((result) => {
     allFeatures = result.data ?? []
     if (feat.value) {
       choices.value = new Choices(feat.value, {
@@ -61,10 +61,10 @@ onUnmounted(() => {
 
 <template>
   <select
-    :value="props.modelValue"
-    @change="onChange"
     ref="feat"
+    :value="props.modelValue"
     multiple
+    @change="onChange"
   ></select>
 </template>
 
