@@ -114,33 +114,33 @@ const onSubmit = async () => {
       </div>
 
       <div class="mb-4 lg:text-right">
-        <p
+        <div
           class="lg:flex items-center lg:justify-end mt-2 text-sm text-slate-500"
         >
-        <div class="flex items-center">
-          <input
-            type="checkbox"
-            id="policy"
-            name="policy"
-            v-model="form.policy"
-            class="w-4 h-4 text-cyan-600 focus:ring-cyan-500 bg-gray-100 mr-2 rounded border-gray-300 focus:ring-2"
-            :class="
-              form.errors.policy && !form.policy
-                ? 'ring-red-500 ring-2 bg-gray-100'
-                : ''
-            "
-            required
-          />
+          <div class="flex items-center">
+            <input
+              type="checkbox"
+              id="policy"
+              name="policy"
+              v-model="form.policy"
+              class="w-4 h-4 text-cyan-600 focus:ring-cyan-500 bg-gray-100 mr-2 rounded border-gray-300 focus:ring-2"
+              :class="
+                form.errors.policy && !form.policy
+                  ? 'ring-red-500 ring-2 bg-gray-100'
+                  : ''
+              "
+              required
+            />
 
-          <label
-            class="hover:cursor-pointer hover:text-slate-900 mr-1"
-            for="policy"
-          >
-            Zapoznałem/am się z
-          </label>
+            <label
+              class="hover:cursor-pointer hover:text-slate-900 mr-1"
+              for="policy"
+            >
+              Zapoznałem/am się z
+            </label>
           </div>
           <PolicyAndTermsModal @confirm="form.policy = true" />
-        </p>
+        </div>
       </div>
     </div>
     <div class="flex justify-end mt-4 sm:mt-0">
