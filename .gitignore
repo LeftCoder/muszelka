@@ -5,8 +5,6 @@
 /public/storage
 /storage/*.key
 /vendor
-/bootstrap/ssr
-/node_modules
 .env
 .env.backup
 .phpunit.result.cache
