@@ -3,7 +3,7 @@ import VideoPlayer from '@/pages/Home/Partials/VideoPlayer.vue'
 </script>
 
 <template>
-  <div class="flex sm:mt-12 lg:mt-0 mb-0 sm:mb-8 lg:mb-32">
+  <div class="flex sm:mt-12 lg:mt-0 mb-0 sm:mb-8 lg:mb-44">
     <div class="flex-1 flex flex-col justify-center items-center">
       <div class="mr-0 sm:mr-8">
         <h1
