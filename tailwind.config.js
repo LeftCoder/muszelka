@@ -1,5 +1,7 @@
-import defaultTheme from 'tailwindcss/defaultTheme'
-import colors from 'tailwindcss/colors'
+// eslint-disable-next-line
+const defaultTheme = require('tailwindcss/defaultTheme')
+// eslint-disable-next-line
+const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
