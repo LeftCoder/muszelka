@@ -102,7 +102,10 @@ export const useRootStore = defineStore('root', {
           return apartment.reservation_list?.every((reservation) => {
             const occupied = isApartmentOccupied(state, reservation)
             //todo: consider reservation status
-            return !occupied
+            const freeStatus =
+              reservation.status !== 'Potwierdzona' &&
+              reservation.status !== 'Nowa'
+            return !occupied && freeStatus
           })
         }
         //there is no reservations for this apartment -> not ocuppied -> include
