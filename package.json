@@ -22,6 +22,7 @@
     "@vue/server-renderer": "^3.2.31",
     "autoprefixer": "^10.4.13",
     "axios": "^0.27.2",
+    "cssnano": "^5.1.14",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
