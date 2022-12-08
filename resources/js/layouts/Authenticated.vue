@@ -8,9 +8,7 @@ import Toast from '@/utils/toast'
 import '@/../css/toast.css'
 
 provide('toast', Toast)
-const message = computed<string>(
-  () => usePage<InertiaPage>().props.value.flash.message
-)
+const message = computed(() => usePage<InertiaPage>().props.value.flash.message)
 
 watch(
   () => message.value,

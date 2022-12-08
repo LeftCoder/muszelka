@@ -6,9 +6,7 @@ import PolicyModal from '@/pages/Contact/Partials/PolicyModal.vue'
 import LoadingSpinnerIcon from '@/shared/LoadingSpinnerIcon.vue'
 import type { InertiaPage } from '@/types'
 
-const message = computed<string>(
-  () => usePage<InertiaPage>().props.value.flash.message
-)
+const message = computed(() => usePage<InertiaPage>().props.value.flash.message)
 
 const form = useForm({
   name: '',
