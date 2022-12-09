@@ -51,5 +51,4 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps-legacy
           server-dir: ./domains/muszelkawicie.pl/testing/
