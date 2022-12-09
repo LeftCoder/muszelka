@@ -39,7 +39,6 @@ jobs:
         with:
           path: ~/.npm
           key: npm-${{ hashFiles('package-lock.json') }}
-          restore-keys: npm-
 
       - name: 🔨 Build Project
         run: |
