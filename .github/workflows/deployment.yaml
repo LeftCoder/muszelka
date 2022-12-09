@@ -29,15 +29,6 @@ jobs:
       - name: Install Composer Dependencies
         run: composer install --no-progress --prefer-dist
 
-      - name: Generate Key
-        run: php artisan key:generate
-
-      - name: Migrate Database
-        run: php artisan migrate
-
-      - name: Link Storage
-        run: php artisan storage:link
-
       - name: Use Node.js 16
         uses: actions/setup-node@v3
         with:
