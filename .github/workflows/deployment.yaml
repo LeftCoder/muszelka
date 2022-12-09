@@ -21,7 +21,7 @@ jobs:
           extensions: ctype, bcmath, fileinfo, json, mbstring, openssl, pdo, tokenizer, xml
 
       - name: Cache Composer Packages
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: vendor
           key: composer-${{ hashFiles('composer.lock') }}
@@ -35,7 +35,7 @@ jobs:
           node-version: '16'
 
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: npm-${{ hashFiles('package-lock.json') }}
