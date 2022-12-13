@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Heading from '@/layouts/Partials/Heading.vue'
+import Heading from '@/layouts/Partials/AppHeading.vue'
 import ApartmentsList from '@/pages/Apartments/Partials/ApartmentsList.vue'
 import ReservationForm from '@/pages/Reservations/Partials/ReservationForm.vue'
 import type { Apartment } from '@/types'

@@ -4,7 +4,7 @@ import { ArrowSmallLeftIcon } from '@heroicons/vue/24/solid/index.js'
 </script>
 
 <script lang="ts">
-import AuthenticatedLayout from '@/layouts/Authenticated.vue'
+import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
 
 export default {
   layout: AuthenticatedLayout,

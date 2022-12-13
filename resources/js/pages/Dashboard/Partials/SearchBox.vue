@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineProps(['modelValue'])
+defineProps({ modelValue: { type: String, default: '' } })
 defineEmits(['update:modelValue'])
 </script>
 

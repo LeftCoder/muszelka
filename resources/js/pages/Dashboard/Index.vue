@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
-import Card from '@/pages/Dashboard/Partials/Card.vue'
+import Card from '@/pages/Dashboard/Partials/DashCard.vue'
 
 interface ResponseData {
   confirmed: number
@@ -18,7 +18,7 @@ onMounted(() => {
 </script>
 
 <script lang="ts">
-import AuthenticatedLayout from '@/layouts/Authenticated.vue'
+import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
 
 export default {
   layout: AuthenticatedLayout,

@@ -10,7 +10,9 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid/index.js'
 import { dropdown } from '@/utils/status'
 import { useUrlSearchParams } from '@vueuse/core'
 
-const props = defineProps({ modelValue: [Number, String] })
+const props = defineProps({
+  modelValue: { type: [Number, String], default: '' },
+})
 const emit = defineEmits(['update:modelValue'])
 const params = useUrlSearchParams('history')
 const selectedStatus = computed(
@@ -25,7 +27,7 @@ const selectedStatus = computed(
 <template>
   <Listbox
     :value="props.modelValue"
-    @update:modelValue="(value) => emit('update:modelValue', value)"
+    @update:model-value="(value) => emit('update:modelValue', value)"
   >
     <div class="relative flex-1">
       <ListboxButton

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Heading from '@/layouts/Partials/Heading.vue'
+import Heading from '@/layouts/Partials/AppHeading.vue'
 import TermsContent from '@/pages/Terms/Partials/TermsContent.vue'
 </script>
 

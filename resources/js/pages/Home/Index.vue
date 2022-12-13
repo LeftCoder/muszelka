@@ -2,8 +2,8 @@
 import HeroSection from '@/pages/Home/Partials/HeroSection.vue'
 import ReservationForm from '@/pages/Home/Partials/ReservationForm.vue'
 import TestemonialList from '@/pages/Home/Partials/TestemonialList.vue'
-import Navbar from '@/layouts/Partials/Navbar.vue'
-import Footer from '@/layouts/Partials/Footer.vue'
+import Navbar from '@/layouts/Partials/TheNavbar.vue'
+import Footer from '@/layouts/Partials/TheFooter.vue'
 </script>
 
 <script lang="ts">

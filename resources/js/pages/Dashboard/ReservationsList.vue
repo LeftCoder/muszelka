@@ -2,7 +2,7 @@
 import NoItems from '@/shared/NoItems.vue'
 import SearchBox from '@/pages/Dashboard/Partials/SearchBox.vue'
 import SelectBox from '@/pages/Dashboard/Partials/SelectBox.vue'
-import Pagination from '@/pages/Dashboard/Partials/Pagination.vue'
+import Pagination from '@/shared/AppPagination.vue'
 import ReservationsTable from '@/pages/Dashboard/Partials/ReservationsTable.vue'
 import type { MetaInformations, PaginationLinks, Reservation } from '@/types'
 import { Squares2X2Icon } from '@heroicons/vue/24/solid/index.js'
@@ -19,8 +19,14 @@ interface Props {
 }
 
 const props = defineProps({
-  reservations: Object as PropType<Props>,
-  filters: Object as PropType<{ search: string; status: number | string }>,
+  reservations: {
+    type: Object as PropType<Props>,
+    default: () => ({}),
+  },
+  filters: {
+    type: Object as PropType<{ search: string; status: number | string }>,
+    default: () => ({}),
+  },
 })
 
 const form = reactive({
@@ -40,7 +46,7 @@ watch(
 </script>
 
 <script lang="ts">
-import AuthenticatedLayout from '@/layouts/Authenticated.vue'
+import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
 
 export default {
   layout: AuthenticatedLayout,

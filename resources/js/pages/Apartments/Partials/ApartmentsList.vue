@@ -21,11 +21,13 @@ const aparmentIsBusy = computed(() => {
 
 <template>
   <div class="grid grid-cols-1 gap-24 mb-24 lg:mb-64">
-    <ApartmentItem
-      v-for="apartment in props.apartments"
-      v-if="props.apartments?.length"
-      :apartment="apartment"
-    />
+    <template v-if="props.apartments?.length">
+      <ApartmentItem
+        v-for="apartment in props.apartments"
+        :key="apartment.id"
+        :apartment="apartment"
+      />
+    </template>
     <NoBookingDate v-else-if="aparmentIsBusy" />
     <NoItems v-else
       ><h2 class="text-2xl text-slate-900 text-center dark:text-slate-100">

@@ -4,7 +4,7 @@ import { ArrowSmallLeftIcon } from '@heroicons/vue/24/solid/index.js'
 
 defineProps({
   canResetPassword: Boolean,
-  status: String,
+  status: { type: String, default: '' },
 })
 
 const form = useForm({
@@ -21,10 +21,9 @@ const onSubmit = () => {
 </script>
 
 <script>
-import LoginLayout from '@/layouts/Login.vue'
+import LoginLayout from '@/layouts/LoginLayout.vue'
 
 export default {
-  components: { Link },
   layout: LoginLayout,
 }
 </script>

@@ -32,7 +32,7 @@ class ReservationController extends Controller
         Mail::to(config('mail.from.address'))->send(new ReservationMade($reservation, $number));
         Mail::to($reservation->email)->send(new ReservationConfirm($reservation, $token, $number));
 
-        return Inertia::render('Checkout/Success');
+        return Inertia::render('Checkout/SuccessPage');
     }
 
     public function confirmed(Token $token)
@@ -48,7 +48,7 @@ class ReservationController extends Controller
 
         $token->delete();
 
-        return Inertia::render('Checkout/Confirmed');
+        return Inertia::render('Checkout/ConfirmedPage');
     }
 
     public function booked()

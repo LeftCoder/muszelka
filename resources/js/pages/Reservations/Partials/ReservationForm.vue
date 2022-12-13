@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Datepicker from '@/shared/Datepicker.vue'
+import Datepicker from '@/shared/AppDatepicker.vue'
 import { computed, ref, watch } from 'vue'
 import { useRootStore } from '@/store'
 import { XMarkIcon } from '@heroicons/vue/20/solid/index.js'

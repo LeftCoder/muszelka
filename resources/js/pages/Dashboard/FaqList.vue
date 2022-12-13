@@ -5,7 +5,7 @@ import { Link } from '@inertiajs/inertia-vue3'
 import type { Faq, MetaInformations, PaginationLinks } from '@/types'
 import NoItems from '@/shared/NoItems.vue'
 import FaqsTable from '@/pages/Dashboard/Partials/FaqsTable.vue'
-import Pagination from '@/pages/Dashboard/Partials/Pagination.vue'
+import Pagination from '@/shared/AppPagination.vue'
 
 interface Props {
   data: Faq[]
@@ -14,12 +14,15 @@ interface Props {
 }
 
 const props = defineProps({
-  faqs: Object as PropType<Props>,
+  faqs: {
+    type: Object as PropType<Props>,
+    default: () => ({}),
+  },
 })
 </script>
 
 <script lang="ts">
-import AuthenticatedLayout from '@/layouts/Authenticated.vue'
+import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
 
 export default {
   layout: AuthenticatedLayout,

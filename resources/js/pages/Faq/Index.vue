@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import QuestionItem from '@/pages/Faq/Partials/QuestionItem.vue'
-import Heading from '@/layouts/Partials/Heading.vue'
+import Heading from '@/layouts/Partials/AppHeading.vue'
 import AccentImage from '@/shared/AccentImage.vue'
 import NoItems from '@/shared/NoItems.vue'
 import type { Faq } from '@/types'

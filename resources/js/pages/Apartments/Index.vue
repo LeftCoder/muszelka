@@ -1,10 +1,15 @@
 <script lang="ts" setup>
-import Heading from '@/layouts/Partials/Heading.vue'
+import Heading from '@/layouts/Partials/AppHeading.vue'
 import ApartmentsList from '@/pages/Apartments/Partials/ApartmentsList.vue'
 import type { Apartment } from '@/types'
 import { PropType } from 'vue'
 
-const props = defineProps({ apartments: Object as PropType<Apartment[]> })
+const props = defineProps({
+  apartments: {
+    type: Object as PropType<Apartment[]>,
+    default: () => ({}),
+  },
+})
 </script>
 
 <template>

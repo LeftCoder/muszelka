@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Menu from '@/pages/Dashboard/Partials/Menu.vue'
+import Menu from '@/pages/Dashboard/Partials/DashMenu.vue'
 import ThemeToggle from '@/shared/ThemeToggle.vue'
 </script>
 

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import Footer from '@/layouts/Partials/Footer.vue'
-import Navbar from '@/layouts/Partials/Navbar.vue'
+import Footer from '@/layouts/Partials/TheFooter.vue'
+import Navbar from '@/layouts/Partials/TheNavbar.vue'
 </script>
 
 <template>

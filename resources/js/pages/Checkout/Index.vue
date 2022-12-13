@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Heading from '@/layouts/Partials/Heading.vue'
+import Heading from '@/layouts/Partials/AppHeading.vue'
 import ReservationForm from '@/pages/Checkout/Partials/ReservationForm.vue'
 import type { InertiaPage } from '@/types'
 import { ArrowSmallLeftIcon } from '@heroicons/vue/20/solid/index.js'

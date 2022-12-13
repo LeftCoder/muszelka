@@ -2,8 +2,8 @@
 import { computed, watch, provide } from 'vue'
 import type { InertiaPage } from '@/types'
 import { usePage } from '@inertiajs/inertia-vue3'
-import Sidebar from '@/pages/Dashboard/Partials/Sidebar.vue'
-import Navbar from '@/pages/Dashboard/Partials/Navbar.vue'
+import Sidebar from '@/pages/Dashboard/Partials/DashSidebar.vue'
+import Navbar from '@/pages/Dashboard/Partials/DashNavbar.vue'
 import Toast from '@/utils/toast'
 import '@/../css/toast.css'
 

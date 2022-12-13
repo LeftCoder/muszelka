@@ -4,7 +4,17 @@ import VueTailwindDatepicker from 'vue-tailwind-datepicker'
 import { useMediaQuery } from '@vueuse/core'
 import { ref, computed } from 'vue'
 
-const props = defineProps(['modelValue'])
+interface Props {
+  modelValue:
+    | [Date, Date]
+    | { start: Date | string; end: Date | string }
+    | {
+        startDate: Date | string
+        endDate: Date | string
+      }
+    | string
+}
+const props = defineProps<Props>()
 const emit = defineEmits(['update:modelValue'])
 const isDesktop = useMediaQuery('(min-width: 640px)')
 

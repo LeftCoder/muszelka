@@ -31,8 +31,8 @@ const props = defineProps<Props>()
                 : 'bg-white dark:bg-slate-800 dark:text-slate-400'
             "
             :href="link.url"
-            v-html="link.label"
-          />
+            >{{ link.label }}</Link
+          >
         </template>
       </div>
     </div>

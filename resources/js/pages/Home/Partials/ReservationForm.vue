@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Datepicker from '@/shared/Datepicker.vue'
+import Datepicker from '@/shared/AppDatepicker.vue'
 import { MagnifyingGlassIcon } from '@heroicons/vue/24/outline/index.js'
 import { useRootStore } from '@/store'
 import { ref, watch } from 'vue'

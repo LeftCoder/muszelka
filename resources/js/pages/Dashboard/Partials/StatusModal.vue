@@ -107,11 +107,11 @@ const confirmUpdate = () => {
                 >
                 <div class="space-y-4 w-full">
                   <RadioGroupOption
-                    v-for="status in statuses"
-                    :key="status.name"
+                    v-for="stat in statuses"
+                    :key="stat.name"
                     v-slot="{ active, checked }"
                     as="template"
-                    :value="status.id"
+                    :value="stat.id"
                   >
                     <div
                       :class="[
@@ -134,7 +134,7 @@ const confirmUpdate = () => {
                               :class="checked ? 'text-white' : 'text-gray-900'"
                               class="font-medium"
                             >
-                              {{ status.name }}
+                              {{ stat.name }}
                             </RadioGroupLabel>
                           </div>
                         </div>

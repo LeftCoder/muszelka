@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import ContactForm from '@/pages/Contact/Partials/ContactForm.vue'
 import GoogleMap from '@/pages/Contact/Partials/GoogleMap.vue'
-import Heading from '@/layouts/Partials/Heading.vue'
+import Heading from '@/layouts/Partials/AppHeading.vue'
 import AccentImage from '@/shared/AccentImage.vue'
 </script>
 
