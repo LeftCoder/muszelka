@@ -38,7 +38,7 @@ jobs:
         uses: pnpm/action-setup@v2
         id: pnpm-install
         with:
-          version: 7
+          version: latest
           run_install: false
 
       - name: Get pnpm store directory
@@ -65,4 +65,6 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ./domains/muszelkawicie.pl/testing/
+          protocol: ftps
+          security: loose
           dry-run: true
