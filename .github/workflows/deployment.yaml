@@ -65,7 +65,4 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ./domains/muszelkawicie.pl/testing/
-          protocol: ftps
-          security: loose
-          log-level: verbose
           dry-run: true
