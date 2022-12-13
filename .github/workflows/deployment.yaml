@@ -29,21 +29,16 @@ jobs:
       - name: Install Composer Dependencies
         run: composer install --no-progress --prefer-dist
 
-      - name: Use Node.js 16
+      - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: 16
 
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: npm-${{ hashFiles('package-lock.json') }}
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
 
       - name: 🔨 Build Project
-        run: |
-          npm install
-          npm run build
+        run: npm run build
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
