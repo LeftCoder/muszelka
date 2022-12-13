@@ -67,4 +67,5 @@ jobs:
           server-dir: ./domains/muszelkawicie.pl/testing/
           protocol: ftps
           security: loose
+          log-level: verbose
           dry-run: true
