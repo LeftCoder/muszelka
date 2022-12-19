@@ -2,6 +2,7 @@
 import HeroSection from '@/pages/Home/Partials/HeroSection.vue'
 import ReservationForm from '@/pages/Home/Partials/ReservationForm.vue'
 import TestemonialList from '@/pages/Home/Partials/TestemonialList.vue'
+import StorySection from '@/pages/Home/Partials/StorySection.vue'
 import Navbar from '@/layouts/Partials/TheNavbar.vue'
 import Footer from '@/layouts/Partials/TheFooter.vue'
 </script>
@@ -36,6 +37,7 @@ export default {
     <div
       class="mx-auto mt-16 grid w-full max-w-[85rem] grid-cols-1 px-4 sm:mt-20 sm:px-6 lg:px-8 xl:mt-32"
     >
+      <StorySection />
       <TestemonialList />
     </div>
   </main>
