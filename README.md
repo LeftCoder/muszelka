@@ -1,6 +1,7 @@
 ## About Muszelka
 
 Muszelka is simple Inertia, Vue and Laravel app.
+[Visit the site](https://muszelkawicie.pl)
 
 ## Todo
 
