@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import Heading from '@/layouts/Partials/AppHeading.vue'
 import ApartmentsList from '@/pages/Apartments/Partials/ApartmentsList.vue'
+import FeaturesSection from '@/pages/Apartments/Partials/FeaturesSection.vue'
 import type { Apartment } from '@/types'
 import { PropType } from 'vue'
 
@@ -24,5 +25,7 @@ const props = defineProps({
     <template #default>Nasze domki</template>
     <template #slogan>Zajrzyj do środka i wybierz coś dla siebie.</template>
   </Heading>
+
+  <FeaturesSection />
   <ApartmentsList :apartments="props.apartments" />
 </template>
