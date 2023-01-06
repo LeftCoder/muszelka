@@ -142,6 +142,50 @@
         </div>
       </div>
     </div>
-    <p class="mt-6 text-lg text-center max-w-3xl mx-auto">Udogodnienia</p>
+    <div class="my-12">
+      <p class="text-lg text-center max-w-3xl mx-auto">
+        Udogodnienia, odległości
+      </p>
+    </div>
+    <div class="flex justify-center">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div
+          class="flex justify-center items-center py-2 px-4 rounded-md bg-slate-50"
+        >
+          <h3 class="font-bold mr-4">morze</h3>
+          <p>250 m.</p>
+        </div>
+        <div
+          class="flex justify-center items-center py-2 px-4 rounded-md bg-slate-50"
+        >
+          <h3 class="font-bold mr-4">jezioro</h3>
+          <p>700 m.</p>
+        </div>
+        <div
+          class="flex justify-center items-center py-2 px-4 rounded-md bg-slate-50"
+        >
+          <h3 class="font-bold mr-4">las</h3>
+          <p>150 m.</p>
+        </div>
+        <div
+          class="flex justify-center items-center py-2 px-4 rounded-md bg-slate-50"
+        >
+          <h3 class="font-bold mr-4">PKS</h3>
+          <p>1.5 km.</p>
+        </div>
+        <div
+          class="flex justify-center items-center py-2 px-4 rounded-md bg-slate-50"
+        >
+          <h3 class="font-bold mr-4">PKP</h3>
+          <p>15 km.</p>
+        </div>
+        <div
+          class="flex justify-center items-center py-2 px-4 rounded-md bg-slate-50"
+        >
+          <h3 class="font-bold mr-4">gastronomia</h3>
+          <p>300 m.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
