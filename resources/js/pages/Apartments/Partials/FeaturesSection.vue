@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="mb-32">
+  <div class="mt-12 sm:mt-0 mb-24 lg:mb-44">
     <div class="flex justify-center">
       <div class="grid grid-cols-3 md:grid-cols-6 gap-4">
         <div
