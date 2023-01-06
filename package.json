@@ -14,8 +14,8 @@
     "@inertiajs/server": "^0.1.0",
     "@tailwindcss/forms": "^0.5.3",
     "@types/lodash": "^4.14.191",
-    "@typescript-eslint/eslint-plugin": "^5.47.0",
-    "@typescript-eslint/parser": "^5.47.0",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
     "@vitejs/plugin-vue": "^3.2.0",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.2",
@@ -23,8 +23,8 @@
     "autoprefixer": "^10.4.13",
     "axios": "^0.27.2",
     "cssnano": "^5.1.14",
-    "eslint": "^8.30.0",
-    "eslint-config-prettier": "^8.5.0",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.8.0",
     "filepond": "^4.30.4",
@@ -36,14 +36,14 @@
     "vite": "^3.2.5",
     "vue": "^3.2.45",
     "vue-filepond": "^7.0.3",
-    "vue-tsc": "^1.0.14"
+    "vue-tsc": "^1.0.22"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.7",
     "@heroicons/vue": "^2.0.13",
     "@inertiajs/server": "^0.1.0",
     "@vue/server-renderer": "^3.2.45",
-    "@vueuse/core": "^9.7.0",
+    "@vueuse/core": "^9.10.0",
     "choices.js": "^10.2.0",
     "dayjs": "^1.11.7",
     "filepond-plugin-file-validate-type": "^1.2.8",
@@ -54,7 +54,7 @@
     "pinia": "^2.0.28",
     "recaptcha-v3": "^1.10.0",
     "typescript": "^4.9.4",
-    "vue-tailwind-datepicker": "^1.2.3",
+    "vue-tailwind-datepicker": "^1.2.6",
     "vue3-google-map": "^0.15.0"
   }
 }
