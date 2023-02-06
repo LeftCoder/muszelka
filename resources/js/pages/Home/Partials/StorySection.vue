@@ -34,29 +34,84 @@
         </div>
 
         <p class="mb-4">
-          Miejscowość nasza znaduje się na środkowym wybrzeżu Bałyku, pomiędzy
-          Darłowem a Jarosławcem, od południa odgrodzona jest jeziorem Kopań i
-          Wzgórzem Barzowickim a z drugiej strony linią brzegową morza.
+          W zacisznej Miejscowości Wicie, w sąsiedztwie lasu, w pierwszej linii
+          brzegowej, przy jednej z bocznych ulic kilkanaście lat temu powstała
+          Muszelka. Miejsce wyjątkowe, które daje odskocznie od codzienności.
+          Miejsce, w którym można naładować baterie, odpocząć, pobyć bliżej
+          natury jednocześnie nie rezygnując z komfortu.
         </p>
 
         <p class="mb-4">
-          Ta piękna kraina obfituje w skarby przyrody, piaszczyste plaże,
-          rozległe równiny, lesiste wzgórza, zielone łąki. Jeśli szukacie
-          Państwo ciszy i spokoju to nasza miejscowość posiada wysokie walory
-          wypoczynkowe służące regeneracji sił fizycznych.
-        </p>
-        <p class="mb-4">
-          Można także wypoczywać czynnie, gdyż u nas znajduje się bardzo ciekawy
-          szlak rowerowy (rowery na wyposażeniu Ośrodka) nad samym morzem w
-          stronę Darłówka i Jarosławca.
-        </p>
-        <p class="mb-12 lg:mb-8">
-          Nasz Ośrodek to duży teren, na którym znajdują się domki (50 miejsc
-          noclegowych). Domki są tak usytuowane, że zapewniają komfort
-          wypoczynku. Na terenie jest dużo zieleni, dwa place zabaw, boisko do
-          gier (odległość do morza 250m).
+          W pobliżu znajdziesz świetną ścieżkę rowerową biegnącą tuż obok plaży.
+          Prawdziwa gratka dla miłośników przejażdżek rowerowych, a także dla
+          tych, którzy kochają rolki, hulajnogi, oraz dla mam z wózkami 😊 A
+          jeśli zatęsknisz za miejskim zgiełkiem – nic prostszego! W kilka minut
+          znajdziesz się przy głównej ulicy, gdzie roi się od sklepików z
+          pamiątkami i restauracji.
         </p>
 
+        <p class="mb-4">
+          No i najważniejsze – morze! Nasz piękny Bałtyk znajdujący się w
+          odległości zaledwie 200 metrów od naszych domków, którego szum słychać
+          podczas wieczornego relaksu na tarasie.
+        </p>
+
+        <p class="mb-4">
+          Każdy z 10 domków został usytuowany w taki sposób aby dawać swobodę i
+          intymność. W 2023 roku domki zostały wyremontowane, a ich wyposażenie
+          wymienione na zupełnie nowe! Dla zapewnienia komfortu zostały
+          wyposażone w klimatyzacje, a okna w moskitiery i rolety. Nowoczesne
+          kuchnie, z dużą ilością miejsca do przechowywania, lodówka, płyta
+          indukcyjna, czajnik, komplet nowych talerzy, garnków, sztućców i
+          wszystkiego co niezbędne do samodzielnego przygotowania posiłków.
+          Jeśli natomiast nie masz na to ochoty podpowiemy Ci gdzie można zjeść
+          pyszną rybkę! 😊
+        </p>
+
+        <div class="mb-12 lg:mb-8">
+          <details>
+            <summary class="mb-4 hover:cursor-pointer hover:text-slate-900">
+              Więcej szczegółów...
+            </summary>
+
+            <p class="mb-4">
+              W skład małych domków wchodzi salon z rozkładaną kanapą wraz z
+              aneksem kuchennym, łazienka, i sypialnia w której znajduje się
+              trzyosobowe łóżko piętrowe. Duże domki posiadają dodatkowo
+              sypialnie z łóżkiem małżeńskim lub rozkładaną sofą. No i
+              oczywiście taras! Najważniejsze miejsce dla wszystkich
+              urlopowiczów, kojarzące się z zapachem grilla, kwintesencja
+              każdego urlopu.
+            </p>
+
+            <p class="mb-4">
+              Każdy z domków posiada telewizor z telewizją naziemną, oraz
+              możliwością podłączenia konsoli do gier.
+            </p>
+
+            <p class="mb-4">
+              Na zewnątrz mnóstwo atrakcji znajdą także najmłodsi. Któż z nas
+              będąc dzieckiem nie marzył o własnym drewnianym domku, z którego
+              można stworzyć twierdzę? Lub wczuć się w rolę żeglarza wypatrując
+              piratów 😊 Dzieciaki mają tutaj taką możliwość! Dwa place zabaw
+              wyposażone w domek, zjeżdżalnie, wspinaczki, huśtawki, piaskownicę
+              i wiele innych… Dzieciaki pozostając pod okiem rodziców mogą się
+              bezpiecznie bawić, ponieważ teren jest ogrodzony i monitorowany.
+            </p>
+
+            <p class="mb-4">
+              Do dyspozycji są także nowe rowery, leżaki, oraz parawany. Macie
+              ochotę zabrać na urlop także swojego pupila? Zadzwońcie! W
+              niektórych domkach możemy gościć także zwierzęta.
+            </p>
+
+            <p class="mb-4">
+              Dla tych, którzy pragną więcej atrakcji polecamy wycieczkę do
+              pobliskiego Darłowa, czy Jarosławca. Polecamy także wyjazd do
+              Aquaparku, lub Doliny Charlotty z ZOO i fokarium.
+            </p>
+          </details>
+        </div>
         <div class="flex gap-4 justify-center lg:justify-end">
           <Link href="/domki">
             <button
