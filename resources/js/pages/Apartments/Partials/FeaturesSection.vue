@@ -1,9 +1,25 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="mt-12 sm:mt-0 mb-24 lg:mb-44">
-    <div class="flex justify-center">
-      <div class="grid grid-cols-3 md:grid-cols-6 gap-4">
+  <div class="mb-24 lg:mb-44">
+    <div class="flex flex-col justify-center items-center space-y-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div
+          class="p-3 border shadow-md rounded-lg hover:cursor-pointer hover:bg-slate-50"
+          title="Klimatyzacja"
+        >
+          <svg
+            class="text-stone-500"
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M6.59.66c2.34-1.81 4.88.4 5.45 3.84c.43 0 .85.12 1.23.34c.52-.6.98-1.42.8-2.34c-.42-2.15 1.99-3.89 4.28-.92c1.81 2.34-.4 4.88-3.85 5.45c0 .43-.11.86-.34 1.24c.6.51 1.42.97 2.34.79c2.13-.42 3.88 1.98.91 4.28c-2.34 1.81-4.88-.4-5.45-3.84c-.43 0-.85-.13-1.22-.35c-.52.6-.99 1.43-.81 2.35c.42 2.14-1.99 3.89-4.28.92c-1.82-2.35.4-4.89 3.85-5.45c0-.43.13-.85.35-1.23c-.6-.51-1.42-.98-2.35-.8c-2.13.42-3.88-1.98-.91-4.28M5 16h2a2 2 0 0 1 2 2v6H7v-2H5v2H3v-6a2 2 0 0 1 2-2m0 2v2h2v-2H5m7.93-2H15l-2.93 8H10l2.93-8M18 16h3v2h-3v4h3v2h-3a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2Z"
+            />
+          </svg>
+        </div>
         <div
           class="p-3 border shadow-md rounded-lg hover:cursor-pointer hover:bg-slate-50"
           title="Łazienka"
@@ -70,6 +86,8 @@
             <polyline points="16 3 12 7 8 3" />
           </svg>
         </div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         <div
           class="p-3 border shadow-md rounded-lg hover:cursor-pointer hover:bg-slate-50"
           title="Parking na posesji"
