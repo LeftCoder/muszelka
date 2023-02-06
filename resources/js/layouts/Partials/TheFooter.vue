@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { Link } from '@inertiajs/inertia-vue3'
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/vue/20/solid/index.js'
+import PriceTableModal from '@/pages/Home/Partials/PriceTableModal.vue'
 const year = new Date().getFullYear()
 </script>
 
@@ -39,6 +40,9 @@ const year = new Date().getFullYear()
                 <Link href="/regulamin" class="hover:text-slate-900"
                   >Regulamin</Link
                 >
+              </li>
+              <li>
+                <PriceTableModal></PriceTableModal>
               </li>
             </ul>
           </div>
