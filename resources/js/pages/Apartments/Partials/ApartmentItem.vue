@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { Apartment } from '@/types'
+import PriceTableModal from '@/pages/Home/Partials/PriceTableModal.vue'
 import { UsersIcon } from '@heroicons/vue/24/solid/index.js'
 import ImageGallery from '@/shared/ImageGallery.vue'
 import format from '@/utils/format'
@@ -35,8 +36,12 @@ const props = defineProps<Props>()
         </div>
 
         <p class="text-2xl text-gray-500">
-          {{ format(props.apartment.price) }} / doba
+          {{ format(props.apartment.price) }} / doba*
         </p>
+        <p class="my-4 text-sm text-slate-500">
+          * ceny różnią się zależnie od wybranego terminu
+        </p>
+        <PriceTableModal :button="true"></PriceTableModal>
       </section>
 
       <section>

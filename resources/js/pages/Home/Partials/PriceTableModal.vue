@@ -9,6 +9,11 @@ import {
 } from '@headlessui/vue'
 import PriceTableContent from '@/pages/Home/Partials/PriceTableContent.vue'
 
+interface Props {
+  button?: boolean
+}
+
+const props = defineProps<Props>()
 const emit = defineEmits(['confirm'])
 const isOpen = ref(false)
 
@@ -23,7 +28,16 @@ const closeModal = () => {
 </script>
 
 <template>
-  <button type="button" class="hover:text-slate-900" @click="setIsOpen(true)">
+  <button
+    type="button"
+    :class="
+      props.button
+        ? 'max-w-min border text-slate-900 rounded-lg text-lg bg-white hover:bg-slate-100 shadow-md font-semibold focus:outline-none md:px-6 px-6 md:py-4 py-3 xl:leading-4'
+        : ''
+    "
+    class="hover:text-slate-900"
+    @click="setIsOpen(true)"
+  >
     Cennik
   </button>
 
