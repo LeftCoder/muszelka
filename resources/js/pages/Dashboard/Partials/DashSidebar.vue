@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue'
 import {
   BellAlertIcon,
   HomeIcon,
-  ClipboardIcon,
+  CurrencyDollarIcon,
   GiftIcon,
   Squares2X2Icon,
   QuestionMarkCircleIcon,
@@ -81,7 +81,9 @@ onMounted(() => {
                 $page.url.startsWith('/dashboard/cennik'),
             }"
           >
-            <ClipboardIcon class="h-6 w-6 dark:text-blue-400 text-slate-700" />
+            <CurrencyDollarIcon
+              class="h-6 w-6 dark:text-blue-400 text-slate-700"
+            />
             <span class="flex-1 ml-3 whitespace-nowrap">Cennik</span>
           </Link>
         </li>
