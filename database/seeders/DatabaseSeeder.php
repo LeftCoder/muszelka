@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\Apartment;
 use App\Models\Faq;
 use App\Models\Feature;
+use App\Models\Period;
 use App\Models\Reservation;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -38,6 +39,7 @@ class DatabaseSeeder extends Seeder
         }
 
         Faq::factory()->count(10)->create();
+        Period::factory()->count(5)->create();
 
         $apartments = Apartment::factory()->count(10)->create();
         foreach ($apartments as $apartment) {

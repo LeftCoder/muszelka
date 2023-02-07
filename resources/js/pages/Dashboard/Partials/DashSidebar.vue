@@ -3,6 +3,7 @@ import { onMounted, ref } from 'vue'
 import {
   BellAlertIcon,
   HomeIcon,
+  ClipboardIcon,
   GiftIcon,
   Squares2X2Icon,
   QuestionMarkCircleIcon,
@@ -69,6 +70,19 @@ onMounted(() => {
           >
             <HomeIcon class="h-6 w-6 dark:text-blue-400 text-slate-700" />
             <span class="flex-1 ml-3 whitespace-nowrap">Domki</span>
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/dashboard/cennik"
+            class="flex items-center p-2 text-base font-normal text-slate-900 rounded-lg dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700"
+            :class="{
+              'bg-slate-100 dark:bg-slate-700':
+                $page.url.startsWith('/dashboard/cennik'),
+            }"
+          >
+            <ClipboardIcon class="h-6 w-6 dark:text-blue-400 text-slate-700" />
+            <span class="flex-1 ml-3 whitespace-nowrap">Cennik</span>
           </Link>
         </li>
         <li>

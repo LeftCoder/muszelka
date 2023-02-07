@@ -84,6 +84,14 @@ export interface Faq {
   answer: string
 }
 
+export interface Period {
+  id: number
+  start: string
+  end: string
+  small: number
+  big: number
+}
+
 export interface PaginationLinks {
   first: string
   last: string

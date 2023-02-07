@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Resources\ApartmentResource;
 use App\Http\Resources\FaqResource;
 use App\Http\Resources\FeatureResource;
+use App\Http\Resources\PeriodResource;
 use App\Http\Resources\ReservationResource;
 use App\Models\Apartment;
 use App\Models\Faq;
 use App\Models\Feature;
+use App\Models\Period;
 use App\Models\Reservation;
 use Illuminate\Support\Facades\Request;
 use Inertia\Inertia;
@@ -48,6 +50,13 @@ class DashboardPagesController extends Controller
 
         return Inertia::render('Dashboard/ApartmentsList', [
             'apartments' => $apartments,
+        ]);
+    }
+
+    public function pricelist()
+    {
+        return Inertia::render('Dashboard/PriceList', [
+            'periods' => PeriodResource::collection(Period::all()),
         ]);
     }
 

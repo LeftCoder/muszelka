@@ -42,6 +42,9 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
     Route::patch('/domki/{apartment}', [ApartmentController::class, 'update']);
     Route::delete('/domki/{apartment}', [ApartmentController::class, 'destroy']);
 
+    //Cennik
+    Route::get('/cennik', [DashboardPagesController::class, 'pricelist']);
+
     //Udogodnienia
     Route::get('/udogodnienia', [DashboardPagesController::class, 'features']);
     Route::get('/udogodnienia/create', [FeatureController::class, 'create']);
