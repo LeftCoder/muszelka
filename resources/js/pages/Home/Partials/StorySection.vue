@@ -22,10 +22,16 @@
         />
 
         <img
-          src="/storage/images/fp-1.jpg"
+          src="/storage/images/default.jpg"
           loading="lazy"
           alt="Plac zabaw dla dzieci"
-          class="rounded-lg absolute top-48 left-32 w-3/4"
+          class="rounded-lg absolute top-48 left-32 w-3/4 z-10"
+        />
+        <img
+          src="/storage/images/fp-1.jpg"
+          loading="lazy"
+          alt="Jeden z domków znajdujących się w ośrodku"
+          class="rounded-lg absolute top-96 left-8 w-3/4"
         />
       </div>
       <div class="w-full lg:w-1/2 px-6">
