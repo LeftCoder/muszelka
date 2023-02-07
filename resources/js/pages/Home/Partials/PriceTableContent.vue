@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { Period } from '@/types'
+import plDate from '@/utils/date'
 
 interface Props {
   periods: Period[]
@@ -27,7 +28,7 @@ const year = new Date().getFullYear()
       <ul class="text-lg space-y-6 mb-12">
         <li v-for="period in props.periods" :key="period.id">
           <div class="font-semibold mb-2">
-            {{ period.start }} - {{ period.end }}
+            {{ plDate(period.start) }} - {{ plDate(period.end) }}
           </div>
           <div>Duży domek {{ period.big }} zł/doba</div>
           <div>Mały domek {{ period.small }} zł/doba</div>

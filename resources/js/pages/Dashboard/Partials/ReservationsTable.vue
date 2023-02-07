@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import dayjs from 'dayjs'
+import plDate from '@/utils/date'
 import type { Reservation, Toast } from '@/types'
 import StatusModal from '@/pages/Dashboard/Partials/StatusModal.vue'
 import { Inertia } from '@inertiajs/inertia'
@@ -11,10 +11,6 @@ interface Props {
 
 const toast = inject('toast') as Toast
 const props = defineProps<Props>()
-
-const formatDate = (date: string) => {
-  return dayjs(date).format('DD.MM.YYYY')
-}
 
 const updateStatus = (status: number, id: number) => {
   Inertia.patch(
@@ -91,10 +87,10 @@ const updateStatus = (status: number, id: number) => {
             >
           </td>
           <td class="py-4 px-6 text-right">
-            {{ formatDate(reservation.start) }}
+            {{ plDate(reservation.start) }}
           </td>
           <td class="py-4 px-6 text-right">
-            {{ formatDate(reservation.end) }}
+            {{ plDate(reservation.end) }}
           </td>
           <td class="py-4 px-6 text-right">{{ reservation.days }}</td>
         </tr>

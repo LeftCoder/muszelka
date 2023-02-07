@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import type { Period } from '@/types'
 import format from '@/utils/format'
+import plDate from '@/utils/date'
 
 interface Props {
   periods: Period[]
@@ -25,8 +26,8 @@ const props = defineProps<Props>()
               class="hover:underline"
               :href="`/dashboard/cennik/${period.id}/edit`"
             >
-              <div class="mb-1">{{ period.start }}</div>
-              <div>{{ period.end }}</div>
+              <div class="mb-1">{{ plDate(period.start) }}</div>
+              <div>{{ plDate(period.end) }}</div>
             </Link>
           </th>
         </tr>
