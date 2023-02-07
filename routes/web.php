@@ -7,6 +7,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PeriodController;
 use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 
@@ -44,6 +45,11 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
 
     //Cennik
     Route::get('/cennik', [DashboardPagesController::class, 'pricelist']);
+    Route::get('/cennik/create', [PeriodController::class, 'create']);
+    Route::post('/cennik', [PeriodController::class, 'store']);
+    Route::get('/cennik/{period}/edit', [PeriodController::class, 'edit']);
+    Route::patch('/cennik/{period}', [PeriodController::class, 'update']);
+    Route::delete('/cennik/{period}', [PeriodController::class, 'destroy']);
 
     //Udogodnienia
     Route::get('/udogodnienia', [DashboardPagesController::class, 'features']);
