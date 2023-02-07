@@ -17,32 +17,33 @@
           target="_blank"
           >https://muszelkawicie.pl</a
         >
-        jest Michał Nowak wykonujący/a działalność gospodarczą pod firmą
-        Muszelka Wicie, adres siedziby: Pestalozziego 2/54, adres do doręczeń:
-        Pestalozziego 2/54, NIP: 112233445, REGON: , wpisaną do Centralnej
-        Ewidencji i Informacji o Działalności Gospodarczej, adres poczty
-        elektronicznej:
+        jest Michał Nowak wykonujący/a działalność gospodarczą pod MICH-TRANS
+        Michał Nowak S.K.A., adres siedziby: Poznańska 30A, 89-240 Kcynia, adres
+        do doręczeń: Poznańska 30A, 89-240 Kcynia, NIP: 558-187-73-09, REGON:
+        520487293, wpisaną do Centralnej Ewidencji i Informacji o Działalności
+        Gospodarczej, adres poczty elektronicznej:
         <a
           href="mailto:muszelka@muszelkawicie.pl"
           class="font-medium text-cyan-700 hover:underline"
           target="_blank"
-          >muszelka@muszelkawicie.pl</a
+        >
+          muszelka@muszelkawicie.pl</a
         >, dalej „Administrator”, będący/a jednoczeście Usługodawcą.
       </p>
 
       <ul class="text-lg space-y-4 mb-12">
         <li>
           <span class="font-semibold">Miejsce wykonywania działalności</span
-          ><br />Pestalozziego 2/54
+          ><br />ul. Nadmorska 12, 76-150 Wicie
         </li>
         <li>
-          <span class="font-semibold">Adres do doręczeń</span
-          ><br />Pestalozziego 2/54, 85-095 Bydgoszcz
+          <span class="font-semibold">Adres do doręczeń</span>
+          <br />ul.Poznańska 30A, 89-240 Kcynia
         </li>
-        <li><span class="font-semibold">NIP</span><br />112233445</li>
+        <li><span class="font-semibold">NIP</span> <br />558-187-73-09</li>
         <li>
-          <span class="font-semibold">REGON</span><br />
-          1231313212
+          <span class="font-semibold">REGON</span>
+          <br />520487293
         </li>
         <li>
           <span class="font-semibold">Adres poczty elektronicznej</span><br /><a
