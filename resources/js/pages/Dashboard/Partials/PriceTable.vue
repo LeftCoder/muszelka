@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { Period } from '@/types'
+import format from '@/utils/format'
 
 interface Props {
   periods: Period[]
@@ -15,13 +16,19 @@ const props = defineProps<Props>()
       >
         <tr>
           <th scope="col" class="py-3 px-6">Termin</th>
-          <td
+          <th
             v-for="period in props.periods"
             :key="period.id"
-            class="bg-white border-b dark:bg-slate-800 dark:border-slate-700"
+            class="text-center"
           >
-            {{ period.start }} - {{ period.end }}
-          </td>
+            <Link
+              class="hover:underline"
+              :href="`/dashboard/cennik/${period.id}/edit`"
+            >
+              <div class="mb-1">{{ period.start }}</div>
+              <div>{{ period.end }}</div>
+            </Link>
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -30,9 +37,9 @@ const props = defineProps<Props>()
           <td
             v-for="period in props.periods"
             :key="period.id"
-            class="py-4 px-6 text-ellipsis"
+            class="py-4 px-6 text-center"
           >
-            {{ period.small }}
+            {{ format(period.small) }}
           </td>
         </tr>
         <tr class="bg-white border-b dark:bg-slate-800 dark:border-slate-700">
@@ -40,9 +47,9 @@ const props = defineProps<Props>()
           <td
             v-for="period in props.periods"
             :key="period.id"
-            class="py-4 px-6 text-ellipsis"
+            class="py-4 px-6 text-center"
           >
-            {{ period.big }}
+            {{ format(period.big) }}
           </td>
         </tr>
       </tbody>

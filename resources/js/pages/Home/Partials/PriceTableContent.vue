@@ -1,4 +1,13 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { Period } from '@/types'
+
+interface Props {
+  periods: Period[]
+}
+
+const props = defineProps<Props>()
+const year = new Date().getFullYear()
+</script>
 
 <template>
   <div class="space-y-12">
@@ -6,7 +15,7 @@
       <h2
         class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4"
       >
-        Sezon 2023
+        Sezon {{ year }}
       </h2>
       <p class="text-lg mb-12">
         Ceny przedstawione poniżej obejmują obłożenie komfortowe, tj.
@@ -16,35 +25,12 @@
       </p>
 
       <ul class="text-lg space-y-6 mb-12">
-        <li>
-          <div class="font-semibold mb-2">27.05. - 10.06</div>
-          <div>Duży domek 270 zł/doba</div>
-          <div>Mały domek 220 zł/doba</div>
-        </li>
-        <li>
-          <div class="font-semibold mb-2">10.06 - 24.06</div>
-          <div>Duży domek 290 zł/doba</div>
-          <div>Mały domek 240 zł/doba</div>
-        </li>
-        <li>
-          <div class="font-semibold mb-2">24.06 - 08.07</div>
-          <div>Duży domek 370 zł/doba</div>
-          <div>Mały domek 320 zł/doba</div>
-        </li>
-        <li>
-          <div class="font-semibold mb-2">08.07 - 12.08</div>
-          <div>Duży domek 400 zł/doba</div>
-          <div>Mały domek 350 zł/doba</div>
-        </li>
-        <li>
-          <div class="font-semibold mb-2">12.08 - 26.08</div>
-          <div>Duży domek 370 zł/doba</div>
-          <div>Mały domek 320 zł/doba</div>
-        </li>
-        <li>
-          <div class="font-semibold mb-2">26.08 - 16.09</div>
-          <div>Duży domek 220 zł/doba</div>
-          <div>Mały domek 170 zł/doba</div>
+        <li v-for="period in props.periods" :key="period.id">
+          <div class="font-semibold mb-2">
+            {{ period.start }} - {{ period.end }}
+          </div>
+          <div>Duży domek {{ period.big }} zł/doba</div>
+          <div>Mały domek {{ period.small }} zł/doba</div>
         </li>
       </ul>
     </section>

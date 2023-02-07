@@ -2,6 +2,8 @@
 
 namespace App\Http\Middleware;
 
+use App\Http\Resources\PeriodResource;
+use App\Models\Period;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -39,6 +41,7 @@ class HandleInertiaRequests extends Middleware
                 ? auth()->user()->only('id', 'name', 'email')
                 : null,
             ],
+            'periods' => PeriodResource::collection(Period::all()),
             'flash' => [
                 'message' => fn () => $request->session()->get('message'),
             ],

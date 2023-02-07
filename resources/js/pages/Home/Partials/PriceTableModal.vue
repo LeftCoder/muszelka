@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import {
   TransitionRoot,
   TransitionChild,
@@ -8,11 +8,14 @@ import {
   DialogTitle,
 } from '@headlessui/vue'
 import PriceTableContent from '@/pages/Home/Partials/PriceTableContent.vue'
+import { InertiaPage } from '@/types'
+import { usePage } from '@inertiajs/inertia-vue3'
 
 interface Props {
   button?: boolean
 }
 
+const periods = computed(() => usePage<InertiaPage>().props.value.periods)
 const props = defineProps<Props>()
 const emit = defineEmits(['confirm'])
 const isOpen = ref(false)
@@ -83,7 +86,7 @@ const closeModal = () => {
             >
 
             <div class="grid justify-items-start p-5 overflow-y-auto h-full">
-              <PriceTableContent />
+              <PriceTableContent :periods="periods" />
             </div>
 
             <div class="flex justify-end bg-gray-100 px-6 py-3">

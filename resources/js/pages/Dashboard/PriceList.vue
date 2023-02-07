@@ -1,7 +1,17 @@
 <script lang="ts" setup>
 import { Squares2X2Icon } from '@heroicons/vue/24/solid/index.js'
 import { Link } from '@inertiajs/inertia-vue3'
+import { Period } from '@/types'
+import PriceTable from '@/pages/Dashboard/Partials/PriceTable.vue'
+import { PropType } from 'vue'
 import NoItems from '@/shared/NoItems.vue'
+
+const props = defineProps({
+  periods: {
+    type: Object as PropType<Period[]>,
+    default: () => ({}),
+  },
+})
 </script>
 
 <script lang="ts">
@@ -36,7 +46,11 @@ export default {
     <Link href="/dashboard/cennik/create"> </Link>
   </div>
 
-  <NoItems class="mt-8">
+  <div v-if="props.periods?.length">
+    <PriceTable :periods="props.periods" />
+  </div>
+
+  <NoItems v-else class="mt-8">
     <h2 class="text-2xl text-slate-900 text-center dark:text-slate-100">
       Brak gotowego cennika.
     </h2>

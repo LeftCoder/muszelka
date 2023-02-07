@@ -8,6 +8,7 @@ export interface InertiaPage extends Page<PageProps> {
       email: string
     }
   }
+  periods: Period[]
   flash: {
     message: string
   }
