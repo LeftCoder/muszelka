@@ -21,17 +21,19 @@ const year = new Date().getFullYear()
       <p class="text-lg mb-12">
         Ceny przedstawione poniżej obejmują obłożenie komfortowe, tj.
         <span class="font-semibold">4 osoby</span> w małym domku i
-        <span class="font-semibold">5 osób</span> w dużym domku. Istnieje
-        możliwość noclegu dodatkowej osoby w cenie 40zł/osoba.
+        <span class="font-semibold">5 osób</span> w dużym domku.
       </p>
 
-      <ul class="text-lg space-y-6 mb-12">
+      <ul class="text-lg space-y-8 mb-12">
         <li v-for="period in props.periods" :key="period.id">
-          <div class="font-semibold mb-2">
-            {{ plDate(period.start) }} - {{ plDate(period.end) }}
+          <div class="mb-3">
+            <div class="font-semibold">
+              {{ plDate(period.start) }} - {{ plDate(period.end) }}
+            </div>
+            <div class="text-sm">Możliwa + 1 osoba 40 zł/doba</div>
           </div>
-          <div>Duży domek {{ period.big }} zł/doba</div>
           <div>Mały domek {{ period.small }} zł/doba</div>
+          <div>Duży domek {{ period.big }} zł/doba</div>
         </li>
       </ul>
     </section>

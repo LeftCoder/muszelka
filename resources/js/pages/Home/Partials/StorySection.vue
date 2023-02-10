@@ -58,7 +58,7 @@
 
         <p class="mb-4">
           No i najważniejsze – morze! Nasz piękny Bałtyk znajdujący się w
-          odległości zaledwie 200 metrów od naszych domków, którego szum słychać
+          odległości zaledwie 250 metrów od naszych domków, którego szum słychać
           podczas wieczornego relaksu na tarasie.
         </p>
 

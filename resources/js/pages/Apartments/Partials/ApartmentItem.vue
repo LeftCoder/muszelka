@@ -20,9 +20,9 @@ const props = defineProps<Props>()
         :gallery-id="props.apartment.id"
       />
     </div>
-    <div class="lg:flex-1 flex flex-col justify-between lg:p-8 py-8 px-4">
-      <section class="mb-12 lg:mb-0">
-        <div class="flex flex-col lg:flex-row lg:justify-between">
+    <div class="lg:flex-1 flex flex-col lg:p-8 py-8 px-4">
+      <section class="mb-12">
+        <div class="flex flex-col lg:flex-row lg:justify-between mb-4">
           <h2 class="mb-4 lg:mb-0 text-3xl font-bold text-gray-900">
             {{ props.apartment.name }}
           </h2>
@@ -34,17 +34,17 @@ const props = defineProps<Props>()
             max. {{ props.apartment.max }} osób/y
           </div>
         </div>
-
-        <p class="text-2xl text-gray-500">
-          {{ format(props.apartment.price) }} / doba*
-        </p>
-        <p class="my-4 text-sm text-slate-500">
-          * ceny różnią się zależnie od wybranego terminu
-        </p>
         <PriceTableModal :button="true"></PriceTableModal>
+        <div class="text-sm mt-4 text-slate-500">
+          <ul class="list-disc list-inside marker:text-amber-500">
+            <li>Ceny różnią się zależnie od wybranego terminu.</li>
+            <li>Istnieje możliwość negocjacji ceny.</li>
+            <li>Dodatkowa osoba to koszt 40pln za dobę.</li>
+          </ul>
+        </div>
       </section>
 
-      <section>
+      <section class="flex-1">
         <p class="text-lg text-slate-500">{{ props.apartment.description }}</p>
       </section>
 
