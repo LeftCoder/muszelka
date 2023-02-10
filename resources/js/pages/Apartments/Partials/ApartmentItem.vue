@@ -3,7 +3,6 @@ import type { Apartment } from '@/types'
 import PriceTableModal from '@/pages/Home/Partials/PriceTableModal.vue'
 import { UsersIcon } from '@heroicons/vue/24/solid/index.js'
 import ImageGallery from '@/shared/ImageGallery.vue'
-import format from '@/utils/format'
 
 interface Props {
   apartment: Apartment
