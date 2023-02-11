@@ -30,7 +30,9 @@ const year = new Date().getFullYear()
             <div class="font-semibold">
               {{ plDate(period.start) }} - {{ plDate(period.end) }}
             </div>
-            <div class="text-sm">Możliwa + 1 osoba 40 zł/doba</div>
+            <div class="text-sm">
+              Możliwość nocowania dla 1 dodakowej osoby w cenie 40 zł/doba
+            </div>
           </div>
           <div>Mały domek {{ period.small }} zł/doba</div>
           <div>Duży domek {{ period.big }} zł/doba</div>
