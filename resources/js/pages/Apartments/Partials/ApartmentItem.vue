@@ -38,7 +38,7 @@ const props = defineProps<Props>()
           <ul class="list-disc list-inside marker:text-amber-500">
             <li>Ceny różnią się zależnie od wybranego terminu.</li>
             <li>Istnieje możliwość negocjacji ceny.</li>
-            <li>Dodatkowa osoba to koszt 40pln za dobę.</li>
+            <li>Dodatkowa osoba to koszt 40 zł za dobę.</li>
           </ul>
         </div>
       </section>
