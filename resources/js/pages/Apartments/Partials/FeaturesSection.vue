@@ -165,8 +165,8 @@
         Udogodnienia, odległości
       </p>
     </div>
-    <div class="flex justify-center">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <div class="flex flex-col mx-auto space-y-8 sm:items-center">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <div
           class="flex justify-center items-center py-2 px-4 rounded-md bg-slate-50"
         >
@@ -185,6 +185,14 @@
           <h3 class="font-bold mr-4">las</h3>
           <p>150 m.</p>
         </div>
+        <div
+          class="flex justify-center items-center py-2 px-4 rounded-md bg-slate-50"
+        >
+          <h3 class="font-bold mr-4">centrum</h3>
+          <p>350 m.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         <div
           class="flex justify-center items-center py-2 px-4 rounded-md bg-slate-50"
         >

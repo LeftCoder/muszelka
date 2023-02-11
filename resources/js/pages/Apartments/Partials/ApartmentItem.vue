@@ -30,7 +30,7 @@ const props = defineProps<Props>()
             class="mb-4 lg:mb-0 h-9 rounded-full w-max inline-flex whitespace-nowrap px-3 bg-blue-50 text-blue-900 items-center text-md"
           >
             <UsersIcon class="h-6 w-6 mr-2" />
-            max. {{ props.apartment.max }} osób/y
+            {{ props.apartment.max }} osób/y
           </div>
         </div>
         <PriceTableModal :button="true"></PriceTableModal>
