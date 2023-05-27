@@ -77,7 +77,7 @@ const updateStatus = (status: number, id: number) => {
             }}</a>
           </td>
           <td class="py-4 px-6 text-right">
-            {{ reservation.adults + reservation.children }}
+            {{ reservation.adults }} + {{ reservation.children }}
           </td>
           <td class="py-4 px-6">
             <Link

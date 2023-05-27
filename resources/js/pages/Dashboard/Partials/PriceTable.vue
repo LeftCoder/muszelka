@@ -17,39 +17,28 @@ const props = defineProps<Props>()
       >
         <tr>
           <th scope="col" class="py-3 px-6">Termin</th>
-          <th
-            v-for="period in props.periods"
-            :key="period.id"
-            class="text-center"
-          >
+          <th scope="col" class="py-3 px-6 text-center">Mały domek</th>
+          <th scope="col" class="py-3 px-6 text-center">Duży domek</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="period in props.periods"
+          :key="period.id"
+          class="bg-white border-b dark:bg-slate-800 dark:border-slate-700"
+        >
+          <th scope="col" class="py-3 px-6">
             <Link
               class="hover:underline"
               :href="`/dashboard/cennik/${period.id}/edit`"
             >
-              <div class="mb-1">{{ plDate(period.start) }}</div>
-              <div>{{ plDate(period.end) }}</div>
+              {{ plDate(period.start) }} - {{ plDate(period.end) }}
             </Link>
           </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="bg-white border-b dark:bg-slate-800 dark:border-slate-700">
-          <th scope="col" class="py-3 px-6">Mały domek</th>
-          <td
-            v-for="period in props.periods"
-            :key="period.id"
-            class="py-4 px-6 text-center"
-          >
+          <td class="py-4 px-6 text-center">
             {{ format(period.small) }}
           </td>
-        </tr>
-        <tr class="bg-white border-b dark:bg-slate-800 dark:border-slate-700">
-          <th scope="col" class="py-3 px-6">Duży domek</th>
-          <td
-            v-for="period in props.periods"
-            :key="period.id"
-            class="py-4 px-6 text-center"
-          >
+          <td class="py-4 px-6 text-center">
             {{ format(period.big) }}
           </td>
         </tr>
