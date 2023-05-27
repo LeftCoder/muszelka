@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { Squares2X2Icon } from '@heroicons/vue/24/solid/index.js'
-import { Link } from '@inertiajs/inertia-vue3'
+import { Link } from '@inertiajs/vue3'
 import ApartmentsTable from '@/pages/Dashboard/Partials/ApartmentsTable.vue'
 import NoItems from '@/shared/NoItems.vue'
 

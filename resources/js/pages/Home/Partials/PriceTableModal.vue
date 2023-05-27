@@ -8,14 +8,14 @@ import {
   DialogTitle,
 } from '@headlessui/vue'
 import PriceTableContent from '@/pages/Home/Partials/PriceTableContent.vue'
-import { InertiaPage } from '@/types'
-import { usePage } from '@inertiajs/inertia-vue3'
+import { PageProps } from '@/types'
+import { usePage } from '@inertiajs/vue3'
 
 interface Props {
   button?: boolean
 }
 
-const periods = computed(() => usePage<InertiaPage>().props.value.periods)
+const periods = computed(() => usePage<PageProps>().props.periods)
 const props = defineProps<Props>()
 const emit = defineEmits(['confirm'])
 const isOpen = ref(false)

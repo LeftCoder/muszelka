@@ -2,7 +2,7 @@
 import ConfirmModal from '@/shared/ConfirmModal.vue'
 import ApartmentForm from '@/pages/Dashboard/Partials/ApartmentForm.vue'
 import ApsGallery from '@/pages/Dashboard/Partials/ApsGallery.vue'
-import { Inertia } from '@inertiajs/inertia'
+import { router } from '@inertiajs/vue3'
 import { ArrowSmallLeftIcon } from '@heroicons/vue/24/solid/index.js'
 import { Apartment } from '@/types'
 
@@ -13,7 +13,7 @@ interface Props {
 const props = defineProps<Props>()
 
 const deleteApartment = () => {
-  Inertia.delete(`/dashboard/domki/${props.apartment.id}`)
+  router.delete(`/dashboard/domki/${props.apartment.id}`)
 }
 </script>
 

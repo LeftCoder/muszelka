@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 import { computed, watch, provide } from 'vue'
-import type { InertiaPage } from '@/types'
-import { usePage } from '@inertiajs/inertia-vue3'
+import type { PageProps } from '@/types'
+import { usePage } from '@inertiajs/vue3'
 import Sidebar from '@/pages/Dashboard/Partials/DashSidebar.vue'
 import Navbar from '@/pages/Dashboard/Partials/DashNavbar.vue'
 import Toast from '@/utils/toast'
 import '@/../css/toast.css'
 
 provide('toast', Toast)
-const message = computed(() => usePage<InertiaPage>().props.value.flash.message)
+const message = computed(() => usePage<PageProps>().props.flash.message)
 
 watch(
   () => message.value,

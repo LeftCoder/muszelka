@@ -2,7 +2,7 @@
 import plDate from '@/utils/date'
 import type { Reservation, Toast } from '@/types'
 import StatusModal from '@/pages/Dashboard/Partials/StatusModal.vue'
-import { Inertia } from '@inertiajs/inertia'
+import { router } from '@inertiajs/vue3'
 import { inject } from 'vue'
 
 interface Props {
@@ -13,7 +13,7 @@ const toast = inject('toast') as Toast
 const props = defineProps<Props>()
 
 const updateStatus = (status: number, id: number) => {
-  Inertia.patch(
+  router.patch(
     `/dashboard/api/status/${id}`,
     { status },
     {

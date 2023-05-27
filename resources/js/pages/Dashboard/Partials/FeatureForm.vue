@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { Feature } from '@/types'
-import { useForm } from '@inertiajs/inertia-vue3'
+import { useForm } from '@inertiajs/vue3'
 import LoadingSpinnerIcon from '@/shared/LoadingSpinnerIcon.vue'
 
 interface Props {

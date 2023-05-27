@@ -2,7 +2,7 @@
 import type { Apartment, Toast } from '@/types'
 import { inject } from 'vue'
 import { Switch } from '@headlessui/vue'
-import { Inertia } from '@inertiajs/inertia'
+import { router } from '@inertiajs/vue3'
 import format from '@/utils/format'
 
 interface Props {
@@ -13,7 +13,7 @@ const toast = inject('toast') as Toast
 const props = defineProps<Props>()
 
 const handleChange = (id: number, occupied: boolean) => {
-  Inertia.patch(
+  router.patch(
     `/dashboard/api/occupied/${id}`,
     {
       occupied: !occupied,

@@ -1,6 +1,6 @@
-import type { Page, PageProps, Errors, ErrorBag } from '@inertiajs/inertia'
-export interface InertiaPage extends Page<PageProps> {
-  errors: Errors & ErrorBag
+export type PageProps<
+  T extends Record<string, unknown> = Record<string, unknown>
+> = T & {
   auth: {
     user: {
       id: string

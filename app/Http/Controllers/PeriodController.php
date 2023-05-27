@@ -20,7 +20,7 @@ class PeriodController extends Controller
         ]);
 
         return redirect('/dashboard/cennik')
-            ->with('message', 'Nowe termin został dodany.');
+            ->with('message', 'Nowy termin został dodany.');
     }
 
     public function create()

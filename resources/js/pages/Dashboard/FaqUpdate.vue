@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import ConfirmModal from '@/shared/ConfirmModal.vue'
 import FaqForm from '@/pages/Dashboard/Partials/FaqForm.vue'
-import { Inertia } from '@inertiajs/inertia'
+import { router } from '@inertiajs/vue3'
 import { ArrowSmallLeftIcon } from '@heroicons/vue/24/solid/index.js'
 import { Faq } from '@/types'
 
@@ -12,7 +12,7 @@ interface Props {
 const props = defineProps<Props>()
 
 const deleteFaq = () => {
-  Inertia.delete(`/dashboard/faq/${props.faq.id}`)
+  router.delete(`/dashboard/faq/${props.faq.id}`)
 }
 </script>
 

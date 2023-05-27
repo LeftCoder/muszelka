@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { InertiaPage } from '@/types'
+import { PageProps } from '@/types'
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 import {
   ChevronDownIcon,
@@ -11,10 +11,10 @@ import {
   ArrowTopRightOnSquareIcon,
   QuestionMarkCircleIcon,
 } from '@heroicons/vue/20/solid/index.js'
-import { usePage } from '@inertiajs/inertia-vue3'
+import { usePage } from '@inertiajs/vue3'
 import { computed } from 'vue'
 
-const user = computed(() => usePage<InertiaPage>().props.value.auth.user.name)
+const user = computed(() => usePage<PageProps>().props.auth.user.name)
 </script>
 
 <template>

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import ConfirmModal from '@/shared/ConfirmModal.vue'
 import FeatureForm from '@/pages/Dashboard/Partials/FeatureForm.vue'
-import { Inertia } from '@inertiajs/inertia'
+import { router } from '@inertiajs/vue3'
 import { ArrowSmallLeftIcon } from '@heroicons/vue/24/solid/index.js'
 import type { Feature } from '@/types'
 
@@ -12,7 +12,7 @@ interface Props {
 const props = defineProps<Props>()
 
 const deleteFeature = () => {
-  Inertia.delete(`/dashboard/udogodnienia/${props.feature.id}`)
+  router.delete(`/dashboard/udogodnienia/${props.feature.id}`)
 }
 </script>
 

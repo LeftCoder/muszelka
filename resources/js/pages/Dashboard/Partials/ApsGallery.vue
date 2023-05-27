@@ -7,7 +7,7 @@ import swipe_pl from '@/utils/swipe_pl'
 import 'photoswipe/style.css'
 import NoItems from '@/shared/NoItems.vue'
 import { MinusIcon } from '@heroicons/vue/20/solid/index.js'
-import { Inertia } from '@inertiajs/inertia'
+import { router } from '@inertiajs/vue3'
 
 interface Props {
   images?: Image[]
@@ -17,7 +17,6 @@ interface Props {
 interface Lightbox {
   init: () => any
   destroy: () => any
-  loadAndOpen: (id: number) => any
 }
 
 const props = defineProps<Props>()
@@ -49,7 +48,7 @@ const deleteImage = (image: number, event: MouseEvent) => {
     event.stopPropagation()
     event.preventDefault()
 
-    Inertia.delete(`/dashboard/api/delete/${image}`, {
+    router.delete(`/dashboard/api/delete/${image}`, {
       onSuccess: () => {
         toast('Zdjęcie usunięte.')
       },

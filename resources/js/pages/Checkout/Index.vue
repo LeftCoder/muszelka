@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 import Heading from '@/layouts/Partials/AppHeading.vue'
 import ReservationForm from '@/pages/Checkout/Partials/ReservationForm.vue'
-import type { InertiaPage } from '@/types'
+import type { PageProps } from '@/types'
 import { ArrowSmallLeftIcon } from '@heroicons/vue/20/solid/index.js'
 import { useRootStore } from '@/store'
 import { computed } from 'vue'
-import { usePage } from '@inertiajs/inertia-vue3'
+import { usePage } from '@inertiajs/vue3'
 
 const store = useRootStore()
-const errors = computed(() => usePage<InertiaPage>().props.value.errors)
+const errors = computed(() => usePage<PageProps>().props.errors)
 </script>
 
 <template>

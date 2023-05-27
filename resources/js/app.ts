@@ -1,10 +1,9 @@
 import '../css/app.css'
 
-import { createApp, h } from 'vue'
+import { createApp, h, DefineComponent } from 'vue'
 import { createPinia } from 'pinia'
 import { load } from 'recaptcha-v3'
-import { createInertiaApp, Head, Link } from '@inertiajs/inertia-vue3'
-import { InertiaProgress } from '@inertiajs/progress'
+import { createInertiaApp, Head, Link } from '@inertiajs/vue3'
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers'
 import axios from 'axios'
 import GuestLayout from '@/layouts/GuestLayout.vue'
@@ -24,7 +23,7 @@ createInertiaApp({
     const page = (
       await resolvePageComponent(
         `./pages/${name}.vue`,
-        import.meta.glob('./pages/**/*.vue')
+        import.meta.glob<DefineComponent>('./pages/**/*.vue')
       )
     ).default
 
@@ -34,14 +33,13 @@ createInertiaApp({
 
     return page
   },
-  setup({ el, app, props, plugin }) {
-    return createApp({ render: () => h(app, props) })
+  setup({ el, App, props, plugin }) {
+    createApp({ render: () => h(App, props) })
       .use(plugin)
       .use(createPinia())
       .component('Head', Head)
       .component('Link', Link)
       .mount(el)
   },
+  progress: { color: '#f59e0b' },
 })
-
-InertiaProgress.init({ color: '#f59e0b' })

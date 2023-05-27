@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useForm, usePage } from '@inertiajs/inertia-vue3'
+import { useForm, usePage } from '@inertiajs/vue3'
 import SuccessMessage from '@/pages/Contact/Partials/SuccessMessage.vue'
 import PolicyModal from '@/pages/Contact/Partials/PolicyModal.vue'
 import LoadingSpinnerIcon from '@/shared/LoadingSpinnerIcon.vue'
-import type { InertiaPage } from '@/types'
+import type { PageProps } from '@/types'
 
-const message = computed(() => usePage<InertiaPage>().props.value.flash.message)
+const message = computed(() => usePage<PageProps>().props.flash.message)
 
 const form = useForm({
   name: '',

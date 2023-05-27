@@ -1,8 +1,8 @@
 <script lang="ts" setup>
+import type { Faq, MetaInformations, PaginationLinks } from '@/types'
 import { PropType } from 'vue'
 import { Squares2X2Icon } from '@heroicons/vue/24/solid/index.js'
-import { Link } from '@inertiajs/inertia-vue3'
-import type { Faq, MetaInformations, PaginationLinks } from '@/types'
+import { Link } from '@inertiajs/vue3'
 import NoItems from '@/shared/NoItems.vue'
 import FaqsTable from '@/pages/Dashboard/Partials/FaqsTable.vue'
 import Pagination from '@/shared/AppPagination.vue'

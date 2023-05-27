@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { Apartment } from '@/types'
-import { useForm } from '@inertiajs/inertia-vue3'
+import { useForm } from '@inertiajs/vue3'
 import FilePondInput from '@/pages/Dashboard/Partials/FilePondInput.vue'
 import ChoicesInput from '@/pages/Dashboard/Partials/ChoicesInput.vue'
 import LoadingSpinnerIcon from '@/shared/LoadingSpinnerIcon.vue'

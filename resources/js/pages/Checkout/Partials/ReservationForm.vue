@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { useRootStore } from '@/store'
-import { useForm } from '@inertiajs/inertia-vue3'
+import { useForm } from '@inertiajs/vue3'
 import LoadingSpinnerIcon from '@/shared/LoadingSpinnerIcon.vue'
 import PolicyAndTermsModal from '@/pages/Checkout/Partials/PolicyAndTermsModal.vue'
 

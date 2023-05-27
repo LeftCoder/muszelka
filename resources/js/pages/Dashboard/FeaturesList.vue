@@ -2,7 +2,7 @@
 import FeaturesTable from '@/pages/Dashboard/Partials/FeaturesTable.vue'
 import NoItems from '@/shared/NoItems.vue'
 import type { Feature } from '@/types'
-import { Link } from '@inertiajs/inertia-vue3'
+import { Link } from '@inertiajs/vue3'
 import { Squares2X2Icon } from '@heroicons/vue/24/solid/index.js'
 
 interface Props {

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { Link } from '@inertiajs/inertia-vue3'
-import { Inertia } from '@inertiajs/inertia'
+import { router, Link } from '@inertiajs/vue3'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline/index.js'
 
@@ -9,7 +8,7 @@ const changeOverflow = (open: boolean) => {
 }
 
 const closeMobileMenu = (close: () => void) => {
-  Inertia.on('finish', () => {
+  router.on('finish', () => {
     close()
     document.body.classList.remove('overflow-hidden')
   })

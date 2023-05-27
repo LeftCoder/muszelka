@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import ConfirmModal from '@/shared/ConfirmModal.vue'
 import PeriodForm from '@/pages/Dashboard/Partials/PeriodForm.vue'
-import { Inertia } from '@inertiajs/inertia'
+import { router } from '@inertiajs/vue3'
 import { ArrowSmallLeftIcon } from '@heroicons/vue/24/solid/index.js'
 import { Period } from '@/types'
 
@@ -12,7 +12,7 @@ interface Props {
 const props = defineProps<Props>()
 
 const deletePeriod = () => {
-  Inertia.delete(`/dashboard/cennik/${props.period.id}`)
+  router.delete(`/dashboard/cennik/${props.period.id}`)
 }
 </script>
 

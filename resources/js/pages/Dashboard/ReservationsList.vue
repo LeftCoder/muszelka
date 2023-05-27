@@ -6,8 +6,7 @@ import Pagination from '@/shared/AppPagination.vue'
 import ReservationsTable from '@/pages/Dashboard/Partials/ReservationsTable.vue'
 import type { MetaInformations, PaginationLinks, Reservation } from '@/types'
 import { Squares2X2Icon } from '@heroicons/vue/24/solid/index.js'
-import { Link } from '@inertiajs/inertia-vue3'
-import { Inertia } from '@inertiajs/inertia'
+import { router, Link } from '@inertiajs/vue3'
 import { PropType, reactive, watch } from 'vue'
 import throttle from 'lodash/throttle'
 import pickBy from 'lodash/pickBy'
@@ -37,7 +36,7 @@ const form = reactive({
 watch(
   form,
   throttle(() => {
-    Inertia.get('/dashboard/rezerwacje', pickBy(form), {
+    router.get('/dashboard/rezerwacje', pickBy(form), {
       preserveState: true,
       replace: true,
     })

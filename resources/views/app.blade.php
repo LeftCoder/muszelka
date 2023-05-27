@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="https://fonts.bunny.net/css?family=pacifico:400&display=swap">
 
         <!-- Scripts -->
-        @vite('resources/js/app.js')
+        @vite('resources/js/app.ts')
         @inertiaHead
     </head>
     <body class="antialiased text-slate-500">
