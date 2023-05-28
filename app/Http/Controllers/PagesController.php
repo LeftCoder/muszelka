@@ -14,7 +14,7 @@ class PagesController extends Controller
 {
     public function home()
     {
-        $reviews = ReviewResource::collection(Review::all());
+        $reviews = ReviewResource::collection(Review::where('published', true)->get());
 
         return Inertia::render('Home/Index', ['reviews' => $reviews]);
     }

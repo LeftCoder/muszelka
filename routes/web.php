@@ -21,6 +21,7 @@ Route::get('/faq', [PagesController::class, 'faq'])->name('faq');
 Route::get('/polityka-prywatnosci', [PagesController::class, 'policy'])->name('policy');
 Route::get('/regulamin', [PagesController::class, 'terms'])->name('terms');
 Route::get('/kontakt', [PagesController::class, 'contact'])->name('contact');
+Route::post('/opinie', [ReviewController::class, 'store']);
 
 //Reservation form
 Route::post('/reservation', [ReservationController::class, 'store']);

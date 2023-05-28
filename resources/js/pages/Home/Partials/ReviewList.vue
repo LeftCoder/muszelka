@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import TestimonialItem from '@/pages/Home/Partials/TestimonialItem.vue'
+import ReviewItem from '@/pages/Home/Partials/ReviewItem.vue'
 import AccentImage from '@/shared/AccentImage.vue'
 import { Review } from '@/types'
 import { ref } from 'vue'
@@ -31,7 +31,7 @@ const fullView = ref(false)
         class="grid grid-cols-1 gap-6 pt-6 items-start lg:gap-8 sm:grid-cols-2 lg:grid-cols-3"
         :class="!fullView ? 'max-h-[33rem] overflow-hidden' : ''"
       >
-        <TestimonialItem
+        <ReviewItem
           v-for="review in props.reviews"
           :key="review.id"
           :opinion="review.body"

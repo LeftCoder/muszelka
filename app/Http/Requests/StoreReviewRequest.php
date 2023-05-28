@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\Recaptcha;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreReviewRequest extends FormRequest
@@ -24,8 +25,10 @@ class StoreReviewRequest extends FormRequest
     public function rules()
     {
         return [
-            'body' => ['required', 'string', 'max:255'],
-            'author' => ['required', 'string', 'max:255']
+            'author' => ['required', 'min:3', 'max:255'],
+            'body' => ['required', 'min:3', 'max:1024'],
+            'policy' => 'accepted',
+            'captcha_token' => [new Recaptcha()],
         ];
     }
 }

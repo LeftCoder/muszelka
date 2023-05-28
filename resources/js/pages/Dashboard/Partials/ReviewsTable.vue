@@ -2,6 +2,7 @@
 import { router } from '@inertiajs/vue3'
 import type { Review, Toast } from '@/types'
 import { inject } from 'vue'
+import { Switch } from '@headlessui/vue'
 
 interface Props {
   reviews: Review[]
@@ -47,7 +48,7 @@ const handleChange = (id: number, published: boolean) => {
           <td class="py-4 px-6 text-ellipsis">
             <Link
               class="hover:underline"
-              :href="`/dashboard/review/${review.id}/edit`"
+              :href="`/dashboard/opinie/${review.id}/edit`"
               >{{ review.author }}</Link
             >
           </td>

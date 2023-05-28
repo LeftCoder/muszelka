@@ -4,20 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreReviewRequest;
 use App\Http\Requests\UpdateReviewRequest;
+use App\Mail\NewReview;
 use App\Models\Review;
+use Illuminate\Support\Facades\Mail;
 use Inertia\Inertia;
 
 class ReviewController extends Controller
 {
     public function store(StoreReviewRequest $request)
     {
-        Review::create([
-            'body' => $request->safe()->body,
-            'author' => $request->safe()->author
-        ]);
+        $details = $request->validated();
+        $details = $request->safe()->except(['captcha_token']);
 
-        return redirect('/')
-            ->with('message', 'Nowa opinia została dodana.');
+        Mail::to(config('mail.from.address'))->send(new NewReview($details));
+
+        return back()->with(['message' => 'Poszło! Dziękujemy za Twoją opinię.']);
     }
 
     public function create()

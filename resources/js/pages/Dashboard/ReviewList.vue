@@ -39,7 +39,7 @@ export default {
         <Squares2X2Icon class="h-6 w-6 text-blue-500" />
       </Link>
       <h2 class="text-2xl lg:text-4xl font-extrabold dark:text-slate-100">
-        Opinie klientów
+        Lista opinii
       </h2>
     </div>
 
