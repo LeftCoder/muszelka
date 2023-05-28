@@ -21,7 +21,7 @@ Route::get('/faq', [PagesController::class, 'faq'])->name('faq');
 Route::get('/polityka-prywatnosci', [PagesController::class, 'policy'])->name('policy');
 Route::get('/regulamin', [PagesController::class, 'terms'])->name('terms');
 Route::get('/kontakt', [PagesController::class, 'contact'])->name('contact');
-Route::post('/opinie', [ReviewController::class, 'store']);
+Route::post('/opinie', [ReviewController::class, 'send']);
 
 //Reservation form
 Route::post('/reservation', [ReservationController::class, 'store']);
@@ -82,6 +82,7 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
     Route::patch('/api/status/{reservation}', [ReservationController::class, 'status']);
     Route::get('/api/booked', [ReservationController::class, 'booked']);
     Route::get('/api/stats', [ReservationController::class, 'stats']);
+    Route::patch('/api/published/{review}', [ReviewController::class, 'published']);
     Route::get('/api/features', [FeatureController::class, 'features']);
     Route::post('/api/upload', [ImageController::class, 'upload']);
     Route::delete('/api/delete', [ImageController::class, 'destroy']);

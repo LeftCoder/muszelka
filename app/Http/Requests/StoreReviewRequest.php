@@ -26,9 +26,7 @@ class StoreReviewRequest extends FormRequest
     {
         return [
             'author' => ['required', 'min:3', 'max:255'],
-            'body' => ['required', 'min:3', 'max:1024'],
-            'policy' => 'accepted',
-            'captcha_token' => [new Recaptcha()],
+            'body' => ['required', 'min:3', 'max:1024']
         ];
     }
 }

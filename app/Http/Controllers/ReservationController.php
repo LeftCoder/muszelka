@@ -14,7 +14,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use Inertia\Inertia;
-use ValueError;
 
 class ReservationController extends Controller
 {
@@ -87,7 +86,7 @@ class ReservationController extends Controller
             $reservation->save();
 
             return back();
-        } catch (ValueError $e) {
+        } catch (\ValueError $e) {
             return back()->with('message', 'Nie można zaktualizować');
         }
     }
