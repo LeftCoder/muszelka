@@ -9,6 +9,7 @@ use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PeriodController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
 
 // Pages
@@ -58,6 +59,14 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
     Route::get('/udogodnienia/{feature}/edit', [FeatureController::class, 'edit']);
     Route::patch('/udogodnienia/{feature}', [FeatureController::class, 'update']);
     Route::delete('/udogodnienia/{feature}', [FeatureController::class, 'destroy']);
+
+    //Opinie
+    Route::get('/opinie', [DashboardPagesController::class, 'reviews']);
+    Route::get('/opinie/create', [ReviewController::class, 'create']);
+    Route::post('/opinie', [ReviewController::class, 'store']);
+    Route::get('/opinie/{review}/edit', [ReviewController::class, 'edit']);
+    Route::patch('/opinie/{review}', [ReviewController::class, 'update']);
+    Route::delete('/opinie/{review}', [ReviewController::class, 'destroy']);
 
     //Faq
     Route::get('/faq', [DashboardPagesController::class, 'faqs']);

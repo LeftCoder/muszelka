@@ -4,15 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\ApartmentResource;
 use App\Http\Resources\FaqResource;
+use App\Http\Resources\ReviewResource;
 use App\Models\Apartment;
 use App\Models\Faq;
+use App\Models\Review;
 use Inertia\Inertia;
 
 class PagesController extends Controller
 {
     public function home()
     {
-        return Inertia::render('Home/Index');
+        $reviews = ReviewResource::collection(Review::all());
+
+        return Inertia::render('Home/Index', ['reviews' => $reviews]);
     }
 
     public function apartments()

@@ -27,7 +27,7 @@ const year = new Date().getFullYear()
       <ul class="text-lg space-y-8 mb-12">
         <li v-for="period in props.periods" :key="period.id">
           <div class="mb-3">
-            <div class="font-semibold">
+            <div class="font-semibold text-amber-500">
               {{ plDate(period.start) }} - {{ plDate(period.end) }}
             </div>
             <div class="text-sm">

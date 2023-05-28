@@ -6,6 +6,7 @@ import {
   BellAlertIcon,
   HomeIcon,
   GiftIcon,
+  PencilSquareIcon,
   Squares2X2Icon,
   ArrowRightOnRectangleIcon,
   ArrowTopRightOnSquareIcon,
@@ -137,6 +138,25 @@ const user = computed(() => usePage<PageProps>().props.auth.user.name)
                 aria-hidden="true"
               />
               Udogodnienia
+            </Link>
+          </MenuItem>
+          <MenuItem v-slot="{ active, close }">
+            <Link
+              href="/dashboard/opinie"
+              :class="[
+                active
+                  ? 'bg-blue-500 text-white'
+                  : 'text-slate-900 dark:text-slate-400',
+                'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+              ]"
+              @click="close"
+            >
+              <PencilSquareIcon
+                class="mr-2 h-5 w-5"
+                :class="[active ? 'text-white' : 'text-blue-400']"
+                aria-hidden="true"
+              />
+              Opinie
             </Link>
           </MenuItem>
           <MenuItem v-slot="{ active, close }">

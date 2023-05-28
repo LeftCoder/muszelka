@@ -6,7 +6,6 @@ use App\Http\Requests\StoreFeatureRequest;
 use App\Http\Requests\UpdateFeatureRequest;
 use App\Http\Resources\FeatureResource;
 use App\Models\Feature;
-use Exception;
 use Inertia\Inertia;
 
 class FeatureController extends Controller
@@ -50,7 +49,7 @@ class FeatureController extends Controller
     {
         try {
             $feature->delete();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return back()->with('message', 'Nie można usunąć udogodnienia.');
         }
 

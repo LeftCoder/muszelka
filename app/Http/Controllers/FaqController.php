@@ -6,12 +6,11 @@ use App\Http\Requests\StoreFaqRequest;
 use App\Http\Requests\UpdateFaqRequest;
 use App\Http\Resources\FaqResource;
 use App\Models\Faq;
-use Exception;
 use Inertia\Inertia;
 
 class FaqController extends Controller
 {
-    public function Faqs()
+    public function faqs()
     {
         return FaqResource::collection(Faq::all());
     }
@@ -52,7 +51,7 @@ class FaqController extends Controller
     {
         try {
             $faq->delete();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return back()->with('message', 'Nie można usunąć pytania.');
         }
 

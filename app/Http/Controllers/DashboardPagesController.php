@@ -7,11 +7,13 @@ use App\Http\Resources\FaqResource;
 use App\Http\Resources\FeatureResource;
 use App\Http\Resources\PeriodResource;
 use App\Http\Resources\ReservationResource;
+use App\Http\Resources\ReviewResource;
 use App\Models\Apartment;
 use App\Models\Faq;
 use App\Models\Feature;
 use App\Models\Period;
 use App\Models\Reservation;
+use App\Models\Review;
 use Illuminate\Support\Facades\Request;
 use Inertia\Inertia;
 
@@ -57,6 +59,13 @@ class DashboardPagesController extends Controller
     {
         return Inertia::render('Dashboard/PriceList', [
             'periods' => PeriodResource::collection(Period::all()),
+        ]);
+    }
+
+    public function reviews()
+    {
+        return Inertia::render('Dashboard/ReviewList', [
+            'reviews' => ReviewResource::collection(Review::all()),
         ]);
     }
 

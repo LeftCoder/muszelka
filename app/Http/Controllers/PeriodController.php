@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorePeriodRequest;
 use App\Http\Requests\UpdatePeriodRequest;
 use App\Models\Period;
-use Exception;
 use Inertia\Inertia;
 
 class PeriodController extends Controller
@@ -50,7 +49,7 @@ class PeriodController extends Controller
     {
         try {
             $period->delete();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return back()->with('message', 'Nie można usunąć wybranego terminu.');
         }
 

@@ -1,6 +1,13 @@
 <script lang="ts" setup>
 import TestimonialItem from '@/pages/Home/Partials/TestimonialItem.vue'
 import AccentImage from '@/shared/AccentImage.vue'
+import { Review } from '@/types'
+
+interface Props {
+  reviews: Review[]
+}
+
+const props = defineProps<Props>()
 </script>
 
 <template>
@@ -15,39 +22,32 @@ import AccentImage from '@/shared/AccentImage.vue'
         Dowiedz się o nas trochę wiecej.
       </p>
     </div>
-    <div
-      class="grid grid-cols-1 gap-12 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 relative"
-    >
+    <div class="relative">
       <AccentImage pos-x="left-[-40px]" pos-y="top-8" />
 
-      <div class="space-y-8">
+      <div
+        class="grid grid-cols-1 gap-6 pt-6 items-start lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 max-h-[33rem] overflow-hidden"
+      >
         <TestimonialItem
-          opinion="Fantastyczne miejsce i super właściciele. Polecam. Każdy domek ma własne miejsce parkingowe dla samochodu. Jest też plac zabaw dla dzieci i bardzo blisko do morza. Miodzio. 😀"
-          sign="Łukasz Jagodziński"
-        />
-        <TestimonialItem
-          opinion="Polecam każdej rodzinie z dziećmi, ceniącą prywatność i ciszę. Domki dobrze wyposażone, czyste i zadbane. Duży teren z placem zabaw, można spokojnie pograć w piłkę. Właściciele życzliwi i pomocni. Pozdrawiamy pana Michała, i życzymy powodzenia w dalszym rozwoju ośrodka."
-          sign="Marta Cecot"
-        />
-      </div>
-      <div class="space-y-8">
-        <TestimonialItem
-          opinion="Domki czyste blisko plaży, ośrodek świetne zlokalizowany, cisza, spokój. Polecam."
-          sign="Krzysiek Kielar"
-        />
-        <TestimonialItem
-          opinion="Do ośrodka Muszelka w Wici jeździmy od lat. Poprzedni właściciele byli dla nas super niemal jak rodzina. W tym roku mogliśmy poznać nowych właścicieli. Są bardzo mili, można na nich liczyć. Od pierwszego spotkania byli dla nas bardzo życzliwi i otwarci."
-          sign="Barbara Ziółkowska"
-        />
-      </div>
-      <div class="space-y-8">
-        <TestimonialItem
-          opinion="Byliśmy pierwszymi gośćmi nowych właścicieli. Wrażenia niezapomniane. Super ludzie, pomocni, życzliwi, otwarci. Zostaliśmy bardzo miło przyjęci. 🚀 Miejsce jest świetne, domki prawie przy morzu, nocą słychać szum fal. 😍"
-          sign="Anna Guzowska"
+          v-for="review in props.reviews"
+          :key="review.id"
+          :opinion="review.body"
+          :sign="review.author"
         />
       </div>
 
       <AccentImage class="rotate-180" pos-x="right-[-20px]" pos-y="bottom-20" />
+
+      <div
+        class="inset-x-0 bottom-0 flex justify-center bg-gradient-to-t from-white pt-32 pb-8 pointer-events-none dark:from-slate-900 absolute"
+      >
+        <button
+          type="button"
+          class="border text-white rounded-lg text-lg bg-amber-500 hover:bg-amber-400 shadow-md font-semibold focus:outline-none md:px-6 px-6 md:py-4 py-3 xl:leading-4 flex items-center pointer-events-auto"
+        >
+          Zobacz więcej...
+        </button>
+      </div>
     </div>
   </div>
 </template>

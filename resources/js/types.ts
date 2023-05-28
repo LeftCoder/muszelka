@@ -93,6 +93,14 @@ export interface Period {
   big: number
 }
 
+export interface Review {
+  id: number
+  body: string
+  author: string
+  created_at: string
+  published: boolean
+}
+
 export interface PaginationLinks {
   first: string
   last: string
