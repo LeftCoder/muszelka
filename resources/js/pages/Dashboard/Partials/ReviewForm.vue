@@ -10,8 +10,8 @@ interface Props {
 const props = defineProps<Props>()
 
 const form = useForm({
-  author: props.author ? props.review.question : '',
-  body: props.body ? props.review.answer : '',
+  author: props.review ? props.review.author : '',
+  body: props.review ? props.review.body : '',
 })
 
 const onSubmit = () => {
