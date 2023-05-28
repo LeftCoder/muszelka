@@ -65,7 +65,7 @@ class DashboardPagesController extends Controller
     public function reviews()
     {
         return Inertia::render('Dashboard/ReviewList', [
-            'reviews' => ReviewResource::collection(Review::all()),
+            'reviews' => ReviewResource::collection(Review::latest()->get()),
         ]);
     }
 

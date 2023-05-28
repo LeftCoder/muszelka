@@ -27,9 +27,12 @@ class ReviewController extends Controller
 
     public function send(SendReviewRequest $request)
     {
-        $details = $request->validated();
-        $details = $request->safe()->except(['captcha_token']);
+        Review::create([
+            'author' => $request->safe()->author,
+            'body' => $request->safe()->body
+        ]);
 
+        $details = $request->safe()->except(['captcha_token']);
         Mail::to(config('mail.from.address'))->send(new NewReview($details));
 
         return back()->with(['message' => 'Poszło! Dziękujemy za Twoją opinię.']);

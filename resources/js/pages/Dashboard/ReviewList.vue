@@ -24,8 +24,8 @@ export default {
 
 <template>
   <Head>
-    <title>Dashboard | Cennik</title>
-    <meta name="description" content="Cennnik dla domków" />
+    <title>Dashboard | Opinie</title>
+    <meta name="description" content="Opinie klientów" />
   </Head>
 
   <div
