@@ -34,9 +34,7 @@ const handleChange = (id: number, published: boolean) => {
         <tr>
           <th scope="col" class="py-3 px-6">Autor</th>
           <th scope="col" class="py-3 px-6">Treść opinii</th>
-          <th scope="col" class="py-3 px-6 text-end">
-            Oznacz jako opublikowany
-          </th>
+          <th scope="col" class="py-3 px-6 text-end">Opublikuj</th>
         </tr>
       </thead>
       <tbody>
