@@ -8,7 +8,6 @@ use App\Http\Resources\ApartmentResource;
 use App\Models\Apartment;
 use App\Models\Image;
 use App\Models\TemporaryImage;
-use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
@@ -78,7 +77,7 @@ class ApartmentController extends Controller
             $apartment->images()->delete();
             Storage::deleteDirectory("tmp/{$apartment->id}");
             $apartment->delete();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return back()->with('message', 'Nie można usunąć domku.');
         }
 

@@ -74,7 +74,7 @@ class ReviewController extends Controller
     public function published(Request $request, Review $review)
     {
         try {
-            $review->published = $request->published;
+            $review->published = $request->input('published');
             $review->save();
 
             return back();
